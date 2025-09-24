@@ -27,5 +27,3 @@ commit - 승인하는거?
 clear - 지우기
 5번까지가 레파지토리 생성될때 하는거 6번 이후는 매번
 집에서 해볼때 4번부터
-> 순서: git init(위치 확인?) > git remote add origin https://github.com/410097800525331/jfs.git(넣을 폴더)
->git add .(폴더 안에 있는거 다 올린다) > git commit m- "메시지"(메시지 확인) > git push -u origin main(민다)
