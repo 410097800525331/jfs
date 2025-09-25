@@ -8,6 +8,8 @@ Figma for VS Code - 피그마 연동
 Live Server - 라이브
 power mode - 
 vscode-icons - 아이콘 바꿈
+Auto Rename Tag
+Auto Close Tag
 
 메뉴에서 3번째 깃 설치 (Git for Windows/x64 Setup.) - 내 PC > 속성 > 
 
@@ -25,6 +27,7 @@ remote - 서버
 origin - 저장소 기본 이름
 commit - 승인하는거?
 clear - 지우기
+assets - 자산
 5번까지가 레파지토리 생성될때 하는거 6번 이후는 매번
 집에서 해볼때 4번부터
 

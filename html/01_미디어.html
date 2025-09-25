@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -23,8 +23,8 @@
     <p style="border: 2px solid gray;">본문</p>
     <a style="text-decoration: none; color: green; font-size: 24px;" href="https://github.com/410097800525331/jfs">깃허브
         사이트</a> <br>
-    <img src="figma.png" alt="대체 텍스트" width="70">
-    <img style="border-radius: 50%; transform: rotate(-45deg);" src="figma.svg" alt="대체 텍스트">
+    <img src="../assets/imgs/figma.png" alt="루돌프" width="70">
+    <img src="../assets/imgs/figma.svg" alt="루돌프" style="border-radius: 50%; transform: rotate(-45deg);">
 
     <!-- ul>li*3 탭 -->
     <ul style="list-style: none;">
@@ -39,31 +39,57 @@
         <li>바닐라라떼</li>
     </ol>
 
+    <!-- ############################ 이미지 영역 ############################ -->
     <!-- 웹표준, 웹접근성: alt / 유효성 검사(html = w3c) -->
     <img style="width: 100px; height: 100px;"
         src="https://kyf.or.kr/utl/web/imageSrc.do?path=20220725&physical=FE0766CA00A847BE9719D8EF205586EC&contentType=image/jpeg"
         alt="인스타그램 SNS 아이콘">
+    <!-- ################################################################### -->
 
-    <!-- 유튜브 링크 걸기 (width= "827" height= "474") -->
-    <iframe style="width: 200px; height: 100px;" src="https://www.youtube.com/embed/deFoBN8EfE0"
-        title="ES식품원료 땅콩병 용기_키키 블루베리 농축액" frameborder="0"
+    <!-- 비디오 영역 -->
+    <!-- 유튜브 링크 걸기 -->
+    <iframe style="width: 300px; height: 200px;" src="https://www.youtube.com/embed/CjIKQb4USSE" title="mov bbb"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe style="width: 300px; height: 200px;" src="https://www.youtube.com/embed/CjIKQb4USSE" title="mov bbb"
+        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
     <!-- 비디오 확장자 변경 프로그램 -> https://convertio.co/kr/video-converter/ -->
-    <video width="320" height="240" controls>
-        <source src="movie.mp4" type="video/mp4">
+    <!-- 태그 - 브라우저 버전 확인 https://caniuse.com/ -->
+    <video poster="../assets/imgs/mov_bbb.png" style="width: 400px; height: 300px;" controls>
+        <source src="../assets/vid/mov_bbb.mp4" type="video/mp4">
         <!-- <source src="movie.ogg" type="video/ogg"> -->
-        <source src="movie.wevm" type="video/wevm">
+        <source src="../assets/vid/mov_bbb.webm" type="video/wevm">
         Your browser does not support the video tag.
     </video>
-    
-    <hr style="border: 2px solid gray;">
-    <!-- 단위: px, %, vh, vw 등 -->
-    <!-- 자동 플레이: autoplay + muted / 무한 반복: loop -->
-    <video style="width: 100%; height: 100vh; object-fit: cover;" src="main_video1.mp4" autoplay muted loop></video>
 
-    
+    <!-- 단위: px, %, vh, vw 등 -->
+    <hr style="border: 2px solid gray;">
+
+    <!-- 
+    비디오 플레이어: controls
+    자동 플레이: autoplay + muted(음소거)
+    무한 반복: loop
+    사용자가 동영상을 재생하거나 탐색하기 전까지 출력되는 포스터 이미지: poster
+    -->
+
+    <!-- <video style="width: 100%; height: 100vh; object-fit: cover;" src="../assets/main_video1.mp4" autoplay muted loop></video> 경남아너스빌 동영상 -->
+
+    <!-- 오디오 영역 -->
+    <audio controls>
+        <source src="../assets/aud/horse.ogv" type="audio/ogg">
+        <source src="../assets/aud/horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio src="../assets/aud/Estrella - House of the Gipsies.mp3" autoplay loop></audio>
+
+    <!--
+    다중 선택: Ctrl + d
+    다중 커서: alt + 클릭
+    -->
 </body>
 
 </html>
