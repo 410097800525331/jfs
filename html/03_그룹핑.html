@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트명</title>
+</head>
+
+<body>
+    <h1>그룹핑</h1>
+    <p>div는 블록레벨(인라인) 요소 그룹핑/span은 인라인 요소만을 그룹핑</p>
+
+    <!-- 내어쓰기: shift + tab -->
+    <!-- 부모/자식 요소, 형제(Siblings)관계, 상속 -->
+    <div>
+        <div style="border: 1px solid blue; width: 50%;">블록레벨 요소의 대표 태그</div>
+        <div>div, h1~h6, p, ul, ol, li, hr</div>
+        <div>크기(width: auto;, height), 여백(margin, padding), 테두리(border) 지정O</div>
+    </div>
+    <hr>
+    <div>
+        <span style="border: 1px solid blue; width: 50%;">인라인 요소의 대표 태그 </span>
+        <span>span, a, img, video, audio, iframe</span>
+        <span>크기 지정X (단, img, video, iframe 예외), margin은 상하X</span>
+    </div>
+
+</body>
+
+</html>

@@ -1,17 +1,25 @@
 - 단축키(설정(Settings))
 Mouse Wheel Zoom - 휠로 줌
+그룹핑: Emmit: Wrap 어쩌구 - alt + w
 
 - vsc 플러그인 세팅
 Korean Language Pack for Visual Studio Code - 한글
 One Dark Pro - 색상 테마
 Figma for VS Code - 피그마 연동
 Live Server - 라이브
-power mode - 
 vscode-icons - 아이콘 바꿈
 Auto Rename Tag
 Auto Close Tag
+Beautify css/sass/scss/less 
+Prettier - Code formatter
 
 메뉴에서 3번째 깃 설치 (Git for Windows/x64 Setup.) - 내 PC > 속성 > 
+
+크롬 웹
+adblock plus - 광고 제거
+Google 번역
+네이버 영어사전
+CSSViewer
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ w3schools.com 언어
 클라이언트(Client) 컴퓨터

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- ko, en, zh(중국), ja(일본) -->
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML기본구조</title>
+    <!-- <link rel="stylesheet" href="../css/"> -->
+    <!-- <script>"자바스크립트의 내용"</script> -->
+</head>
+
+<body>
+    <h1>제목</h1>
+    <!-- lorem + teb -->
+    <!-- 
+    강조 텍스트 순서
+    strong: 강한 강조 텍스트, 굵게 / em: 중요한 텍스트, 이텔릭 / mark: 강조 텍스트, 형광펜
+    -->
+    <p><span style="color: green; font-weight: 700; font-size: 30px;"><mark>Lorem ipsum</mark></span> dolor sit amet
+        consectetur
+        adipisicing elit. <b>Obcaecati</b> corporis nihil magni et recusandae, itaque
+        quae eius <span style="font-style: italic;">quibusdam nostrum</span> laboriosam fuga ipsum <mark>corrupti,
+            accusantium a</mark> libero <span style="background-color: aqua;">saepe</span> explicabo <i>perferendis</i>
+        sint!</p> <!-- i 기울임 / b 두껍게 -->
+    <!-- lorem5 + teb 더미 텍스트 -->
+    <p>Lorem ipsum dolor sit amet.</p>
+    <ul>
+        <li>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </li>
+        <li></li>
+    </ul>
+    <a href="#"></a>
+    <!-- 더미 이미지: https://picsum.photos/ -->
+    <img src="https://picsum.photos/id/237/300/200" alt="대체 텍스트">
+
+    <!-- 비디오 삽입 - mp4, webm, ogv(type: ogg) -->
+    <!-- 무료 비디오: https://www.pexels.com/ko-kr/videos/ -->
+    <video controls style="width: 360px;" autoplay muted loop> <!-- poster -->
+        <source src="../assets/vid/13624726_3840_2160_24fps.mp4" type="video/mp4">
+    </video>
+
+    <!-- 오디오 삽입 - mp3(type: mpeg), wav, ogg -->
+    <!-- 무료 효과음: https://pgtd.tistory.com/ -->
+    <audio controls>
+        <source src="../assets/aud/99DFF0395FA958AD03.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 외부 파일 가져오기(mp4 말고도 URL도 가능) / frameborder="0" 쓰면 안됨 -->
+    <iframe src="https://daum.com" style="border: none;"></iframe>
+</body>
+
+</html>
