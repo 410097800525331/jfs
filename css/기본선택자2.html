@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자2</title>
+    <style>
+        /* 
+        1. 하위(자식+손자) 선택자: 공백 (ul *)
+        2. 자식 선택자: >
+        3. 복합(Compound) 선택자: ex) ul.li
+        4. 가상 클래스 선택자(Pseido-class, 슈도클래스): :hover
+        5. 가상 요소 선택자(Pseido-element): ::after, ::backdrop
+        */
+
+        /* ul h2 {border: 1px solid red;} */
+        .descendant {border: 1px solid red;}
+        li > p {border: 2px dashed purple;}
+        li.li {border: 2px dashed green;}
+        li .li {border: 2px dashed blue;}
+    </style>
+</head>
+
+<body>
+    <h1>CSS 선택자2</h1>
+    <h2>두 개 이상의 선택자를 활용한 선택자</h2>
+    <ul>
+        <li>
+            <h2 class="descendant">하위 선택자</h2>
+            <p class="li">하위 선택자란 공백을 사용하여 두개의 선택자를 사용한 선택자를 말한다</p>
+        </li>
+        <li>자식 선택자</li>
+        <li class="li">결합 선택자</li>
+        <li>가상 클래스 선택자</li>
+        <li>가상 요소 선택자</li>
+    </ul>
+</body>
+
+</html>

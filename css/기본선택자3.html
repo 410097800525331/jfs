@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자3</title>
+    <style>
+        /* 
+        1. 하위(자식+손자) 선택자: 공백 (ul *)
+        2. 자식 선택자: >
+        3. 복합(Compound) 선택자: ex) ul.li
+        4. 가상 클래스 선택자(Pseido-class, 슈도클래스): :hover
+        5. 가상 요소 선택자(Pseido-element): ::after, ::backdrop
+        */
+        
+        div {
+            width: 340px; height: 268px;
+            border: 1px solid gray;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        /* 변형: 이미지 확대(scale) */
+        div:hover {}
+        div:hover img {
+            transform: scale(1.5, 1.5); /* trf:s */
+            transition: 1s; /* trs */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS 선택자3</h1>
+    <div>
+        <img src="../assets/imgs/경남아너스빌.jpg" alt="충주연수 경남아너스빌 센터원 아파트 외관">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html, body, h1, ul, li {border: 1px solid red;}
+        body {border: 1px solid red;}
+        h1 {border: 1px solid red;}
+        ul {border: 1px solid red;}
+        li {
+            color: orange;
+            border: 1px solid red;
+        }
+        /* .li {color: darkred;}
+        #li {color: blueviolet;} */
+        .li2 {color: yellowgreen;}
+        
+        /* 
+        아이디/클래스 이름 지정 규칙
+        1. 첫글자에 숫자 사용 X
+        2. 특수 문자는 -, _ 만 사용
+        3. 캐밥-케이스 사용(관례적)
+        */
+    </style>
+</head>
+<body>
+    <h1>CSS 선택자</h1>
+    <ul>
+        <li>태그 선택자</li>
+        <li id="li" class="li li2">id 선택자</li>
+        <li class="li">class 선택자</li>
+        <li>그룹 선택자</li>
+        <li>전체 선택자</li>
+    </ul>
+</body>
+</html>
