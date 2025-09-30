@@ -5,40 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김슬기</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body style="background-color: #f7f7f7;">
-    <h1>개인 사이트</h1>
-    <p>나의 개인 사이트</p>
-    <!-- nav>ul>li*2>a[href] -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sub.html">About me</a></li>
-        </ul>
-    </nav>
+    <!--
+    페이지
+    1. Home -> index.html
+    2. About me(my story) -> about.html
+    3. work(portfolio, project) -> work.html
+    4. contact us -> contact.html
 
-    <!-- 경남아너스빌 카드 -->
-    <div style="font-family: 'Noto Sans KR', sans-serif; background-color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; width: 100%; max-width: 360px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); border-left: 5px solid #9b59b6;">
-        <div style="height: 250px;">
-            <img src="./assets/imgs/경남아너스빌.jpg" alt="충주연수 경남아너스빌 센터원 아파트 외관" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    header(헤더) area
+    - h1 로고
+    - GNB 내비게이션
+    -->
+    <header>
+        <!-- h1.logo>a[href=index.html] -->
+        <h1 class="logo"><a href="index.html">Home</a></h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- section(본문) area -->
+    <!-- https://www.honorsville.co.kr/ -->
+    <div class="card-container">
+        <div class="card-image-wrapper">
+            <img src="https://www.honorsville.co.kr/upload/temp/20255303432444.jpg" alt="충주연수 경남아너스빌 센터원 아파트 외관"
+                class="card-image">
+            <!-- <img src="apartment-complex.jpg" alt="충주연수 경남아너스빌 센터원 아파트 외관" class="card-image"> -->
         </div>
 
-        <div style="padding: 10px 20px 30px;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 5px;">
-                <span>분양중</span>
-                <button>하트</button>
+        <div class="card-content">
+            <div class="card-header">
+                <span class="tag-badge">분양중</span>
+                <!-- 폼 요소: 회원가입, 로그인, 게시판, 상품구매 및 결재 -->
+                <button class="like-button" aria-label="관심 단지로 추가">
+                </button>
             </div>
-            <h3>충주연수 경남아너스빌 센터원</h3>
-            <div>
+
+            <h2 class="card-title">충주연수 경남아너스빌 센터원</h2>
+
+            <div class="card-details">
                 <p>충청북도 충주시 연수동 787-25 일원</p>
                 <p>243세대</p>
             </div>
-            <div>
-                <p>1866-0243</p>
+
+            <div class="card-contact">
+                <p class="phone-number">1866-0234</p>
             </div>
         </div>
     </div>
+
+    <!-- footer(푸터) -->
+     <footer>
+        <p>&copy; 2025 KSG. All rights reserved.</p>
+     </footer>
 </body>
 
 </html>
