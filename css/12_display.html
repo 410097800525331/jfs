@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS display</title>
+    <style>
+        /* 
+        display: 표시방식;
+        block
+        inline
+        inline-block: 인라인이면서 블록 성격을 가짐
+        none
+        */
+    </style>
+</head>
+<body>
+    <div>
+        <h1>display</h1>
+        <p>Lorem <span>ipsum</span> dolor sit amet consectetur adipisicing elit.<br> Cum mollitia libero et enim labore <b>corrupti</b> culpa aliquam architecto iste consectetur at, ab dolorem perspiciatis facere <i>quibusdam eum doloribus atque in.</i></p>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="https://410097800525331.io/jfs">개인 사이트</a></li>
+                    <li><a href="naver.naver.com">naver.naver.com</a></li>
+                    <li><a href="tel:010-1234-1234">tel:010-1234-1234</a></li>
+                    <li><a href="index.html">index.html</a></li>
+                    <li><a href="#sec">클릭하면 id가 sec인 위치로 이동</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="sec">
+            <h2>block vs inline</h2>
+            <figure>
+                <!--
+                 절대 경로: 도메인을 포함한 전체 경로
+                 상대 경로
+                  -->
+                 <!-- 상대 경로, 로컬과 서버에서 모두 테스트 가능 -->
+                <img src="../assets/imgs/figma.svg" alt="루돌프">
+                <figcaption>상대 경로 연결</figcaption> <!-- 이미지 설명글(캡션) -->
+                <!-- 작업 영역 폴더 기준(절대 경로), 로컬x 서버에서만 보임! -->
+                <img src="/assets/imgs/figma.svg" alt="루돌프">
+                <figcaption>작업 영역 폴더</figcaption>
+            </figure>
+            <video>
+                <source src="../assets/vid/mov_bbb.webm" type="video/mp4">
+            </video>
+            <audio src="../assets/aud/horse.ogv"></audio>
+        </section>
+        <footer>
+            <address>주소 및 연락처</address>
+        </footer>
+    </div>
+</body>
+</html>

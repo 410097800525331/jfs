@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 박스모델</title>
+        <style>
+            /*
+            속기 속성 border
+
+            개별 속성
+            border-width: medium(2.4px);
+            border-style: 스타일; -> 필수
+            border-color: 색;
+
+            border-width: 값1 [값2] [값3] [값4];
+            - px
+            - medium(2.4px), thick, thin
+
+            border-위치(top 등)-width
+            border-위치(top 등)-style
+            border-위치(top 등)-color
+            */
+
+            div {
+                width: 100px; height: 100px;
+                margin: 20px;
+            }
+            .box1 {
+                border: 1px solid black;
+            }
+            .box2 {
+                border-bottom: 1px solid #000; /* bdb */
+                border-bottom-width: 5px; /* bdbw5 */
+                border-bottom-style: dashed; /* bdbs(d) */
+                border-bottom-color: red; /* bdbc */
+            }
+            p {
+                width: 100px; height: 100px;
+                margin: 20px;
+            }
+            p.dotted {border-style: dotted;} /*  */
+            p.dashed {border-style: dashed;}/*  */
+            /* 상 좌우 하 */
+            p.solid {border-style: solid dashed dotted;} /*  */
+            p.double {border-style: double;}
+            p.groove {border-style: groove;}
+            p.ridge {border-style: ridge;}
+            p.inset {border-style: inset;}
+            p.outset {border-style: outset;}
+            p.none {border-style: none;}
+            p.hidden {border-style: hidden;}
+            /* 상 우 하 좌 */
+            p.mix {border-style: dotted dashed solid double;}
+        </style>
+</head>
+
+<body>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+
+    <p class="dotted">dotted</p>
+    <p class="dashed">dashed</p>
+    <p class="solid">solid</p>
+    <p class="double">double</p>
+    <p class="groove">groove</p>
+    <p class="ridge">ridge</p>
+    <p class="inset">inset</p>
+    <p class="outset">outset</p>
+    <p class="none">none</p>
+    <p class="hidden">hidden</p>
+    <p class="mix">mix</p>
+</body>
+
+</html>

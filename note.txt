@@ -13,6 +13,8 @@ Auto Close Tag
 Beautify css/sass/scss/less 
 Prettier - Code formatter
 Image preview - 이미지 미리보기
+TabOut - 탭누르면 끝으로
+open in browser(단축키: shift+alt+b, alt+b)
 
 메뉴에서 3번째 깃 설치 (Git for Windows/x64 Setup.) - 내 PC > 속성 > 
 

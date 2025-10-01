@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 박스모델</title>
+    <style>
+        /*
+        속성은 
+        1. 개별 속성 ex) border-width, border-style, border-color
+        2. 속기 속성 ex) border: 굵기 종류 색;
+        */
+
+        /* 공통(common) */
+        .box {
+            box-sizing: border-box; /* bx */
+            width: 300px; /* w300 */
+            height: 200px; /* h200 */
+            border: 10px solid black; /* bd */
+            padding: 50px; /* p50 */
+            margin: 20px; /* m20 */
+        }
+        .box1 {
+            /* 콘텐츠 안에 padding과 border이 생김, width = 300px */
+            box-sizing: border-box; /* bx */
+        }
+        .box2 {
+            /* 전체 너비 = width + padding*2 + boder*2 */
+            /* 기본값(default) */
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+</body>
+
+</html>

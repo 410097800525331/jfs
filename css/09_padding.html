@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 박스모델</title>
+    <style>
+        /*
+        같은 내용을 동시 선택
+        선택 후 ctrl + d
+        선택 후 ctrl + f2
+        */
+
+        .box, span {
+            /* 참고, 음수 지정 불가능 */
+
+            /* 속기 속성 */
+            padding: 100px 150px 100px 150px;
+            padding: 100px 150px;
+            padding: 100px 150px 80px;
+            padding: 100px;
+            /* 
+            개별속성
+            padding-top: 100px;
+            padding-bottom: 100px;
+            padding-right: 150px;
+            padding-left: 150px;
+            */
+            padding: 20px;
+            background-color: skyblue;
+
+            /* span의 패딩과 div의 아래여백이 겹침 발생 */
+            margin-bottom: 100px;
+        }
+        span {
+            /* 인라인 요소의 margin 상하는 적용x */
+            margin: 100px;
+            padding: 20px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus earum fuga, dignissimos cumque cupiditate culpa fugiat nihil eaque exercitationem harum, incidunt excepturi illo quibusdam? A aut distinctio aliquam dolore voluptate.</p>
+
+    <span>Lorem ipsum</span>
+</body>
+
+</html>

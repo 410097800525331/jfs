@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 박스모델</title>
+    <style>
+        /* 
+        속기 속성
+        border-radius: 모서리 둥글게;
+
+        개별 속성 ex)
+        border-top-left-radius
+        */
+
+        div {
+            width: 100px; height: 100px;
+            background-color: lightblue;
+            margin: 20px;
+        }
+        .frame1 {border-radius: 10% 20% 30% 40%;}
+        .frame2 {border-radius: 10% 20% 30%;}
+        .frame3 {border-radius: 10% 20%;}
+        /* 애니메이션 */
+        .frame4 {
+            border-radius: 50%;
+            animation: rotate 5s infinite linear;
+        }
+        @keyframes rotate {
+            0% {transform: rotate(0);} /* trfr */
+            0% {transform: rotate(360deg);}
+        }
+        .frame5 {
+            border-radius: 50px 50px 0 0;
+            height: 50px;
+        }
+        .frame6 {
+            border-radius: 100% 0 0 0;
+            width: 50px; height: 50px;
+        }
+        .frame7 {
+            border-radius: 5px;
+            width: 100px; height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frame1">박스1</div>
+    <div class="frame2">박스2</div>
+    <div class="frame3">박스3</div>
+    <div class="frame4">박스4</div>
+    <div class="frame5">박스5</div>
+    <div class="frame6">박스6</div>
+    <div class="frame7">박스7</div>
+</body>
+
+</html>
