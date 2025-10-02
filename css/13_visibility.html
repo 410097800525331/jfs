@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 가시성</title>
+    <style>
+        /* 
+        가상 클래스 선택자
+        :hover
+        :nth-child(n)
+        :nth-of-type(n)
+        n은 정수 -1, 0, 1 등/키워드: odd(홀수), even(짝수)/수열: 2n, 2n+1, 5n+1 등
+
+        ~child
+        :nth-last-child(n)
+        :nth-child(n)
+        :first-child
+        :last-child
+        :only-child
+        
+        ~of-type
+        :nth-last-of-type(n)
+        :first-of-type
+        :last-of-type
+        :only-of-type
+        */
+
+        /* 공간 차지X */
+        div:nth-of-type(2) {
+            display: none; /* dn */
+        }
+        /* visibility, opacity 공간 차지 */
+        div:nth-of-type(4) {
+            visibility: visible; /* v */
+            visibility: hidden; /* v */
+        }
+        div:nth-of-type(6) {
+            opacity: 1; /* op1 */
+            opacity: 0.5; /* op0.5 */
+            opacity: 0; /* op0 */
+        }
+    </style>
+</head>
+<body>
+    <!-- div*6{가시성$} -->
+    <div>가시성1</div>
+    <div>display: none;</div>
+    <div>가시성3</div>
+    <div>visibility: hidden;</div>
+    <div>가시성5</div>
+    <div>opacity: 0</div>
+    <div>가시성6</div>
+</body>
+</html>

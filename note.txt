@@ -4,17 +4,21 @@ Mouse Wheel Zoom - 휠로 줌
 
 - vsc 플러그인 세팅
 Korean Language Pack for Visual Studio Code - 한글
-One Dark Pro - 색상 테마
 Figma for VS Code - 피그마 연동
 Live Server - 라이브
 vscode-icons - 아이콘 바꿈
 Auto Rename Tag
 Auto Close Tag
-Beautify css/sass/scss/less 
 Prettier - Code formatter
 Image preview - 이미지 미리보기
 TabOut - 탭누르면 끝으로
 open in browser(단축키: shift+alt+b, alt+b)
+Bracket Pair Color DLW - 끝태그 알아보게 색 바꾸는거
+Color Highlight - CSS 컬러 표시해줌
+One Dark Pro - 색상 테마 (제거함)
+Beautify css/sass/scss/less (제거함)
+indent-rainbow - 끝태그 알아보게 앞에 색 나옴 (제거함)
+Highlight Matching Tag - 괄호 끝 표시해줌 (제거함)
 
 메뉴에서 3번째 깃 설치 (Git for Windows/x64 Setup.) - 내 PC > 속성 > 
 
@@ -23,6 +27,13 @@ adblock plus - 광고 제거
 Google 번역
 네이버 영어사전
 CSSViewer
+ColorZilla - 색 추출#
+
+구글 제미나이 - ai
+w3schools - 언어 공부
+can i use - 브라우저 호환
+https://www.w3.org/ - html 유효성 검사
+https://cdnjs.com - 폰트어썸 등 cdn
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ w3schools.com 언어
 클라이언트(Client) 컴퓨터

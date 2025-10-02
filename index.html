@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김슬기</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style2.css">
 </head>
 
-<body style="background-color: #f7f7f7;">
+<body>
     <!--
     페이지
     1. Home -> index.html
@@ -36,36 +37,32 @@
     <!-- https://www.honorsville.co.kr/ -->
     <div class="card-container">
         <div class="card-image-wrapper">
-            <img src="https://www.honorsville.co.kr/upload/temp/20255303432444.jpg" alt="충주연수 경남아너스빌 센터원 아파트 외관"
-                class="card-image">
-            <!-- <img src="apartment-complex.jpg" alt="충주연수 경남아너스빌 센터원 아파트 외관" class="card-image"> -->
-        </div>
+            <img src="https://www.honorsville.co.kr/upload/temp/20255303432444.jpg" alt="충주연수 경남아너스빌 센터원 아파트 외관" class="card-image">
+        </div> <!-- .card-image-wrapper -->
 
         <div class="card-content">
             <div class="card-header">
                 <span class="tag-badge">분양중</span>
-                <!-- 폼 요소: 회원가입, 로그인, 게시판, 상품구매 및 결재 -->
-                <button class="like-button" aria-label="관심 단지로 추가">
-                </button>
+                <span class="like-button"><i class="fa-solid fa-heart"></i></span>
             </div>
 
-            <h2 class="card-title">충주연수 경남아너스빌 센터원</h2>
-
-            <div class="card-details">
-                <p>충청북도 충주시 연수동 787-25 일원</p>
-                <p>243세대</p>
+            <div class="card-body">
+                <h3 class="card-title">충주연수 경남아너스빌 센터원</h3>
+                <div class="card-details">
+                    <p>충청북도 충주시 연수동 787-25 일원</p>
+                    <p>243세대</p>
+                </div>
+                <div class="card-contact">
+                    <p class="phone-number">1866-0234</p>
+                </div>
             </div>
-
-            <div class="card-contact">
-                <p class="phone-number">1866-0234</p>
-            </div>
-        </div>
-    </div>
+        </div> <!-- .card-content -->
+    </div> <!-- .card-container -->
 
     <!-- footer(푸터) -->
-     <footer>
+    <footer>
         <p>&copy; 2025 KSG. All rights reserved.</p>
-     </footer>
+    </footer>
 </body>
 
 </html>

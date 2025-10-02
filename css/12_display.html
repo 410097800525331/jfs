@@ -1,23 +1,95 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS display</title>
     <style>
         /* 
+        왼쪽 패널 열고/닫기: ctrl+b
+        창 분할
+        1. 왼쪽 탐색기에서 분할하여 볼 파일을 마우스로 드래그
+        2. 두 개이상의 파일이 탭으로 열려있을 때: ctrl+alt+좌우방향키
+        3. 같은 파일을 분할하여 볼 때: ctrl+\
+        4. 기본 창 분할은 좌우 -> 상하 분할: alt+분할버튼클릭
+
         display: 표시방식;
-        block
-        inline
+        block: 
+            1. 줄 바꿈(세로 배치: 위에서 아래)
+            2. width: 100%; height: 콘텐츠크기;
+            3. 크기 조절, 여백(margin, padding), 테두리(border) ⭕
+                -> 마진 겹침 주의!
+            4. 태그 종류: html, body, div(header, section, footer,
+                nav, ...), h1~h6, p, ul, figure, figcaption, address
+
+        list-item: li 
+
+        inline: 
+            1. 줄 바꿈❌(가로 배치: 왼쪽에서 오른쪽)
+                -> 부모 요소의 크기가 콘텐츠 보다 작으면 줄 바꿈된다.
+            2. width: 콘텐츠크기; height: 콘텐츠크기;
+            3. 패딩과 테두리⭕
+            4. 크기 조절, 위/아래margin ❌ 
+                -> 예외: img, video, iframe 크기 조절 가능!
+            5. 태그 종류: span, b, i, br, a, img, video
+
         inline-block: 인라인이면서 블록 성격을 가짐
-        none
+            1. 줄 바꿈❌(가로 배치: 왼쪽에서 오른쪽)
+                -> 부모 요소의 크기가 콘텐츠 보다 작으면 줄 바꿈된다.
+            2. width: 콘텐츠크기; height: 콘텐츠크기;
+            3. 크기 조절, 여백(margin, padding), 테두리(border) ⭕
+                -> 마진 겹침 없다.
+            4. 태그 종류: button
+
+        none: 없음, audio
         */
+
+        * {
+            outline: 1px solid lightgreen; /* /* out */ */
+            width: 500px;
+        }
+
+        /* p 안의 모든 요소 */
+        p *, a, img, video {
+            outline: 2px solid red;
+        }
+
+        /* #btn {
+            width: auto;
+            padding: 0;
+            border: none;
+            line-height: 1;
+        } */
+        /* #btn {
+            width: 500px;
+            padding: 600px;
+            margin-top: 500px;
+            border: none;
+            background-color: lightcyan;
+            outline: none;
+            line-height: 1;
+        }
+
+        #btn button {
+            width: auto;
+            /* wa */
+            /* width: 120px; height: 40px; */
+            padding: 13px 46px;
+            border: 1px solid blue;
+            margin: 10px;
+            line-height: 1;
+            outline: none;
+        } */
     </style>
 </head>
+
 <body>
     <div>
         <h1>display</h1>
-        <p>Lorem <span>ipsum</span> dolor sit amet consectetur adipisicing elit.<br> Cum mollitia libero et enim labore <b>corrupti</b> culpa aliquam architecto iste consectetur at, ab dolorem perspiciatis facere <i>quibusdam eum doloribus atque in.</i></p>
+        <p>Lorem <span>ipsum</span> dolor sit amet consectetur adipisicing elit.<br> Cum mollitia libero et enim labore
+            <b>corrupti</b> culpa aliquam architecto iste consectetur at, ab dolorem perspiciatis facere <i>quibusdam
+                eum doloribus atque in.</i></p>
         <header>
             <nav>
                 <ul>
@@ -36,21 +108,30 @@
                  절대 경로: 도메인을 포함한 전체 경로
                  상대 경로
                   -->
-                 <!-- 상대 경로, 로컬과 서버에서 모두 테스트 가능 -->
+                <!-- 상대 경로, 로컬과 서버에서 모두 테스트 가능 -->
                 <img src="../assets/imgs/figma.svg" alt="루돌프">
                 <figcaption>상대 경로 연결</figcaption> <!-- 이미지 설명글(캡션) -->
                 <!-- 작업 영역 폴더 기준(절대 경로), 로컬x 서버에서만 보임! -->
                 <img src="/assets/imgs/figma.svg" alt="루돌프">
                 <figcaption>작업 영역 폴더</figcaption>
             </figure>
-            <video>
-                <source src="../assets/vid/mov_bbb.webm" type="video/mp4">
-            </video>
-            <audio src="../assets/aud/horse.ogv"></audio>
+            <div>
+                <video>
+                    <source src="../assets/vid/mov_bbb.webm" type="video/mp4">
+                </video>
+                <!-- 주의! frameborder 속성 대신 CSS의 border 속성을 사용한다 -->
+                <iframe src="https://wwww.daum.net" frameborder="0">네이버</iframe>
+                <audio src="../assets/aud/horse.ogv"></audio>
+            </div>
         </section>
         <footer>
             <address>주소 및 연락처</address>
         </footer>
+
+        <div id="btn">
+            <button>버튼</button><button>버튼</button><button>버튼</button><button>버튼</button><button>버튼</button>
+        </div>
     </div>
 </body>
+
 </html>
