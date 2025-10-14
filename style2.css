@@ -22,10 +22,15 @@ img {
 /* header */
 
 /* section */
+#section {
+    display: flex; /* df */
+    justify-content: center; /* jcc */
+}
 /* card-container */
 .card-container {
     width: 340px; 
     background-color: #F0EEED;
+    margin: 0 10px;
     /* overflow: hidden; */
 }
 /* .card-image-wrapper */
