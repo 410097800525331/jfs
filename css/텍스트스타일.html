@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 스타일</title>
+    <style>
+        /* 
+        둘이 세트
+        text-align: justify; 텍스트 양쪽 맞춤
+        word-break: break-all; 단어 사이가 떨어지는 현상 방지
+
+        속기 속성
+        font: [스타일] 크기[/줄간격] 글꼴;
+        - font: bold italic 2em/1.5 'Times New Roman, serif';
+
+        */
+        
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            /* 본문에 기본 글자 크기는 16px */
+            font-size: 2.2em; /* 엠(M) 부모 글자 크기의 2배 */
+            font-style: italic; /* fs */
+            color: skyblue;
+            font-weight: lighter; /*  fwl */
+        }
+        p {
+            font-size: 16px;
+            /* 본문의 줄 간격은 1.5 ~ 2가 좋다!!! */
+            line-height: 1.5; /* 글자 크기의 1배 */
+            text-align: justify; /* 양쪽 맞춤 */
+            /* 단어 사이가 떨어지는 현상 방지 */
+            word-break: break-all; /* 단어 단위 줄 바꿈이 글자 단위 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Text style</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+        Molestiae aliquam quas veritatis nihil corrupti quod in, sequi eum voluptas repellat  <br>
+        harum optio adipisci animi perspiciatis fuga non odio dolorem dolorum!</p>
+</body>
+</html>

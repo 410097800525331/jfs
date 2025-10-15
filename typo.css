@@ -1,0 +1,38 @@
+@charset 'utf-8';
+
+/* https://cdnjs.com  CDN? 가장 가까운 곳에서 전달, 설정 */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css'); /* 폰트어썸 */
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css'); /* ? */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'); /* 구글폰트 Noto Sans */
+
+/* 
+구글 폰트, 눈누, 어도비, 다폰트
+https://fonts.google.com/ (code - import)
+https://noonnu.cc/
+
+비디오
+https://www.pexels.com/ko-kr/ (픽셀즈 닷컴)
+*/
+
+/* section1 area */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+}
+#sec1 .container h2 {
+    font-size: 60px;
+}
+#sec1 .container p {
+    font-size: 24px;
+}
+#sec1 .container span:first-of-type {
+    font-size: 40px;
+}
+#sec1 .container span:last-of-type {
+    font-size: 17px;
+}
+#sec1 .counter div {
+    color: #3e3a38;
+}
