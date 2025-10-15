@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flexible</title>
+    <style>
+        /* 
+        justify-content 주축의 정렬
+
+        flex-start
+        flex-end
+        center
+        space-between
+        space-around
+        spce-evenly 균등 분배
+        
+        */
+        .flex-container {
+            display: flex;
+            margin: 20px;
+            background-color: lightblue;
+        }
+        .flex-container div {
+            background-color: #f1f1f1;
+            width: 100px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .fx1 {justify-content: flex-start;}
+        .fx2 {justify-content: flex-end;}
+        .fx3 {justify-content: center;}
+        .fx4 {justify-content: space-between;}
+        .fx5 {justify-content: space-around;}
+        .fx6 {justify-content: space-evenly;}
+    </style>
+</head>
+
+<body>
+    <div class="flex-container fx1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="flex-container fx2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="flex-container fx3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="flex-container fx4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="flex-container fx5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="flex-container fx6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+</body>
+
+</html>

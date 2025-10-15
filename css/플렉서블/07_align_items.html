@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flexible</title>
+    <style>
+        /* 
+        align-items 교차축의 정렬
+
+        stretch 부모 크기의 100%
+        flex-start
+        flex-end
+        center
+        baseline 텍스트선을 기준으로 배치
+        */
+        .flex-container {
+            display: flex;
+            height: 300px;
+            margin: 20px;
+            background-color: lightblue;
+        }
+        .flex-container div {
+            width: 100px;
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin: 10px;
+        }
+        .fx1 {align-items: stretch;}
+        .fx2 {align-items: flex-start;}
+        .fx3 {align-items: flex-end;}
+        .fx4 {align-items: center;}
+        .fx5 {align-items: baseline;}
+        .fx5 div:nth-of-type(1) {font-size: 30px;}
+        .fx5 div:nth-of-type(2) {font-size: 40px;}
+        .fx5 div:nth-of-type(3) {font-size: 20px;}
+    </style>
+</head>
+
+<body>
+    <div class="flex-container fx1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="flex-container fx2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="flex-container fx3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="flex-container fx4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="flex-container fx5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+</body>
+
+</html>

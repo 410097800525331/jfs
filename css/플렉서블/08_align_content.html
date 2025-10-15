@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flexible</title>
+    <style>
+        /* 
+        align-content 교차축의 정렬
+        (조건) flex-wrap: wrap;을 지정한 후 사용!
+
+        stretch
+        flex-start
+        flex-end
+        center
+        space-between
+        space-around
+        space-evenly
+        */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            height: 300px;
+            margin: 20px;
+            background-color: lightblue;
+        }
+        .flex-container div {
+            width: 100px;
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin: 10px;
+        }
+        .fx1 {align-content: stretch;}
+        .fx2 {align-content: flex-start;}
+        .fx3 {align-content: flex-end;}
+        .fx4 {align-content: center;}
+        .fx5 {align-content: space-between;}
+        .fx6 {align-content: space-around;}
+        .fx7 {align-content: space-evenly;}
+    </style>
+</head>
+
+<body>
+    <div class="flex-container fx1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+    </div>
+    <div class="flex-container fx2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+    </div>
+    <div class="flex-container fx3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+    </div>
+    <div class="flex-container fx4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+    </div>
+    <div class="flex-container fx5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+    </div>
+    <div class="flex-container fx6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+    </div>
+    <div class="flex-container fx7">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+    </div>
+
+</body>
+
+</html>

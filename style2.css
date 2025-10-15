@@ -21,16 +21,24 @@ img {
 
 /* header */
 
+
+/* section common(공통) */
+.sec {
+    /* vh: viewport height */
+    height: 100vh;
+}
+
 /* section */
-#section {
+#sec2 {
     display: flex; /* df */
     justify-content: center; /* jcc */
+    gap: 20;
 }
 /* card-container */
 .card-container {
     width: 340px; 
     background-color: #F0EEED;
-    margin: 0 10px;
+    /* margin: 0 10px; */
     /* overflow: hidden; */
 }
 /* .card-image-wrapper */
