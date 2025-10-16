@@ -14,12 +14,26 @@ https://noonnu.cc/
 https://www.pexels.com/ko-kr/ (픽셀즈 닷컴)
 */
 
+
+/* root 선택자는 html태그를 선택한다. */
+:root {
+    /* CSS의 변수 정의:  CSS 변수는 :root에 정의한다. */
+    --main-color: #9a8b86;
+    --sub-color: #3e3a38;
+    --white-color: #fff;
+} 
+
+body {
+    /* font: 크기/줄간격 글꼴1, 글꼴2 */
+    font: 15px/1.6 "Noto Sans KR", sans-serif;
+    color: var(--main-color);
+}
+
 /* section1 area */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-body {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 16px;
+#sec1 {
+    color: var(--white-color);
 }
 #sec1 .container h2 {
     font-size: 60px;
@@ -34,5 +48,19 @@ body {
     font-size: 17px;
 }
 #sec1 .counter div {
-    color: #3e3a38;
+    /* 부모 요소(#sec1)에서 지정한 글자색보다 자식 요소에 지정한 속성이 우선 적용된다 */
+    color: var(--sub-color);
+}
+
+/* section2 area */
+.card-title {
+    font-size: 22px;
+    color: #333;
+    line-height: 27px;
+}
+.phone-number {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 24px;
+    color: #0f2244;
+    font-weight: 700; /* bold */
 }

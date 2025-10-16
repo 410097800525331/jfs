@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐로셀</title>
+    <style>
+        body {margin: 0;}
+        .container {
+            position: relative;
+            height: 100vh;
+            background-color: #FF636B;
+        }
+        /* 좌우 버튼 */
+        .prevnext {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top: 50%;
+            padding: 0 30px;
+            transform: translateY(-50%);
+            /*max-width: 1330px;
+            margin: auto; m:a */
+            cursor: pointer; /* cu */
+        }
+        .prev_btn{
+            
+        }
+        .next_btn{
+
+        }
+        /* pagination(페이지네이션) 또는 indicator(인디케이터) */
+        .pagination {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 40px;
+            /* left: calc(50% - 23px); */
+            /* margin-left: -23px; */
+        }
+        .pagination span {
+            display: inline-block; /* dib */
+            width: 8px; height: 8px;
+            background-color: #fff;
+            border-radius: 50%; /* bdrr */
+            margin: 10px;
+
+            /* 글자 숨기기 */
+            text-indent: -2000px; /* ti */
+            /* 인라인 요소의 수직 배치 */
+            vertical-align: middle; /* vam */
+        }
+        .pagination .active {
+            width: 20px; height: 20px;
+            /*
+            transform(변형)
+            - 위치: translate
+            - 크기: scale
+            - 회전: rotate
+            - 기울기: skew
+            */
+            /* transform: scale(2.5); */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- https://inthree.kr/_2023/ -->
+    <div class="container">
+        <div class="prevnext">
+            <div class="prev_btn"><img src="../../assets/inthree/main-visual-prev.png" alt="이전 버튼"></div>
+            <div class="next_btn"><img src="../../assets/inthree/main-visual-next.png" alt="다음 버튼"></div>
+        </div>
+        <div class="pagination">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+        </div>
+    </div>
+
+</body>
+</html>

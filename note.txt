@@ -22,18 +22,23 @@ Highlight Matching Tag - 괄호 끝 표시해줌 (제거함)
 
 메뉴에서 3번째 깃 설치 (Git for Windows/x64 Setup.) - 내 PC > 속성 > 
 
-크롬 웹
+*크롬 웹
 adblock plus - 광고 제거
 Google 번역
 네이버 영어사전
 CSSViewer
 ColorZilla - 색 추출#
+Image Downloader
+모바일 전화 시뮬레이터 - 반응형 사이트 테스트
 
 구글 제미나이 - ai
 w3schools - 언어 공부
 can i use - 브라우저 호환
 https://www.w3.org/ - html 유효성 검사
 https://cdnjs.com - 폰트어썸 등 cdn
+
+폰트어썸, 머터리어 아이콘
+구글폰트, 다폰트, 눈누, 어도비폰트
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ w3schools.com 언어
 클라이언트(Client) 컴퓨터

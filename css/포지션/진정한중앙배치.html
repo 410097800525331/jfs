@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진정한 중앙배치</title>
+    <style>
+        body {margin: 0;}
+        .outer {
+            height: 100vh;
+            background: lightblue;
+        }
+        .inner {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px; height: 400px;
+            /* margin: -200px 0 0 -200px; */
+            background: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">콘텐츠</div>
+    </div>
+</body>
+</html>

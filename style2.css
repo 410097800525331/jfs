@@ -5,12 +5,6 @@
 
 /* 여백은 8의 배수가 보기 좋다 (> 10의 배수 > 짝수) */
 
-body {
-    font-family: 'NanumSquare, sans-serif';
-    font-size: 15px; /* fz15 */
-    color: #9a8b86;
-    line-height: 1.6;
-}
 
 /* header */
 
@@ -23,16 +17,25 @@ body {
 
 /* section1 area */
 /* #sec1 * {outline: 1px solid green;} */
+#sec1 {
+    position: relative;
+}
+#sec1 .vid {
+    position: absolute;
+}
 #sec1 .outer {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
 }
 #sec1 .container {
     width: 100%;
     max-width: 1330px; /* maw1330 */
     text-align: center;
+}
+#sec1 .container p {
+    margin: 26px 0 100px; /* m26-0-100 */
 }
 #sec1 .counter {
     display: flex;
@@ -109,20 +112,9 @@ body {
 .card-body {
     margin: 0 45px 120px; /* m0-45-120 */
 }
-.card-title {
-    font-size: 22px;
-    color: #333;
-    line-height: 27px;
-}
 .card-details p {
     /* p는 위아래 기본 마진이 있다. 폰트 크기의 1em */
     margin: 0;
-}
-.phone-number {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 24px;
-    color: #0f2244;
-    font-weight: 700; /* bold */
 }
 
 /* footer */

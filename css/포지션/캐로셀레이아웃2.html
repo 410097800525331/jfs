@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐로셀</title>
+    <style>
+        /* 폰트어썸 라이브러리 */
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css);
+        body {margin: 0;}
+        .container {
+            position: relative;
+            height: 100vh;
+            background-color: #FF636B;
+        }
+        /* 좌우 버튼 */
+        .prevnext {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top: 50%;
+            padding: 0 30px;
+            transform: translateY(-50%);
+            max-width: 1440px;
+            margin: auto; /* m:a */
+            cursor: pointer; /* cu */
+            font-size: 5em; /* 80px */
+        }
+        .prevnext a {
+            color: #fff;
+        }
+        .prevnext a:hover {
+            color: #777;
+        }
+        
+        /* pagination(페이지네이션) 또는 indicator(인디케이터) */
+        .pagination {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 40px;
+            /* left: calc(50% - 23px); */
+            /* margin-left: -23px; */
+        }
+        .pagination span {
+            display: inline-block; /* dib */
+            width: 8px; height: 8px;
+            background-color: #fff;
+            border-radius: 50%; /* bdrr */
+            margin: 10px;
+
+            /* 글자 숨기기 */
+            text-indent: -2000px; /* ti */
+            /* 인라인 요소의 수직 배치 */
+            vertical-align: middle; /* vam */
+        }
+        .pagination .active {
+            width: 20px; height: 20px;
+            /*
+            transform(변형)
+            - 위치: translate
+            - 크기: scale
+            - 회전: rotate
+            - 기울기: skew
+            */
+            /* transform: scale(2.5); */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- https://inthree.kr/_2023/ -->
+    <div class="container">
+        <div class="prevnext">
+            <!--
+            폰트어썸, 머터리어 아이콘
+            https://cdnjs.com
+            -->
+            <a href="#" class="prev_btn"><i class="fa-solid fa-angle-left"></i></a>
+            <a href="#" class="next_btn"><i class="fa-solid fa-angle-right"></i></a>
+        </div>
+        <div class="pagination">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+        </div>
+    </div>
+
+</body>
+</html>

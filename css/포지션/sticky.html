@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sticky</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+        /* sticky: 처음은 relative top의 위치에 도달하면 fiexd와 같아진다. */
+        .parent {
+            position: sticky;
+            top: 0;
+            width: 400px; height: 300px;
+            border: 3px solid lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iure perspiciatis earum. Exercitationem molestiae aliquam laboriosam nulla veritatis. Repudiandae nam architecto voluptas perferendis rem ratione unde voluptatem, corrupti nemo eos!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iure perspiciatis earum. Exercitationem molestiae aliquam laboriosam nulla veritatis. Repudiandae nam architecto voluptas perferendis rem ratione unde voluptatem, corrupti nemo eos!
+    </p>
+    <div class="parent"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iure perspiciatis earum. Exercitationem molestiae aliquam laboriosam nulla veritatis. Repudiandae nam architecto voluptas perferendis rem ratione unde voluptatem, corrupti nemo eos!</p>
+</body>
+
+</html>
