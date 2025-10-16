@@ -11,6 +11,7 @@
 
 /* section common(공통) */
 .sec {
+    position: relative;
     /* vh: viewport height */
     height: 100vh;
 }
@@ -18,10 +19,12 @@
 /* section1 area */
 /* #sec1 * {outline: 1px solid green;} */
 #sec1 {
-    position: relative;
+    background: yellowgreen;
 }
 #sec1 .vid {
     position: absolute;
+    width: 100%; height: 100%;
+    /* overflow: hidden; */
 }
 #sec1 .outer {
     position: absolute;
@@ -49,12 +52,46 @@
 }
 
 /* section2 area */
-#sec2 {
-    display: flex; /* df */
+/* #sec2 {
+    display: flex;
     align-items: center;
-    justify-content: center; /* jcc */
+    justify-content: center;
     gap: 20px;
+} */
+.btn_warp {
+    position: absolute;
+    right: 22%; top: 10%;
+    vertical-align: middle;
 }
+.btn_warp a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #0F2244;
+}
+.btn_warp span {
+    margin: 0 18px 0 10px;
+}
+.bg_section {
+    position: relative;
+}
+.bg_section img {
+    height: 100vh;
+}
+.bg_percel {
+    position: absolute;
+    left: 50%; top: 60%;
+    transform: translate(-50%, -50%);
+}
+.sec_inner {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+ }
 /* card-container */
 .card-container {
     width: 340px; 
