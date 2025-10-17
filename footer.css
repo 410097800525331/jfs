@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+footer img {
+    width: auto;
+}
+footer {
+    background: #222;
+    padding: 50px 0;
+    color: var(--white-color);
+}
+footer a {
+    color: var(--white-color);
+}
+footer .info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin-left: 250px;
+}
+footer .left_info .util_box {
+    display: flex;
+}
+footer .left_info ul {
+    display: flex;
+}

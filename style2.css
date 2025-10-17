@@ -1,6 +1,7 @@
 @charset "utf-8"; /* @ch */
 @import url(common.css); /* css 끼리 연결 */
 @import url(typo.css);
+@import url(footer.css);
 
 
 /* 여백은 8의 배수가 보기 좋다 (> 10의 배수 > 짝수) */
@@ -52,26 +53,13 @@
 }
 
 /* section2 area */
-/* #sec2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-} */
-.btn_warp {
-    position: absolute;
-    right: 22%; top: 10%;
-    vertical-align: middle;
-}
-.btn_warp a {
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: 500;
-    color: #0F2244;
-}
-.btn_warp span {
-    margin: 0 18px 0 10px;
-}
+#sec2 {
+    background-image: url(../jfs/assets/honorsville/bg_section02.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    /* background: url(../jfs/assets/honorsville/bg_section02.jpg) no-repeat 50%/cover; */
+ }
 .bg_section {
     position: relative;
 }
@@ -154,4 +142,44 @@
     margin: 0;
 }
 
-/* footer */
+/* section3 area */
+#sec3 {
+    /* 배경 이미지 + Paralax Scrolling */
+    background: url(./assets/2025_autumn_pick_bg_250916.jpg) no-repeat 50%/cover fixed;
+    /* background-attachment: fixed; */ /* bga */
+
+}
+#sec3 .intro {
+    position: absolute;
+    left: 400px; top: 50%;
+    transform: translateY(-50%);
+    width: 385px; height: 520px;
+    text-align: right;
+}
+#sec3 .intro h2 span {
+    display: block;
+}
+#sec3 .intro p:first-of-type {
+    margin: 48px 0 16px;
+}
+#sec3 .intro a {
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin-top: 28px;
+    padding: 4px 24px;
+    color: var(--white-color);
+}
+#sec3 .intro a:hover {
+    color: #222;
+    background: var(--white-color);
+    text-decoration: underline;
+    transition: .7s;
+}
+#sec3 .product {
+    position: absolute;
+    left: 890px; top: 50%;
+    transform: translateY(-50%);
+    width: 880px; height: 550px;
+}
+
