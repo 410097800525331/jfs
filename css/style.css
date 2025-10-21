@@ -18,6 +18,8 @@
 body, h1, h2, h3, p, ul {margin: 0;}
 ul {padding: 0; list-style: none;}
 a {text-decoration: none;}
+iframe {width: 100%; height: 100%;}
+button {border:none;}
 
 /* typo */
 :root {
@@ -32,27 +34,6 @@ body {
 header a {
     color: var(--white-color);
 }
-/* section area */
-h2 {
-    font-weight: 400;
-    font-size: 2.4rem;
-    color: var(--white-color);
-    letter-spacing: 1rem; /* ls 자간 */
-    /* text-transform: uppercase; tt 대문자 */
-}
-/* section area:contact */
-#contact h2 {
-    font-size: 3.6rem;
-}
-#contact a {
-    color: #777;
-}
-#contact button {
-    color: #fff;
-}
-#contact .addr {
-    font-size: 1.8rem;
-}
 /* footer area */
 footer a, footer p {
     color: var(--white-color);
@@ -63,6 +44,33 @@ footer .top_btn a {
 footer .sns i {
     font-size: 2.4rem;
 }
+/* section area */
+h2 {
+    font-weight: 400;
+    font-size: 2.4rem;
+    color: var(--white-color);
+    letter-spacing: 1rem; /* ls 자간 */
+    /* text-transform: uppercase; tt 대문자 */
+}
+/* section area:contact */
+#contact {
+    color: #777;
+}
+#contact h2 {
+    font-size: 3.6rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+#contact a {
+    color: #777;
+}
+#contact button {
+    color: #fff;
+}
+#contact .addr {
+    font-size: 1.8rem;
+}
 
 /* common */
 h2 {
@@ -70,10 +78,20 @@ h2 {
     left: 50%; top: 50%;
     transform: translate(-50%, -50%);
 }
+h3 {
+    text-align: center;
+    margin: 64px 0 10px;
+}
+h3+p {
+    text-align: center;
+}
 
 /* header area */
-header .gnb ul {
+header {
     position: fixed;
+    z-index: 9999;
+}
+header .gnb ul {
     display: flex;
 }
 header .gnb li a {
@@ -114,12 +132,13 @@ footer .sns i {
 /* section area */
 #home {
     height: 100vh;
-    background: url(../assets/img/main_bg.jpg) no-repeat 50% 50%/cover;
+    background: url(../assets/img/main_bg.jpg) no-repeat 50% 50%/cover fixed;
 }
-h2 {
+#home h2 {
     background: var(--main-color);
     padding: 8px 24px 10px 30px;
 }
+
 /* section area: contact */
 #contact .contact {
     width: 600px;
@@ -129,13 +148,11 @@ h2 {
     height: 400px;
     background: url(/jfs/assets/img/parallax3.jpg) no-repeat 50% 50%/cover fixed;
 }
-#contact .parallax_bg h2 {
-    background: transparent;
-}
 #contact .container {
     display: flex;
-    justify-content: center;
-    margin: 48px 0 96px;
+    justify-content: space-between;
+    width: 900px;
+    margin: 48px auto 96px;
 }
 #contact .map {
     width: 280px; height: 160px;
@@ -148,17 +165,21 @@ h2 {
 }
 #contact .frm_input {
     display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 #contact input {
-    width: 295px; height: 45px;
+    width: 100%; height: 45px;
+    padding-left: 16px;
 }
 #contact input:first-of-type {
     margin-right: 7px;
 }
 #contact textarea  {
     width: 100%; height: 150px;
-    resize: none;
+    resize: none; /* 크기 조절 X */
     margin-top: 10px;
+    padding: 16px;
 }
 #contact button {
     background: #111;
