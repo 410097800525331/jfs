@@ -4,11 +4,11 @@
 /* font: 1. CDN 2. @font-face */
 @font-face {
     font-family: Lato-Regular; /* 사용자 정의 폰트명 */
-    src: url(../assets/font/Lato-Regular.ttf);
+    src: url(/assets/font/Lato-Regular.ttf); /* 상대주소 */
 }
 @font-face {
     font-family: Lato-Thin;
-    src: url(../assets/font/Lato-Thin.ttf);
+    src: url(https://410097800525331.github.io/jfs/assets/font/Lato-Thin.ttf); /* 절대주소 */
 }
 
 /* reset */
