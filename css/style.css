@@ -136,6 +136,9 @@ h2 {
     color: var(--main-color);
     font-size: 1.8rem;
 }
+.contact .addr li a {
+    color: var(--main-color);
+}
 .contact form input {
     display: inline-block;
     width: 280px; height: 45px;
