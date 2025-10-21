@@ -151,6 +151,7 @@ h2 {
     color: var(--white-color);
     width: 160px; height: 43px;
     background-color: #111;
+    float: right;
 }
 .contact form button i {
     margin-right: 14px;
