@@ -1,46 +1,38 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김슬기</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/jfs/css/style.css">
 </head>
-
-<body style="background-color: #f7f7f7;">
-    <!--
-    페이지
-    1. Home -> index.html
-    2. About me(my story) -> about.html
-    3. work(portfolio, project) -> work.html
-    4. contact us -> contact.html
-
-    header(헤더) area
-    - h1 로고
-    - GNB 내비게이션
-    -->
+<body>
+    <!-- header -->
     <header>
-        <!-- h1.logo>a[href=index.html] -->
-        <h1 class="logo"><a href="index.html">Home</a></h1>
-        <nav>
-            <ul>
-                <li><a href="about.html">About me</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+    <!-- 1depth(깊이) -->
+    <nav class="gnb">
+        <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-user"></i>ABOUT</a></li>
+            <li><a href="work.html"><i class="fa-solid fa-grip"></i>PORTFOLIO</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>CONTACT</a></li>
+        </ul>
+    </nav>
     </header>
-
-    <!-- section(본문) area -->
-    <section>
-        <h2>About me</h2>
-    </section>
-
-    <!-- footer(푸터) -->
-     <footer>
+    <!-- section -->
+    <div id="about">
+        <h2>About</h2>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="top_btn"><a href="#top"><i class="fa-solid fa-arrow-up"></i>To the top</a></div>
+        <div class="sns">
+            <a href="#"><i class="fa-brands fa-kakao-talk"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
         <p>&copy; 2025 KSG. All rights reserved.</p>
-     </footer>
+    </footer>
 </body>
-
 </html>

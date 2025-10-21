@@ -1,46 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김슬기</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/jfs/css/style.css">
 </head>
-
-<body style="background-color: #f7f7f7;">
-    <!--
-    페이지
-    1. Home -> index.html
-    2. About me(my story) -> about.html
-    3. work(portfolio, project) -> work.html
-    4. contact us -> contact.html
-
-    header(헤더) area
-    - h1 로고
-    - GNB 내비게이션
-    -->
+<body>
+    <!-- header -->
     <header>
-        <!-- h1.logo>a[href=index.html] -->
-        <h1 class="logo"><a href="index.html">Home</a></h1>
-        <nav>
-            <ul>
-                <li><a href="about.html">About me</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+    <!-- 1depth(깊이) -->
+    <nav class="gnb">
+        <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-user"></i>ABOUT</a></li>
+            <li><a href="work.html"><i class="fa-solid fa-grip"></i>PORTFOLIO</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>CONTACT</a></li>
+        </ul>
+    </nav>
     </header>
-
-    <!-- section(본문) area -->
-    <section>
-        <h2>contact Us</h2>
-    </section>
-
-    <!-- footer(푸터) -->
-     <footer>
+    <!-- section -->
+    <div id="contact">
+        <!-- <div class="parallax">
+            <h2>Contact</h2>
+        </div> -->
+        <h3>WHERE I WORK</h3>
+        <p>I'd love your feedback!</p>
+        <div class="container">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1121.357497644669!2d127.11041415974472!3d37.35013212693073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b59c5d7697313%3A0xbba08f656485ef2c!2z65GQ65Oc66a87Lu07ZOo7YSw7ZWZ7JuQIOyEseuCqOu2hOuLuSAo6rWsLuydtOygoOyVhOy5tOuNsOuvuOy7tO2TqO2EsO2VmeybkCk!5e0!3m2!1sko!2skr!4v1761029168755!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact">
+                <ul class="addr">
+                    <li><i class="fa-solid fa-location-dot"></i>성남시, 분당구</li>
+                    <li><i class="fa-solid fa-phone"></i>Phone: <a  href="tel:010-1234-5678">+82 10-1234-5678</a></li>
+                    <li><i class="fa-solid fa-envelope"></i>Email: <a   href="mailto:mail@mail.com">mail@mail.com</a></li>
+                </ul>
+                <p>Please call us at the number above or leave a message.</p>
+                <!-- form: input, textarea, button, select(option, optgroup)/fieldset,  legend,  -->
+                <form action="">
+                    <input type="text" value="Name">
+                    <input type="email" value="Email"> <br>
+                    <textarea name="" id=""></textarea> <br>
+                    <!-- <input type="submit" value="메시지 보내기"> -->
+                    <button type="submit"><i class="fa-regular fa-paper-plane"></i>메시지   보내기</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="top_btn"><a href="#top"><i class="fa-solid fa-arrow-up"></i>To the top</a></div>
+        <div class="sns">
+            <a href="#"><i class="fa-brands fa-kakao-talk"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
         <p>&copy; 2025 KSG. All rights reserved.</p>
-     </footer>
+    </footer>
 </body>
-
 </html>
