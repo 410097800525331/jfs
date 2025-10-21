@@ -1,5 +1,46 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-#sec {
+/* font: 1. CDN 2. @font-face */
+@font-face {
+    font-family: Lato-Regular; /* 사용자 정의 폰트명 */
+    src: url(../assets/font/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: Lato-Thin;
+    src: url(../assets/font/Lato-Thin.ttf);
+}
+
+/* reset */
+* {box-sizing: border-box;}
+body, h1, h2, h3, p, ul {margin: 0;}
+ul {padding: 0; list-style: none;}
+
+/* typo */
+body {
+    font-family: "Lato-Reguler", sans-serif;
+}
+h2 {
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+    letter-spacing: 10px; /* ls 자간 */
+    /* text-transform: uppercase; tt 대문자 */
+}
+
+/* common */
+h2 {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* sec1 */
+#home {
+    height: 100vh;
     background: url(../assets/img/main_bg.jpg) no-repeat 50% 50%/cover;
+}
+h2 {
+    background: #404040;
+    padding: 8px 24px 10px 30px;
 }
