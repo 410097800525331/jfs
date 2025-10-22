@@ -12,7 +12,7 @@ Auto Close Tag
 Prettier - Code formatter
 Image preview - 이미지 미리보기
 TabOut - 탭누르면 끝으로
-open in browser(단축키: shift+alt+b, alt+b)
+open in browser(단축키: shift+alt+b, alt+b) - 브라우저 선택
 Bracket Pair Color DLW - 끝태그 알아보게 색 바꾸는거
 Color Highlight - CSS 컬러 표시해줌
 One Dark Pro - 색상 테마 (제거함)

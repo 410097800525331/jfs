@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input type</title>
+    <style>
+        /* 속성 선택자 */
+        /* [type="checkbox"] {
+            appearance: none; 기존 모습 숨기기
+            width: 11px; height: 11px;
+            border: 1px solid gray;
+            border-radius: 0;
+        } */
+        /* [type="checkbox"] {
+          appearance: none;
+          width: 20px;
+          height: 20px;
+          border: 1px solid gray;
+          border-radius: 0;
+          display: inline-block;
+          position: relative;
+          border-radius: 50%;
+          cursor: pointer;
+        } */
+        /* 체크됐을 때 표시 (체크박스 안에 체크 기호 넣기) */
+        /* [type="checkbox"]:checked::after {
+          content: "";
+          position: absolute;
+          top: 2px;
+          left: 4px;
+          width: 4px;
+          height: 8px;
+          border: solid gray;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        } */
+
+        .custom-checkbox {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .custom-checkbox input {
+            display: none;
+        }
+        .custom-checkbox .checkmark {
+            width: 20px;
+            height: 20px;
+            background-color: #eee;
+            border-radius: 6px;
+
+            display: inline-block;
+            transition: 0.2s;
+        }
+        /* 가상 클래스 선택자 :checked */
+        .custom-checkbox input:checked+.checkmark {
+            background-color: #000;
+        }
+
+        [type="number"] {
+            width: 300px;
+            text-align: right;
+        }
+        [type="email"] {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>input의 type 유형</h2>
+    <!-- 5대 브라우저: 크롬, 파이어폭스, 사파리, 엣지, 오페라 -->
+    <!-- 유효성 검사: 정규식 -->
+    <form action="">
+        <!-- 입력 상자 -->
+        <label for="user_id">아이디: </label>
+         <!-- name: 입력 필드(field) 이름 (서버에 데이터를 보낼 때 key 역할) -->
+         <!-- maxlength: 입력 상자에 입력 가능한 최대 문자 수 -->
+        <input type="text" name="user_id" id="user_id" value="홍길동" required maxlength="10" autocomplete="off" autofocus> <br> <!-- autofocus: 주로 첫 번째 입력 상자에 지정하여 커서 깜빡 깜빡 -->
+        
+         <!-- 아이디, 비밀번호는 required 를 적어서 비었을 때 전송 안되게 -->
+        비밀번호: <input type="password" name="user_pw1" required> <br>
+         <!-- disabled: 사용 불가, 데이터 전송 X -->
+        비밀번호 확인: <input type="text" name="user_pw2" value="보인다!" required disabled> <br>
+
+        hidden: <input type="hidden" name="hidden_data"> <br> <!-- 개발자용 -->
+        <!-- pattern="/^\d{3}-\d{4}-\d{4}$/" 정규식 -->
+        email: <input type="email" name="user_email" multiple pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"> <br>
+        tel: <input type="tel" name="user_tel" pattern="/^\d{3}-\d{4}-\d{4}$/"> <br>
+        url: <input type="url" name="user_url"> <br>
+
+        <!-- 검색창 -->
+         <!-- 기본값: autocomplete="on" 이전에 입력한 정보가 목록에 뜬다.(off) -->
+        search: <input type="search" name="search_data" autocomplete="on" autofocus>
+        <input type="submit" value="검색"> <br> <br>
+        
+        <!-- value 버튼 이름 -->
+         <!-- submit: 데이터 전송 목적으로 사용 -->
+        submit: <input type="submit" value="버튼"> <br>
+        button: <input type="button" value="버튼"> <br>
+        reset: <input type="reset" value="버튼"> <br>
+         <!-- file, email 타입에 multiple: 다중 파일 선택하여 업로드 -->
+         <!-- accept=".jpg": 처음 선택할때 특정 파일이 뜨도록 -->
+        file: <input type="file" value="파일 선택" multiple accept=".jpg"> <br> 
+        image: <input type="image" src="../../assets/imgs/btn.svg" alt="버튼 이미지"> <br> <br>
+        
+        <!-- 
+        라벨 필수!!!
+         체크박스 버트: 다중 선택 가능
+         라디오 버튼: 다중 선택 불가능 / name필수
+        -->
+        checkbox:
+        <input type="checkbox" id="chk1" name="chkgroup" value="a" checked>
+        <label for="chk1">필수</label>
+        <input type="checkbox" id="chk2" name="chkgroup" value="b"><label for="chk2">선택</label>
+        <input type="checkbox" name="chkgroup" value="c"> 선택 <br> <br>
+        radio:
+        <input type="radio" name="radiogroup" value="yes" checked> 동의함
+        <input type="radio" name="radiogroup" value="no"> 동의하지 않음 <br> <br>
+        
+        <!-- 커스텀 체크박스 -->
+        <label class="custom-checkbox">
+            <input type="checkbox">
+            토글(toggle): <span class="checkmark"></span>
+        </label>
+        <label class="custom-checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label> <br> <br>
+        
+        <!-- number, range -->
+         <!-- 이번트 속성: onkeydown="return false" 키보드 입력 막기 -->
+        <!-- 
+        최소(min) 1개에서 최대(max) 5개까지 구매 가능하며,
+        홀수: 1, 3, 5개로만 구매 가능하게 지정
+        -->
+        상품 수량: <input type="number" name="product_count" value="1" min="1" max="5" step="2" onkeydown="return false">개 <br>
+        range: <input type="range"> <br> <br>
+        
+        <!-- 날짜/시간 -->
+        time: <input type="time"> <br>
+        date: <input type="date"> <br>
+        datetime-local: <input type="datetime-local"> <br>
+        week: <input type="week"> <br>
+        month: <input type="month"> <br> <br>
+        
+        <!-- 색상 -->
+        color: <input type="color">
+    </form>
+</body>
+
+</html>

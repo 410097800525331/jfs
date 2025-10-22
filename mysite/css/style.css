@@ -18,8 +18,11 @@ a {text-decoration: none;}
 body {
     font: 1.5rem/1.6 "Lato-Reguler", sans-serif;
 }
-/* header area */
-/* footer area */
+/* header */
+header a {
+    color: var(--main-color);
+}
+/* footer */
 footer a, footer p {
     color: var(--white-color);
 }
@@ -34,12 +37,27 @@ footer .sns i {
 }
 
 /* header area */
-header .gnb {
-    position: absolute;
+header {
+    position: fixed;
+    z-index: 9999;
+}
+header .gnb ul {
+    display: flex;
+    margin: 10px 20px;
+}
+header .gnb li a {
+    display: inline-block;
+    padding: 8px 16px;
+}
+header .gnb li a:hover {
+    background: var(--sub-color);
+}
+header .gnb li i {
+    margin-right: 8px;
 }
 
 /* footer area */
-footer {
+/* footer {
     background: var(--main-color);
     text-align: center;
     padding: 100px;
@@ -57,15 +75,44 @@ footer .top_btn i {
 }
 footer .sns {
     margin: 36px;
-}
-/* footer .sns::after {
-    content: "";
-    width: 1440px;
-    border-bottom: 3px solid white;
 } */
 
 /* section area */
-#home {
+.home {
+    position: relative;
     height: 100vh;
-    background: #000;
+}
+.home .home_txt {
+    position: absolute;
+    left: 10%; top: 70%;
+    transform: translateY(-50%);
+    width: 40%;
+}
+.home .home_bg {
+    position: absolute;
+    right: 0; top: 0;
+    width: 50%; height: 100%;
+    background: url(../assets/img/main_bg.jpg) no-repeat 0 0/cover;
+}
+/* about area */
+.about {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+.about > div {
+    width: 32%;
+    padding: 30px;
+    outline: 1px solid yellowgreen;
+}
+.about div > div {
+    height: 32%;
+}
+.about .my_photo {
+    width: 200px; height: 250px; background-color: #ccc;
+}
+/* pofol area */
+.pofol {
+    height: 100vh;
+    background-color: #ccc;
 }

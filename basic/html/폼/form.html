@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+
+<body>
+    <!-- method 초기값: get -->
+    <!-- name 은 폼 요소의 이름: js 또느 DB -->
+    <form action="/action_page.jsp" method="get">
+        <label for="fname">First name:</label><br>
+        <!-- input type=text 일때 value는 입력의 초기값 -->
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <!-- input type=submit 일때 value는 입력의 초기값 -->
+        <input type="submit" value="Submit">
+        <button type="submit">Submit</button>
+        <button>Submit</button> <!-- type 생략 가능(submit 임) -->
+    </form>
+    <p>"제출" 버튼을 클릭하면, 폼 데이터가 "/action_page.jsp"라는 페이지로 전송됩니다.</p>
+
+    <!-- 로그인 창, 로그인 페이지 -->
+    <form action="/login.jsp" method="POST">
+        <!-- label for 속성값과 input id 속성값이 같아야 됨 -->
+        <label for="username">아이디:</label>
+        <!-- required 필수! 빈박스x -->
+        <input type="text" id="username" name="username" required placeholder="아이디를 입력하세요."><br>
+
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" name="password" required placeholder="비밀번호를 입력하세요."><br>
+
+        <input type="submit" value="로그인">
+    </form>
+</body>
+
+</html>
