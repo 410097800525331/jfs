@@ -71,6 +71,14 @@ h3 {
 #contact .addr {
     font-size: 1.8rem;
 }
+textarea {
+    font: 1.5rem/1.6 "Lato-Reguler", sans-serif;
+}
+/* 가상 요소 선택자: :placeholder */
+::placeholder {
+    font: 1.5rem/1.6 "Lato-Reguler", sans-serif;
+    color: var(--sub-color);
+}
 
 /* common */
 h2 {

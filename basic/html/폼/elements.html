@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form elements</title>
+    <style>
+        textarea:nth-of-type(2) {
+            width: 300px;
+            height: 60px;
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- https://www.w3schools.com/html/html_form_attributes.asp -->
+    <form action="/action_page.jsp">
+        <fieldset>
+            <legend>Personalia:</legend>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+
+        <!--
+        size: 입력 상자에 표시할 글자 수
+        예) size=4
+            한글의 경우: 2byte -> 4자
+            영어/숫자의 경우: 1byte-> 8자
+        maxlength: 쓸 수 있는 글자 수
+        -->
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" size="50"><br>
+        <label for="pin">PIN:</label><br>
+        <input type="text" id="pin" name="pin" maxlength="4" size="4">
+
+        <label for="cars">Choose a car:</label>
+        <select name="cars" id="cars">
+            <optgroup label="Swedish Cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+            </optgroup>
+            <optgroup label="German Cars">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </optgroup>
+        </select>
+    </form>
+    <form action="ele.jsp">
+        <fieldset>
+            <legend>캡션: 설명글</legend>
+            <input type="text" id="naming">
+            <label for="naming"></label>
+
+            <button>전송</button>
+            <button type="submit">전송</button>
+            <button type="reset">초기화</button>
+            <button type="button">버튼</button>
+
+            <!-- 이벤트(event) -->
+            <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+        </fieldset>
+
+        <div>
+            <pre>
+Lorem ipsum, dolo
+ sit amet consectetur
+            dipisicing elit. Odio harum
+ eaque quos vero ut sapiente aut ex vo
+            </pre>
+            <!-- style 크기를 지정하지 않았을때, rows: 행수 / clos: 열수 -->
+            <!-- 댓글, 이메일 내용, 회칙(readonly) -->
+            <textarea name="message1" rows="5"
+                cols="15">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio harum eaque quos vero ut sapiente aut ex voluptate neque illo laudantium, temporibus, quam aspernatur maxime, voluptatem vitae quidem nostrum expedita?</textarea>
+            <textarea name="message2" rows="10" cols="30"
+                readonly>개인정보보호법에 따라 네이버에 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간, 동의 거부권 및 동의 거부 시 불이익에 관한 사항을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.</textarea>
+
+            <!-- 목록 -->
+            <ul>
+                <li>목록1</li>
+                <li>목록2</li>
+                <li>목록3</li>
+            </ul>
+
+            <!-- 폼의 목록: 목록 상자 -->
+            <label for="cars">Choose a car:</label>
+            <!--
+            value: 서버에 보내질
+            multiple: 다중 선택
+             size="3" multiple
+            -->
+            <select id="cars" name="cars">
+                <option value="audi">Audi</option>
+                <option value="fiat">Fiat</option>
+                <option value="saab">Saab</option>
+                <!-- selected: 옵션의 첫 번째 -->
+                <option value="volvo" selected>Volvo</option>
+            </select>
+
+            <!-- 콤보 상자: select + input -->
+            <!-- input의 list 속성 값과 datalist의 id속성 값이 같아야 한다 -->
+            <input list="browsers">
+            <datalist id="browsers">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+
+            <!-- option의 종료 태그를 사용 가능 -->
+            <input list="browsers2">
+            <datalist id="browsers2">
+                <option value="Edge"></option>
+                <option value="Firefox"></option>
+                <option value="Chrome"></option>
+                <option value="Opera"></option>
+                <option value="Safari"></option>
+            </datalist>
+        </div>
+
+        <output>
+            <optgroup>
+    </form>
+    <form action="/action_page2.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        0
+        <input type="range" id="a" name="a" value="50">
+        100 +
+        <input type="number" id="b" name="b" value="50">
+        =
+        <output name="x" for="a b"></output>
+        <br><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

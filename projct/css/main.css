@@ -1,15 +1,60 @@
-@charset "utf-8"; /* @ch */
-@import url(common.css); /* css 끼리 연결 */
-@import url(typo.css);
+@charset "utf-8";
+@import url(common.css);
 @import url(footer.css);
 
+/* typo */
+#sec1 {color: var(--white-color);}
+#sec1 .container h2 {font-size: 60px;}
+#sec1 .container p {font-size: 24px;}
+#sec1 .container span:first-of-type {font-size: 40px;}
+#sec1 .container span:last-of-type {font-size: 17px;}
+#sec1 .counter div {color: var(--sub-color);}
+/* section2 */
+.card-title {
+    font-size: 22px;
+    color: #333;
+    line-height: 27px;
+}
+.phone-number {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 24px;
+    color: #0f2244;
+    font-weight: 700; /* bold */
+}
+/* section3 */
+#sec3 .intro {
+    color: var(--white-color);
+}
+#sec3 .intro h2 {
+    font-weight: var(--fwm);
+    text-transform: uppercase;
+    line-height: 1;
+}
+#sec3 .intro h2 span:nth-of-type(1) {
+    font-size: 100px;
+    letter-spacing: 7px;
+}
+#sec3 .intro h2 span:nth-of-type(2) {
+    font-size: 80px;
+    letter-spacing: 8px;
+}
+#sec3 .intro h2 span:nth-of-type(3) {
+    font-size: 45px;
+    letter-spacing: 5px;
+}
+#sec3 .intro p:first-of-type {
+    font-size: 28px;
+    line-height: 1;
+}
+#sec3 .intro p:first-of-type b {
+    font-weight: var(--fwm);
+}
+#sec3 .intro p:first-of-type strong {
+    font-weight: var(--fwm);
+}
 
 /* 여백은 8의 배수가 보기 좋다 (> 10의 배수 > 짝수) */
-
-
 /* header */
-
-
 /* section common(공통) */
 .sec {
     position: relative;

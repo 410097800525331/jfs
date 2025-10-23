@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/* typo */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css'); /* 폰트어썸 */
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css'); /* 눈누 나눔스퀘어 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'); /* 구글폰트 Noto Sans */
+/* 
+첫글자 대문자
+text-transform: capitalize; ttc
+소문자
+text-transform: lowercase; ttl
+대문자
+text-transform: uppercase; tt
+자간
+letter-spacing: 8px; ls 
+*/
+:root {
+    --main-color: #9a8b86;
+    --sub-color: #3e3a38;
+    --white-color: #fff;
+    --gray5: #555;
+    --gray3: #333;
+    --fwm: 500;
+} 
+body {
+    font: 15px/1.6 "Noto Sans KR", sans-serif;
+    color: var(--main-color);
+}
+/* section1 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+
+/* 여백은 8의 배수가 보기 좋다 (> 10의 배수 > 짝수) */
+* {
+    box-sizing: border-box;
+}
+body, h1, h2, h3, p, ul {
+    margin: 0;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+    /* object-fit: cover; */
+}
+video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+button {
+    border: none;
+    background: transparent;
+}

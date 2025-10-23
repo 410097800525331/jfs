@@ -86,9 +86,13 @@
         비밀번호 확인: <input type="text" name="user_pw2" value="보인다!" required disabled> <br>
 
         hidden: <input type="hidden" name="hidden_data"> <br> <!-- 개발자용 -->
-        <!-- pattern="/^\d{3}-\d{4}-\d{4}$/" 정규식 -->
-        email: <input type="email" name="user_email" multiple pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"> <br>
-        tel: <input type="tel" name="user_tel" pattern="/^\d{3}-\d{4}-\d{4}$/"> <br>
+        <!--
+        정규식 ^ 캐럿, $ 스트링
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        ^010-\d{4}-\d{4}$
+        -->
+        email: <input type="email" name="user_email" multiple pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"> <br>
+        tel: <input type="tel" name="user_tel" pattern="^\d{2,3}-\d{3,4}-\d{4}$"> <br>
         url: <input type="url" name="user_url"> <br>
 
         <!-- 검색창 -->

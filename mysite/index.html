@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>김슬기</title>
     <link rel="stylesheet" href="/jfs/mysite/css/style.css">
 </head>
+
 <body>
     <!-- header -->
-    <header>
-        <!-- 1depth(깊이) -->
+    <!-- <header>
         <nav class="gnb">
             <ul>
                 <li><a href="/jfs/index.html">HOME</a></li>
@@ -18,18 +19,124 @@
                 <li><a href="/jfs/sub/contact.html"><i class="fa-solid fa-envelope"></i>CONTACT</a></li>
             </ul>
         </nav>
-    </header>
-    <!-- section -->
-    <div class="home">
-        <div class="home_txt">
-            <h2>MY PORTFOLIO</h2>
-            <hr>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Voluptas commodi ad, illum eos magni quisquam inventore quas aperiam nam, voluptates perspiciatis, incidunt et esse! Quod minima a nihil obcaecati consequatur?</div>
-            <hr>
-        </div>
-        <div class="home_bg"></div>
+    </header> -->
+    <div class="nav-buttons">
+        <a data-index="0" class="home"></a>
+        <a data-index="1"></a>
+        <a data-index="2"></a>
+        <a data-index="3"></a>
+        <a data-index="4"></a>
+        <a data-index="5"></a>
     </div>
-    <!-- about -->
+    <main>
+        <!-- section -->
+        <section id="s1" style="transform: translateY(0%)">
+            <div class="home_txt">
+                <h2>MY PORTFOLIO</h2>
+                <hr>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Voluptas commodi ad, illum eos
+                    magniquisquam inventore quas aperiam nam, voluptates perspiciatis, incidunt et esse! Quod minima a
+                    nihilobcaecati consequatur?</div>
+                <hr>
+            </div>
+            <div class="home_bg"></div>
+        </section>
+        <!-- about -->
+        <section id="s2" style="transform: translateY(100%)">
+            <div>
+                <div style="background-color: #ccc;"></div>
+                <div>
+                    <h3>About Me</h3>
+                    <div class="df">
+                        <div>
+                            <P>Name</P>
+                            <P>Birth</P>
+                            <P>Contact</P>
+                        </div>
+                        <div>
+                            <p>김슬기/Kim Seul Gi</p>
+                            <p>2004.10.14</p>
+                            <p><i class="fa-solid fa-phone"></i><a href="tel:010-2499-4191">010-2499-4191</a></p>
+                            <p><i class="fa-regular fa-envelope"></i><a
+                                    href="mailto:xmxhxn13@naver.com"></a>xmxhxn13@naver.com</p>
+                            <p><i class="fa-brands fa-instagram"></i>@seulgi.rw</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div style="background-color: #ccc;"></div>
+            </div>
+        </section>
+        <!-- pofol1 -->
+        <section id="s3" style="transform: translateY(200%)">섹션 3</section>
+        <!-- pofol2 -->
+        <section id="s4" style="transform: translateY(300%)">섹션 4</section>
+        <!-- contact -->
+        <section id="s5" style="transform: translateY(400%)">섹션 5</section>
+        <!-- footer -->
+        <section id="s6" style="transform: translateY(500%)">
+            <footer>
+                <div class="top_btn"><a href="#top"><i class="fa-solid fa-arrow-up"></i>To the top</a></div>
+                <div class="sns">
+                    <a href="#"><i class="fa-brands fa-kakao-talk"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <p>&copy; 2025 KSG. All rights reserved.</p>
+            </footer>
+        </section>
+    </main>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const buttons = document.querySelectorAll('.nav-buttons a');
+        let current = 0;
+        let isScrolling = false;
+
+        function showSection(index) {
+            sections.forEach((sec, i) => {
+                sec.style.transform = `translateY(${(i - index) * 100}%)`;
+            });
+            buttons.forEach(btn => btn.classList.remove('active'));
+            buttons[index].classList.add('active');
+            current = index;
+        }
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const index = Number(btn.dataset.index);
+                showSection(index);
+            });
+        });
+
+        // 마우스 휠로 섹션 이동
+        window.addEventListener('wheel', (e) => {
+            if (isScrolling) return;
+            isScrolling = true;
+            if (e.deltaY > 0 && current < sections.length - 1) {
+                showSection(current + 1);
+            } else if (e.deltaY < 0 && current > 0) {
+                showSection(current - 1);
+            }
+            setTimeout(() => (isScrolling = false), 800); // 너무 빠른 이동 방지
+        });
+
+        // 키보드 ↑ ↓로도 이동 가능
+        document.addEventListener('keydown', e => {
+            if (isScrolling) return;
+            if (e.key === 'ArrowDown' && current < sections.length - 1) {
+                isScrolling = true;
+                showSection(current + 1);
+                setTimeout(() => (isScrolling = false), 800);
+            } else if (e.key === 'ArrowUp' && current > 0) {
+                isScrolling = true;
+                showSection(current - 1);
+                setTimeout(() => (isScrolling = false), 800);
+            }
+        });
+    </script>
+    
     <div class="about">
         <div>
             <div>
@@ -37,73 +144,89 @@
                 <hr>
             </div>
             <div class="my_photo"></div>
+        </div>
+        <div>
+            
             <ul>
-                <li>김슬기</li>
-                <li><i class="fa-regular fa-calendar-days"></i>2004. 10. 14</li>
-                <li><i class="fa-solid fa-mobile-screen-button"></i><a href="tel:010-1234-1234">010-1234-1234</a></li>
-                <li><i class="fa-regular fa-envelope"></i><a href="mailto:mail@mail.com"></a>mail@mail.com</li>
+                <h3>Education</h3>
+                <li class="df">
+                    <div>
+                        <p>2020.03~2023.02</p>
+                    </div>
+                    <div>
+                        <p>삼일상업고등학교 졸업</p>
+                    </div>
+                </li>
+                <h3>Training</h3>
+                <li class="df">
+                    <div>
+                        <p>2021.03~2023.02</p>
+                        <p>2025.09~2026.03</p>
+                    </div>
+                    <div>
+                        <p>UI/UX 웹디자인&웹퍼블리셔 양성과정</p> (SBS아카데미학원)
+                        <p>프로젝트 기반 풀스택 개발자 양성과정</p> ((JAVA, Spring), 두드림컴퓨터학원)
+                    </div>
+                </li>
+                <h3>Work Experience</h3>
+                <li class="df">
+                    <div>
+                        <p>2021.03~2023.02</p>
+                        <p>2023.11~2025.07</p>
+                    </div>
+                    <div>
+                        <p>성주약품 학습근로자</p>
+                        <p>티지이글로벌(TGE GLOBAL) 디자이너</p>
+                    </div>
+                </li>
             </ul>
+            <div>
+                <h3>Persinality</h3>
+                <div class="df">
+                    <p></p>
+                </div>
+            </div>
         </div>
         <div>
             <div>
-                <h2>EDUCATION</h2>
-                <div>
-                    <p>2020.03~2023.02 삼일상업고등학교 졸업</p>
-                    <p>2021.03~2023.02 성주약품 학습근로자</p>
-                    <p>2023.11~2025.07 티지이글로벌(TGE GLOBAL)</p>
+                <h3>?</h3>
+                <div class="df">
+                    <p></p>
                 </div>
             </div>
             <div>
-                <h2>?</h2>
+                <h3>Certificate</h3>
+                <div class="df">
+                    <div>
+                        <p>2020.09</p>
+                        <p>2020.12</p>
+                        <p>2021.04</p>
+                        <p>2021.06</p>
+                        <p>2023.04</p>
+                    </div>
+                    <div>
+                        <p>전산회계 2급</p>
+                        <p>워드프로세서</p>
+                        <p>한글엑셀(A)</p>
+                        <p>한글액세스(A)</p>
+                        <p>운전면허 2종</p>
+                    </div>
+                </div>
             </div>
             <div>
-                <h2>PERSINALITY</h2>
-            </div>
-        </div>
-        <div>
-            <div>
-                <h2>?</h2>
-            </div>
-            <div>
-                <h2>CERTIFICATE</h2>
-                <ul>
-                    <li>2020.09 전산회계 2급</li>
-                    <li>2020.12 워드프로세서</li>
-                    <li>2021.04 한글엑셀(A)</li>
-                    <li>2021.06 한글액세스(A)</li>
-                    <li>2023.04 운전면허 2종</li>
-                </ul>
-            </div>
-            <div>
-                <h2>PROGRAM SKILLS</h2>
-                <p>Photoshop</p>
-                <p>Illustration</p>
-                <p>Figma</p>
-                <p>Front</p>
-                <p>Backend</p>
-                <p>Excel</p>
+                <h3>Program Skills</h3>
+                <div>
+                    <p>Photoshop</p>
+                    <p>Illustration</p>
+                    <p>Figma</p>
+                    <p>Blender</p>
+                    <p>Front</p>
+                    <p>Backend</p>
+                    <p>Excel</p>
+                </div>
             </div>
         </div>
     </div>
-    <!-- pofol -->
-    <div class="pofol">
-        
-    </div>
-    <!-- contact -->
-    <div class="contact">
-         
-    </div>
-    <!-- footer -->
-    <footer>
-        <div class="top_btn"><a href="#top"><i class="fa-solid fa-arrow-up"></i>To the top</a></div>
-        <div class="sns">
-            <a href="#"><i class="fa-brands fa-kakao-talk"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <!-- <a href="#"><i class="fa-brands fa-figma"></i></a> -->
-        </div>
-        <p>&copy; 2025 KSG. All rights reserved.</p>
-    </footer>
 </body>
+
 </html>
