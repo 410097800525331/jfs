@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표: empty cells</title>
+    <style>
+        table {
+            margin: 50px;
+        }
+        td {
+            border: 1px solid;
+        }
+        .ex1 {
+            empty-cells: show; /* ec 기본값 */
+        }
+        .ex2 {
+            empty-cells: hide;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="ex1">
+        <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+        </tr>
+        <tr>
+            <td>Lois</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <table class="ex2">
+        <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+        </tr>
+        <tr>
+            <td>Lois</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>

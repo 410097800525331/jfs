@@ -78,3 +78,7 @@ git push -u origin main
 git pull origin main
 git pull --rebase origin main
 
+.bc li:not(:last-child)::after {
+    font-family: "font Awesome 6 Free";
+    content: '\f054';
+}
