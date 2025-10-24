@@ -25,7 +25,8 @@ letter-spacing: 8px; ls
 } 
 body {
     font: 15px/1.6 "Noto Sans KR", sans-serif;
-    color: var(--main-color);
+    /* color: var(--main-color); */
+    color: var(--gray5)
 }
 /* section1 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');

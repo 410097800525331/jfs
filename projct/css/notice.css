@@ -1,13 +1,18 @@
 @charset "utf-8"; 
 @import url(common.css);
 
+/* typo */
+h2 {
+    font-size: 3.0rem;
+    color: var(--gray3);
+}
+th {
+    color: var(--gray3);
+}
+
 .container {
     width: 1040px;
     margin: 0 auto;
-}
-.container h2 {
-    font-size: 3.0rem;
-    color: #222;
 }
 /* breadcrumb */
 .bc {
@@ -47,4 +52,31 @@
 }
 .search_wrap button:hover {
     text-decoration: underline;
+}
+/* notice table area */
+.notice {
+    width: 100%;
+    border-collapse: collapse; /* bcl */
+}
+.notice tr {
+    height: 50px;
+}
+.notice th {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+.notice td {
+    border-bottom: 1px solid #ddd
+}
+.notice td:not(:nth-of-type(2)) {
+    text-align: center;
+}
+.notice a:hover {
+    text-decoration: underline;
+}
+/* pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
