@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전환: 시간전환함수</title>
+    <style>
+        /* 
+        https://cubic-bezier.com/#.17,.67,.83,.67 큐빅베지어
+        */
+        div {
+            width: 100px; height: 100px;
+            background-color: red;
+            margin: 10px;
+            transition: 2s;
+        }
+        #div1 {transition-timing-function: linear;} /* 등속 */
+        #div2 {transition-timing-function: ease;} /* 느림-빠름-다시 느림 */
+        #div3 {transition-timing-function: ease-in;} /* 점점 빠르게 */
+        #div4 {transition-timing-function: ease-out;} /* 점점 느리게 */
+        #div5 {transition-timing-function: ease-in-out;}  /* 느림-빠름-느림 */
+        /* cubic-bezier(.17,.67,.83,.67) */
+        div:hover {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">linear</div>
+    <div id="div2">ease</div>
+    <div id="div3">ease-in</div>
+    <div id="div4">ease-out</div>
+    <div id="div5">ease-in-out</div>
+</body>
+
+</html>

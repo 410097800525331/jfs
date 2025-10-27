@@ -1,100 +1,68 @@
 @charset "utf-8";
-* {
-  font-family: 'Pretendard-Regular';
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-}
-
-
-/* header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-  position: relative;
-  z-index: 1000;
-}
+@import url(./common.css);
 
 /* 로고 */
 .logo {
   width: 200px; height: 60px;
-  background-color: #777;
 }
-.logo a {
-  font-weight: bold;
-  font-size: 20px;
-  text-decoration: none;
-  color: #333;
+/* header */
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%; height: 120px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+  /* padding: 15px 40px; */
 }
-
 /* nav 공통 */
 .header nav ul {
   display: flex;
   gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
-
 .header nav ul li {
   position: relative;
 }
-
 .header nav ul li a,
 .header nav ul li button {
-  text-decoration: none;
   font-size: 14px;
-  color: #333;
-  background: none;
-  border: none;
+  /* transition: color 0.2s ease; */
+  background-color: transparent;
   cursor: pointer;
-  padding: 8px 5px;
-  transition: color 0.2s ease;
 }
-
-.header nav ul li a:hover,
+/* .header nav ul li a:hover,
 .header nav ul li button:hover {
   color: #000;
-}
-
+} */
 /* 서브 메뉴 (드롭다운) */
-.sub-menu {
+.sub_menu {
+  position: absolute;
+  top: 100%; left: 0;
   display: none;
   flex-direction: column;
-  position: absolute;
-  top: 100%;
-  left: 0;
   background: #fff;
   border: 1px solid #ddd;
-  min-width: 160px;
+  /* min-width: 160px; */
   padding: 10px 0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-
-.sub-menu li {
+/* .sub_menu li {
   width: 100%;
-}
-
-.sub-menu li a {
+} */
+.sub_menu li a {
   display: block;
   padding: 8px 15px;
   font-size: 13px;
   white-space: nowrap;
 }
-
-.sub-menu li a:hover {
+.sub_menu li a:hover {
   background: #f8f8f8;
   color: #000;
 }
-
 /* 호버 시 드롭다운 보이기 */
-.gnb > li:hover > .sub-menu {
+.gnb > li:hover > .sub_menu {
   display: flex;
 }
 

@@ -9,13 +9,13 @@
 </head>
 
 <body>
-    <section class="product-detail">
+    <section class="product_detail">
         <!-- 왼쪽: 상품 이미지 -->
-        <div class="product-image">
-            <div class="main-img">
-                <img src="images/sample-main.jpg" alt="상품 이미지">
+        <div class="product_image">
+            <div class="main_img">
+                <img src="../assets/imgs/stand1.jpg" alt="상품 이미지">
             </div>
-            <ul class="thumb-list">
+            <ul class="thumb_list">
                 <li><img src="images/sample-thumb1.jpg" alt="썸네일 1"></li>
                 <li><img src="images/sample-thumb2.jpg" alt="썸네일 2"></li>
                 <li><img src="images/sample-thumb3.jpg" alt="썸네일 3"></li>
@@ -23,44 +23,110 @@
         </div>
 
         <!-- 가운데: 옵션 영역 -->
-        <div class="product-options">
-            <h2 class="product-title">[소량제작 풀컬러] 지퍼스탠드</h2>
-            <div class="option-group">
+        <div class="product_options">
+            <ul class="option_inner">
+                <li><a href="#">삼방</a></li>
+                <li><a href="#">자동롤</a></li>
+                <li><a href="#">지퍼스탠드</a></li>
+                <li><a href="#">단상자</a></li>
+            </ul>
+            <h2 class="product_title">[소량제작 풀컬러] 지퍼스탠드</h2>
+            <div class="option_group">
                 <label for="size">사이즈</label>
-                <select id="size">
+                <select id="size" required>
                     <option>선택</option>
-                    <option>소형</option>
-                    <option>중형</option>
-                    <option>대형</option>
+                    <option>150 x 215 + 80(20-30티백 규격)</option>
+                    <option>200 x 265 + 10(40-50티백 규격)</option>
                 </select>
             </div>
 
-            <div class="option-group">
+            <!-- <div class="option-group" disabled>
                 <label for="material">원단</label>
                 <select id="material">
-                    <option>선택</option>
+                    <option>PET + VMPET + LLDPE</option>
                     <option>매트</option>
                     <option>유광</option>
                 </select>
+            </div> -->
+            <div class="option_group" disabled>
+                <label for="material">원단</label>
+                <input type="text" id="material" value="PET + VMPET + LLDPE" disabled></input>
             </div>
 
-            <div class="option-group">
-                <label>후가공</label>
-                <ul class="radio-list">
-                    <li><label><input type="radio" name="finish" value="none" checked> 없음</label></li>
-                    <li><label><input type="radio" name="finish" value="zipper"> 지퍼</label></li>
-                </ul>
-            </div>
+            <form class="option_group">
+                <fieldset>
+                    <legend>후가공</legend>
+                    <div class="option_inner">
+                        <label>지퍼</label>
+                        <ul class="radio_list">
+                            <li><label><input type="radio" name="opt1" value="opt1Y"> 있음</label></li>
+                            <li><label><input type="radio" name="opt1" value="opt1N"> 없음</label></li>
+                        </ul>
+                        <div>0원</div>
+                    </div>
+                    <div class="option_inner">
+                        <label>코팅</label>
+                        <ul class="radio_list">
+                            <li><label><input type="radio" name="opt2" value="none"> 유광</label></li>
+                            <li><label><input type="radio" name="opt2" value="zipper"> 무광</label></li>
+                        </ul>
+                        <div>0원</div>
+                    </div>
+                    <div class="option_inner">
+                        <label>걸이타공</label>
+                        <ul class="radio_list">
+                            <li><label><input type="radio" name="opt3" value="none"> 모자형</label></li>
+                            <li><label><input type="radio" name="opt3" value="zipper"> 원형</label></li>
+                            <li><label><input type="radio" name="opt3" value="zipper"> 없음</label></li>
+                        </ul>
+                        <div>0원</div>
+                    </div>
+                    <div class="option_inner">
+                        <label>모서리</label>
+                        <ul class="radio_list">
+                            <li><label><input type="radio" name="opt4" value="none"> 직각</label></li>
+                            <li><label><input type="radio" name="opt4" value="zipper"> 둥근</label></li>
+                        </ul>
+                        <div>0원</div>
+                    </div>
+                    <div class="option_inner">
+                        <label>밸브부착</label>
+                        <ul class="radio_list">
+                            <li><label><input type="radio" name="opt5" value="opt5Y"> 있음</label></li>
+                            <li><label><input type="radio" name="opt5" value="opt5N"> 없음</label></li>
+                        </ul>
+                        <div>0원</div>
+                    </div>
+                    <div class="option_inner">
+                        <label>밑지컬러</label>
+                        <ul class="radio_list">
+                            <li><label><input type="radio" name="opt6" value="opt6Y"> 있음</label></li>
+                            <li><label><input type="radio" name="opt6" value="opt6N"> 없음</label></li>
+                        </ul>
+                        <div>0원</div>
+                    </div>
+                    <div class="option_inner">
+                        <label>디자인 작업종류</label>
+                        <ul class="radio_list">
+                            <li><label><input type="radio" name="opt7" value="opt1T"> 1종</label></li>
+                            <li><label><input type="radio" name="opt7" value="opt2T"> 2종</label></li>
+                            <li><label><input type="radio" name="opt7" value="opt3T"> 3종</label></li>
+                            <li><label><input type="radio" name="opt7" value="opt4T"> 4종</label></li>
+                        </ul>
+                        <div>0원</div>
+                    </div>
+                </fieldset>
+            </form>
 
-            <div class="option-group">
+            <div class="option_group">
                 <label for="file">디자인 파일</label>
                 <input type="file" id="file">
             </div>
 
-            <div class="option-group qty-group">
+            <div class="option_group qty_group">
                 <label for="qty">수량</label>
-                <div class="qty-box">
-                    <button type="button" class="qty-btn minus">-</button>
+                <div class="qty_box">
+                    <button type="button" class="qty_btn minus">-</button>
                     <input type="number" id="qty" value="1" min="1">
                     <button type="button" class="qty-btn plus">+</button>
                 </div>
@@ -68,19 +134,25 @@
         </div>
 
         <!-- 오른쪽: 가격 및 결제 -->
-        <div class="product-summary">
-            <div class="summary-box">
+        <div class="product_summary">
+            <div class="summary_box">
                 <p><strong>가격</strong> <span id="price">0원</span></p>
-                <p><strong>추가금액</strong> <span id="add-price">0원</span></p>
-                <p><strong>1장당</strong> <span id="unit-price">0원</span></p>
-                <p><strong>최종결제금액</strong> <span id="total-price">0원</span></p>
+                <p><strong>추가금액</strong> <span id="add_price">0원</span></p>
+                <p><strong>1장당</strong> <span id="unit_price">0원</span></p>
+                <p><strong>최종결제금액</strong> <span id="total_price">0원</span></p>
             </div>
-            <div class="btn-area">
-                <button type="button" class="btn-cart">장바구니 담기</button>
-                <button type="button" class="btn-buy">구매하기</button>
+            <div class="btn_area">
+                <button type="button" class="btn_cart">장바구니 담기</button>
+                <button type="button" class="btn_buy">구매하기</button>
+                <!-- <button type="button" class="btn_buy">견적인쇄하기</button> 추후 업데이트-->
             </div>
         </div>
     </section>
+    <hr>
+    <ul>
+        <li><a href="#">디자인 가이드</a></li>
+        <li><a href="#">배송 정보</a></li>
+    </ul>
 </body>
 
 </html>

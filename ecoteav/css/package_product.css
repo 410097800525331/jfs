@@ -8,7 +8,7 @@
   text-decoration: none;
 }
 
-.product-detail {
+.product_detail {
   display: flex;
   gap: 40px;
   max-width: 1400px;
@@ -17,77 +17,91 @@
   box-sizing: border-box;
 }
 
-.product-image {
+.product_image {
   flex: 1 1 35%;
 }
 
-.product-image .main-img img {
+.product_image .main_img img {
   width: 100%;
   display: block;
   border: 1px solid #eee;
 }
 
-.thumb-list {
+.thumb_list {
   display: flex;
   gap: 10px;
   margin-top: 10px;
 }
 
-.thumb-list li {
+.thumb_list li {
   flex: 1;
   cursor: pointer;
 }
 
-.thumb-list img {
+.thumb_list img {
   width: 100%;
   display: block;
   border: 1px solid #eee;
 }
 
-.product-options {
+.product_options {
   flex: 1 1 35%;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.product-title {
+.product_title {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.option-group {
+.option_group {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.option-group label {
+.option_group label {
   font-size: 14px;
   font-weight: 500;
 }
 
-.option-group select,
-.option-group input[type="file"],
-.option-group input[type="number"] {
+
+.option_inner {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.option_inner label {
+  width: 120px;
+  border: 1px solid #ccc;
+}
+.option_inner label input {
+  text-align: left;
+}
+.option_group select,
+.option_group input[type="file"],
+.option_group input[type="number"] {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.radio-list {
+.radio_list {
   display: flex;
   gap: 10px;
 }
 
-.qty-group .qty-box {
+.qty_group .qty_box {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.qty-btn {
+.qty_btn {
   width: 30px;
   height: 30px;
   border: 1px solid #ccc;
@@ -95,43 +109,43 @@
   cursor: pointer;
 }
 
-.qty-box input {
+.qty_box input {
   width: 60px;
   text-align: center;
 }
 
-.product-summary {
+.product_summary {
   flex: 1 1 25%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.summary-box {
+.summary_box {
   border: 1px solid #ddd;
   padding: 20px;
   background: #fafafa;
 }
 
-.summary-box p {
+.summary_box p {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
   margin: 8px 0;
 }
 
-.summary-box strong {
+.summary_box strong {
   font-weight: 600;
 }
 
-.btn-area {
+.btn_area {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.btn-cart,
-.btn-buy {
+.btn_cart,
+.btn_buy {
   padding: 12px;
   border: none;
   cursor: pointer;
@@ -139,27 +153,27 @@
   border-radius: 4px;
 }
 
-.btn-cart {
+.btn_cart {
   background: #fff;
   border: 1px solid #333;
 }
 
-.btn-buy {
+.btn_buy {
   background: #333;
   color: #fff;
 }
 
 /* 반응형 */
 @media (max-width: 1024px) {
-  .product-detail {
+  .product_detail {
     flex-direction: column;
   }
-  .product-summary {
+  .product_summary {
     order: 3;
   }
-  .product-image,
-  .product-options,
-  .product-summary {
+  .product_image,
+  .product_options,
+  .product_summary {
     flex: 1 1 100%;
   }
 }
