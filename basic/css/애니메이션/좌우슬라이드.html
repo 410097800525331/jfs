@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌우 슬라이드</title>
+    <style>
+        /* reset */
+        body {margin: 0;}
+        img {
+            vertical-align: top;
+            width: 600px; height: 300px;
+            object-fit: cover;
+        }
+
+        .slider {
+            width: 600px; height: 300px;
+            overflow: hidden;
+            margin: 50px auto;
+            border: 20px solid #333;
+        }
+        .slides {
+            display: flex;
+            width: calc(600px * 4);
+            animation: slideRoll 15s infinite ease-in-out;
+        }
+        @keyframes slideRoll {
+            0% {transform: translateX(0);}
+            11.11% {transform: translateX(-600px);}
+            33.33% {transform: translateX(-600px);}
+            44.44% {transform: translateX(-1200px);}
+            66.66% {transform: translateX(-1200px);}
+            77.77% {transform: translateX(-1800px);}
+            100% {transform: translateX(-1800px);}
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <img src="../../assets/imgs/20250901085539504042.png" alt="이미지1">
+            <img src="../../assets/imgs/20250616093330346112 (1).png" alt="이미지2">
+            <img src="../../assets/imgs/20250901085834618047 (1).png" alt="이미지3">
+            <!-- 롤링 이미지 -->
+            <img src="../../assets/imgs/20250901085539504042.png" alt="이미지1">
+        </div>
+    </div>
+</body>
+</html>

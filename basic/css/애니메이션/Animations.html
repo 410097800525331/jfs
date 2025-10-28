@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <STyle>
+        /* 
+        애니메이션 코드
+        from, to
+        0%, 50%, 100%
+
+        animation-name: myAnimation;
+        animation-diration: 4s;
+        animation-delay: ;
+        animation-iteration-count: 1;(기본값) / infinite 반복
+        animation-direction:
+        animation-fill-mode: forwards; / to에서 멈춤
+        animation-play-state:
+        */
+        @keyframes myAnimation {
+            from {background-color: red;}
+            to {background-color: yellow;}
+        }
+        div {
+            width: 100px; height: 100px;
+            background-color: red;
+            animation-name: myAnimation;
+            animation-duration: 4s;
+            /* animation-iteration-count: infinite; */
+            animation-fill-mode: forwards; /* to에서 멈춤 */
+        }
+    </STyle>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

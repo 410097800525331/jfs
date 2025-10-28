@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>에코티브</title>
+    <title>에코티브 - 브랜드굿즈제작, 티백OEM/ODM, 블렌딩티 개발, 향료 개발</title>
     <link rel="stylesheet" href="../css/package_product.css">
 </head>
 
@@ -24,37 +24,30 @@
 
         <!-- 가운데: 옵션 영역 -->
         <div class="product_options">
-            <ul class="option_inner">
+            <ul class="option_content">
                 <li><a href="#">삼방</a></li>
                 <li><a href="#">자동롤</a></li>
                 <li><a href="#">지퍼스탠드</a></li>
                 <li><a href="#">단상자</a></li>
             </ul>
+
             <h2 class="product_title">[소량제작 풀컬러] 지퍼스탠드</h2>
             <div class="option_group">
                 <label for="size">사이즈</label>
                 <select id="size" required>
-                    <option>선택</option>
+                    <option value="" disabled selected hidden>선택</option>
                     <option>150 x 215 + 80(20-30티백 규격)</option>
                     <option>200 x 265 + 10(40-50티백 규격)</option>
                 </select>
             </div>
 
-            <!-- <div class="option-group" disabled>
+            <div class="option_group">
                 <label for="material">원단</label>
-                <select id="material">
-                    <option>PET + VMPET + LLDPE</option>
-                    <option>매트</option>
-                    <option>유광</option>
-                </select>
-            </div> -->
-            <div class="option_group" disabled>
-                <label for="material">원단</label>
-                <input type="text" id="material" value="PET + VMPET + LLDPE" disabled></input>
+                <input type="text" id="material" value="PET + VMPET + LLDPE" disabled>
             </div>
 
             <form class="option_group">
-                <fieldset>
+                <fieldset  class="option_group2">
                     <legend>후가공</legend>
                     <div class="option_inner">
                         <label>지퍼</label>
@@ -120,15 +113,15 @@
 
             <div class="option_group">
                 <label for="file">디자인 파일</label>
-                <input type="file" id="file">
+                <input type="file" id="file" multiple accept=".ai">
             </div>
 
             <div class="option_group qty_group">
                 <label for="qty">수량</label>
                 <div class="qty_box">
-                    <button type="button" class="qty_btn minus">-</button>
+                    <button type="button" class="qty_btn minus"><i class="fa-solid fa-minus"></i></button>
                     <input type="number" id="qty" value="1" min="1">
-                    <button type="button" class="qty-btn plus">+</button>
+                    <button type="button" class="qty_btn plus"><i class="fa-solid fa-plus"></i></button>
                 </div>
             </div>
         </div>
@@ -148,8 +141,8 @@
             </div>
         </div>
     </section>
-    <hr>
-    <ul>
+
+    <ul class="package_info">
         <li><a href="#">디자인 가이드</a></li>
         <li><a href="#">배송 정보</a></li>
     </ul>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations ball</title>
+    <STyle>
+        /* 
+        애니메이션 코드
+        from, to
+        0%, 50%, 100%
+
+        이름: animation-name: myAnimation; (필수)
+        동작시간:animation-diration: 4s; (필수)
+        가속도: animation-timing-function: ease;
+        지연시간: animation-delay: ;
+        반복횟수: animation-iteration-count: 1;(기본값) / infinite 반복
+        방향: animation-direction: alternate; / 왔다 갔다
+        상태 유지: animation-fill-mode: forwards; / to에서 멈춤
+        버튼으로 움직이고 멈추고: animation-play-state: running;(기본값) / pause;(일시정지)
+        */
+        @keyframes ball {
+            0% {
+                transform: translateY(0);
+                animation-timing-function: ease-in;
+            }
+            100% {
+                transform: translateY(300px);
+                animation-timing-function: ease-out;
+            }
+        }
+        div {
+            width: 100px; height: 100px;
+            transform: translateY(0);
+            background-color: #000;
+            border-radius: 50%;
+            animation-name: ball;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+    </STyle>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

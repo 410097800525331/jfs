@@ -7,42 +7,46 @@
     <title>2D 변환</title>
     <style>
         /* 
-        transform:
-        translate() 위치
-        rotate() 회전
-        scaleX() 크기
-        scaleY()
-        scale()
-        skewX() 기울기
-        skewY()
-        skew()
-        matrix() 혼합
+            transform: 값 값 값 ...;
+                translate(x, y)     x,y위치 이동
+                translateX(x)       x위치 이동(좌우)
+                translateY(y)       y위치 이동(상하)
+                    - 0을 기준으로 양수이면 오른쪽/아래쪽 이동,
+                    - 음수이면 왼쪽/위쪽으로 이동한다.
+
+                rotate()        회전
+
+                scaleX()        크기
+                scaleY()
+                scale()
+                skewX()         기울기
+                skewY()
+                skew()
+                matrix()        혼합
         */
-        .outer {
-            position: relative;
-            width: 100px; height: 100px;
-            background-color: brown;
-            transform: translate(50px, 100px);
+
+        .close {
+            /* background: blue; */
+            line-height: 1;
+            /* 변환은 블록레벨 요소에 지정한다. */
+            display: inline-block;
+            /* transform: rotate(); 단위: deg(degree), 각도 0~360  */
+            transform: rotate(0deg); /* 기본값 */
+            transform-origin: 50% 58%; /* 기본값 50% 50% */
+            transition: .5s;
+            /* 
+                duration의 값이 작을 수록 속도는 빨라진다.
+                소수점 앞의 0은 생략 가능!
+            */
         }
-        .inner {
-            position: absolute;
-            bottom: 0; left: 50%;
-            transform: translateX(-50%);
-            width: 50px; height: 50px;
-            background-color: aqua;
-            transform: translate(-250px, 0px);
-            transition: 1s;
-        }
-        .outer:hover .inner {
-            transform: translate(0px, 0px);
+        .close:hover {
+            transform: rotate(360deg);      
         }
     </style>
 </head>
 
 <body>
-    <div class="outer">
-        <div class="inner">위치</div>
-    </div>
+    <span class="close">❌</span>
 </body>
 
 </html>

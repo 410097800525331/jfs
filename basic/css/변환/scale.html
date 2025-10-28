@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변환: scale</title>
+    <style>
+        /* reset */
+        img {width: 100%; height: 100%;}
+        .outer {
+            width: 960px; height: 584;
+            overflow: hidden;
+        }
+        .inner {
+            height: 100%;
+            transition: 1s;
+        }
+        .inner:hover {
+            transform: scale(1.2, 1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"><img src="../../assets/imgs/bg_sec31.jpg" alt="변환 크기 조절"></div>
+        <!-- <div class="inner"><img src="../../assets/imgs/bg_sec32.jpg" alt="변환 크기 조절"></div> -->
+    </div>
+</body>
+</html>
