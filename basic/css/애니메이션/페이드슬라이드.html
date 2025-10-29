@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>페이드 슬라이드</title>
     <style>
-        /*
-        :where(css4) 우선순위 낮음
-        :is(css4) 우선순위 높음
-        */
-        :where(body, ul) {margin: 0;}
-        ul {padding: 0; list-style: none;}
-        img {vertical-align: top; width: 100%; height: 100%; object-fit: cover;}
+        /* 초기화 */
+        /* :where(선택자, 선택자, ...) (css4) */
+        /* :is(선택자, 선택자, ...) (css4) */
+        :where(body, ul) {
+            margin: 0;
+        }
 
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            vertical-align: top;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 슬라이드 */
         .slider {
             position: relative;
-            width: 600px; height: 300px;
-            border: 20px solid;
-            margin: 0 auto;
+            width: 600px;
+            height: 300px;
+            margin: 50px auto;
+            border: 20px solid #333;
         }
+
         .slides li {
+            /* 이미지를 겹쳐서 배치 */
             position: absolute;
-            width: 600px; height: 100%;
+            /* width: 600px; */
+            height: 100%;
             opacity: 0;
             animation: crossfade 9s infinite;
         }
-        .slides li:nth-child(1) {animation-delay: 0s; opacity: 1;}
+
+        /* 각 이미지의 시작 타이밍 */
+        .slides li:nth-child(1) {animation-delay: 0s; opacity:1;}
         .slides li:nth-child(2) {animation-delay: 3s;}
         .slides li:nth-child(3) {animation-delay: 6s;}
+
+        /* 교차 페이드 효과 */
         @keyframes crossfade {
             0% {opacity: 0;}
             10% {opacity: 1;}
@@ -37,13 +58,15 @@
         }
     </style>
 </head>
+
 <body>
     <div class="slider">
         <ul class="slides">
-            <li><img src="../../assets/imgs/20250901085539504042.png" alt="이미지1"></li>
-            <li><img src="../../assets/imgs/20250616093330346112 (1).png" alt="이미지2"></li>
-            <li><img src="../../assets/imgs/20250901085834618047 (1).png" alt="이미지3"></li>
-        </div>
+            <li><img src="../../assets/imgs/20250314110653975050.png" alt="이미지1"></li>
+            <li><img src="../../assets/imgs/20250901085539504042.png" alt="이미지2"></li>
+            <li><img src="../../assets/imgs/20250901085539504042.png" alt="이미지3"></li>
+        </ul>
     </div>
 </body>
+
 </html>

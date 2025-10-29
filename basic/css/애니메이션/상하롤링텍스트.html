@@ -5,49 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>상하롤링텍스트</title>
     <style>
-        body {margin: 0;}
-        ul {list-style: none; padding: 0;}
+        /* 초기화 */
+        body,ul {margin: 0;}
+        ul {padding: 0; list-style:none;}
+
+        /* 슬라이드 */
         .slider {
-            width: 400px; height: 45px;
+            width: 400px;
+            height: 45px;
             overflow: hidden;
             margin: 50px auto;
-            border: 20px solid;
+            border: 1px solid #333;
         }
         .slides {
             height: calc(100% * 4);
             animation: slideRoll 9s infinite ease-in-out;
         }
         @keyframes slideRoll {
-            0% {transform: translateY(0);}
-            11.11% {transform: translateY(-25%);}
-            33.33% {transform: translateY(-25%);}
-            44.44% {transform: translateY(-50%);}
-            66.66% {transform: translateY(-50%);}
-            77.77% {transform: translateY(-75%);}
-            100% {transform: translateY(-75%);}
+            0% {transform:translateY(0);}
+            11.11% {transform:translateY(-25%);}
+            33.33% {transform:translateY(-25%);}
+            44.44% {transform:translateY(-50%);}
+            66.66% {transform:translateY(-50%);}
+            77.77% {transform:translateY(-75%);}
+            100% {transform:translateY(-75%);}
         }
-        .slides li {
+
+        .slider li {
             display: flex;
             align-items: center;
             height: 25%;
             padding-left: 8px;
         }
+        /* 말줄임표 효과(...) */
         .slider li span {
-            /* 긴 문장 ... 표시 */
-            text-overflow: ellipsis;
-            white-space: nowrap; /* 줄바꿈X */
-            overflow: hidden;
+            text-overflow: ellipsis; /* txo, 생략 */
+            white-space: nowrap; /* whs, 줄바꿈x */
+            overflow: hidden; /* oh, 넘치는 부분 숨기기 */
         }
+
     </style>
 </head>
 <body>
     <div class="slider">
         <ul class="slides">
-            <li><span>JP모건, 코스피 5,000으로 목표치↑"강세장에선 6,000도 가능"JP모건, 코스피 5,000으로 목표치↑</span></li>
-            <li><span>이창용 한은총재 "올해 성장률 1%이상 가능성 커졌다"JP모건, 코스피 5,000으로 목표치↑</span></li>
-            <li><span>종묘·경복궁·수장고'김건희 논란'에 고개 숙인 국가유산청JP모건, 코스피 5,000으로 목표치↑</span></li>
-            <li><span>내란 선동범 몰린 여순사건 피해자, 77년 만에 재심서 무죄JP모건, 코스피 5,000으로 목표치↑</span></li>
-            <li><span>JP모건, 코스피 5,000으로 목표치↑"강세장에선 6,000도 가능"JP모건, 코스피 5,000으로 목표치↑</span></li>
+            <li><span>[속보] 李대통령 "김정은, 트럼프 뜻 수용 못했지만…평화의 씨앗될 것</span></li>
+            <li><span>李대통령 "케데헌 혼문처럼 연대…내란몰아낸 K민주주의가 증명" JP모건, 코스피 5,000으로 목표치↑…"강세장에선 6,000도 가능"</span></li>
+            <li><span>이창용 한은총재 "올해 성장률 1%이상 가능성 커졌다" 종묘·경복궁·수장고…'김건희 논란'에 고개 숙인 국가유산청</span></li>
+            <li><span>[속보] 李대통령 "김정은, 트럼프 뜻 수용 못했지만…평화의 씨앗될 것"</span></li>
         </ul>
     </div>
 </body>

@@ -54,7 +54,9 @@
 }
 
 /* 여백은 8의 배수가 보기 좋다 (> 10의 배수 > 짝수) */
-/* header */
+/* 내비게이션 */
+
+
 /* section common(공통) */
 .sec {
     position: relative;

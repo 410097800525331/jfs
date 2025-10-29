@@ -3,47 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>좌우 슬라이드</title>
+    <title>좌우슬라이드</title>
     <style>
-        /* reset */
-        body {margin: 0;}
+        /* 초기화 */
+        body,ul {margin: 0;}
+        ul {padding: 0; list-style: none;}
         img {
             vertical-align: top;
-            width: 600px; height: 100%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
+        /* 슬라이드 */
         .slider {
-            width: 600px; height: 100%;
+            width: 600px;
+            height: 300px;
             overflow: hidden;
             margin: 50px auto;
             border: 20px solid #333;
         }
         .slides {
             display: flex;
-            /* width: calc(600px * 4); */
-            width: 400%;
-            animation: slideRoll 15s infinite ease-in-out;
+            /* calc() 사용시 연산자 앞뒤를 1칸 띄어쓰기 한다. */
+            width: calc(100% * 4);
+            height: 100%;
+            /* animation-name: slideRoll;
+            animation-duration: 9s;
+            animation-iteration-count: infinite; */
+            /* 속기 속성 */
+            /* animation: 이름 동작시간 [반복횟수] [가속도]; */
+            animation: slideRoll 9s infinite ease-in-out;
         }
         @keyframes slideRoll {
-            0% {transform: translateX(0);}
-            11.11% {transform: translateX(-25%);}
-            33.33% {transform: translateX(-25%);}
-            44.44% {transform: translateX(-50%);}
-            66.66% {transform: translateX(-50%);}
-            77.77% {transform: translateX(-75%);}
-            100% {transform: translateX(-75%);}
+            0% {transform:translateX(0);}
+            11.11% {transform:translateX(-25%);}
+            33.33% {transform:translateX(-25%);}
+            44.44% {transform:translateX(-50%);}
+            66.66% {transform:translateX(-50%);}
+            77.77% {transform:translateX(-75%);}
+            100% {transform:translateX(-75%);}
         }
+
     </style>
 </head>
 <body>
     <div class="slider">
         <ul class="slides">
-            <li><img src="../../assets/imgs/20250901085539504042.png" alt="이미지1"></li>
-            <li><img src="../../assets/imgs/20250616093330346112 (1).png" alt="이미지2"></li>
-            <li><img src="../../assets/imgs/20250901085834618047 (1).png" alt="이미지3"></li>
-            <!-- 롤링 이미지 -->
-            <li><img src="../../assets/imgs/20250901085539504042.png" alt="이미지1"></li>
+            <li><img src="../../assets/imgs/20250314110653975050.png" alt="이미지1"></li>
+            <li><img src="../../assets/imgs/20250901085539504042.png" alt="이미지2"></li>
+            <li><img src="../../assets/imgs/20250901085539504042.png" alt="이미지3"></li>
+            <!-- 롤링이미지 -->
+            <li><img src="../../assets/imgs/20250314110653975050.png" alt="이미지1"></li>
         </ul>
     </div>
 </body>

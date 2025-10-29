@@ -3,50 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>상하 슬라이드</title>
+    <title>좌우슬라이드</title>
     <style>
-        /* reset */
-        body {margin: 0;}
-        ul {padding: 0; list-style: none;}
+        /* 초기화 */
+        body,ul {margin: 0;}
+        ul {padding: 0; list-style:none;}
+
         img {
             vertical-align: top;
-            width: 100%; height: 100%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
+        /* 슬라이드 */
         .slider {
-            width: 600px; height: 300px;
+            width: 600px;
+            height: 300px;
             overflow: hidden;
             margin: 50px auto;
             border: 20px solid #333;
         }
         .slides {
-            height: 100%;
+            height: calc(100% * 4);
             animation: slideRoll 9s infinite ease-in-out;
         }
         @keyframes slideRoll {
-            0% {transform: translateY(0);}
-            11.11% {transform: translateY(-100%);}
-            33.33% {transform: translateY(-100%);}
-            44.44% {transform: translateY(-200%);}
-            66.66% {transform: translateY(-200%);}
-            77.77% {transform: translateY(-300%);}
-            100% {transform: translateY(-300%);}
+            0% {transform:translateY(0);}
+            11.11% {transform:translateY(-25%);}
+            33.33% {transform:translateY(-25%);}
+            44.44% {transform:translateY(-50%);}
+            66.66% {transform:translateY(-50%);}
+            77.77% {transform:translateY(-75%);}
+            100% {transform:translateY(-75%);}
         }
+
         .slider li {
-            width: 25%;
+            height: 25%;
         }
+
     </style>
 </head>
 <body>
     <div class="slider">
         <ul class="slides">
-            <li><img src="../../assets/imgs/20250901085539504042.png" alt="이미지1"></li>
-            <li><img src="../../assets/imgs/20250616093330346112 (1).png" alt="이미지2"></li>
-            <li><img src="../../assets/imgs/20250901085834618047 (1).png" alt="이미지3"></li>
-            <!-- 롤링 이미지 -->
-            <li><img src="../../assets/imgs/20250901085539504042.png" alt="이미지1"></li>
-        </div>
+            <li><img src="../../assets/imgs/20250314110653975050.png" alt="이미지1"></li>
+            <li><img src="../../assets/imgs/20250901085539504042.png" alt="이미지2"></li>
+            <li><img src="../../assets/imgs/20250901085539504042.png" alt="이미지3"></li>
+            <!-- 롤링이미지 -->
+            <li><img src="../../assets/imgs/20250314110653975050.png" alt="이미지1"></li>
+        </ul>
     </div>
 </body>
 </html>
