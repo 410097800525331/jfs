@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌우롤링텍스트</title>
+    <style>
+        :where(body, ul) {margin: 0; background-color: #E0D7D6;}
+        ul {padding: 0; list-style: none;}
+
+        .marquee {
+            font-size: 90px;
+            font-weight: bold;
+            letter-spacing: 12px;
+            color: #cfc0bb;
+            
+            white-space: nowrap; /* 줄바꿈X */
+            overflow: hidden;
+        }
+        .marquee .inner1,
+        .marquee .inner2 {
+            display: flex;
+        }
+        .inner1 {
+            animation: textRoll1 20s linear infinite;
+        }
+        @keyframes textRoll1 {
+            0% {transform: translateX(0%);}
+            100% {transform: translateX(-100%);}
+        }
+        .inner2 {
+            animation: textRoll2 20s linear infinite;
+        }
+        @keyframes textRoll2 {
+            0% {transform: translateX(-100%);}
+            100% {transform: translateX(0%);}
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee">
+        <div class="inner1">
+            <span>AFFINITY ㆍ PRESTIGE ㆍ CONSIDERATION</span>
+            <span>AFFINITY ㆍ PRESTIGE ㆍ CONSIDERATION</span>
+        </div>
+    </div>
+    <div class="marquee">
+        <div class="inner2">
+            <span>AFFINITY ㆍ PRESTIGE ㆍ CONSIDERATION</span>
+            <span>AFFINITY ㆍ PRESTIGE ㆍ CONSIDERATION</span>
+        </div>
+    </div>
+</body>
+</html>

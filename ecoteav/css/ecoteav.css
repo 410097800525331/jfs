@@ -42,252 +42,190 @@
   font-size: 1.2rem;
   line-height: 1.2;
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .side_menu {
     right: 10px;
     padding: 10px 0;
   }
 }
-/* 
-배너
-.main-banner {
-  width: 100%;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
 
-.banner-list {
+/* 메인 배너 */
+.main_banner {
+  width: 100%; height: 700px;
+  margin: 140px auto 0;
+}
+.banner_list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 기본 3열
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  grid-template-columns: repeat(3, 1fr);
 }
-
-.banner-list li {
+.banner_list li {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
 }
-
-.banner-list a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
+.banner_list a {
   color: #fff;
 }
-
-.banner-img {
-  width: 100%;
-  height: 350px;
+.banner_img {
+  width: 100%; height: 700px;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   transition: transform 0.5s ease;
-
-  background-color: #ddd;
 }
-
-.banner-list li:hover .banner-img {
+.banner_list li:hover .banner_img {
   transform: scale(1.1);
 }
-
-.banner-text {
+.banner_overlay {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  z-index: 2;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.4s ease;
+  z-index: 1;
 }
-
-.banner-text h3 {
-  font-size: 1.3rem;
+.banner_list li:hover .banner_overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.banner_text {
+  position: absolute;
+  bottom: 20%; left: 30px; right: 30px;
+  z-index: 2;
+}
+.banner_text h3 {
+  font-size: 2.2rem;
   margin-bottom: 10px;
 }
-
-.banner-text p {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  margin-bottom: 15px;
+.banner_text p {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
 }
-
-.banner-text .more {
+.more_btn {
   display: inline-block;
-  padding: 6px 14px;
+  padding: 8px 40px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
   border: 1px solid #fff;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  transition: all 0.3s;
 }
-
-.banner-text .more:hover {
-  background: #fff;
+.more_btn:hover {
+  background-color: #fff;
   color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
-
-반응형
-@media (max-width: 767px) {
-  .banner-list {
-    grid-template-columns: 1fr; 모바일에서는 1열
+@media (max-width: 770px) {
+  .banner_list {
+    grid-template-columns: 1fr;
   }
-
-  .banner-img {
+  .banner_img {
     height: 250px;
   }
 }
+/* 프로세스 */
 
-프로세스
-.oem-process {
-  text-align: center;
+/* .oem_process {
+  max-width: 1400px;
   padding: 60px 20px;
-  background: #fff;
-}
-
-.oem-process h2 {
-  font-size: 1.8rem;
-  margin-bottom: 40px;
-  color: #222;
-  font-weight: 700;
-}
-
-.process-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  max-width: 1200px;
   margin: 0 auto;
 }
-
-.process-item {
-  background: #fff;
+.process_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+.process_item {
   border: 1px solid #eee;
   border-radius: 12px;
   padding: 30px 20px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
 }
-
-.process-item:hover {
+애니메이션으로 만들기
+.process_item:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-
-.process-item img {
+.process_item img { ㅡㅡ
   width: 50px;
   height: 50px;
   margin-bottom: 20px;
 }
-
-.process-item h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  font-weight: 600;
+.process_item h3 {
+  margin-bottom: 8px;
   color: #333;
 }
-
-.process-item p {
-  font-size: 0.9rem;
-  color: #666;
-  line-height: 1.5;
+.process_item p {
+  font-size: 1.4rem;
 }
-
-.process-item.highlight {
-  border: 2px solid #ff7f00;
-  background: #fff7f0;
+.process_item.highlight {
+  border: 2px solid #00ad00;
+  background: #aedabb; ㅡㅡ
 }
-
-@media (max-width: 768px) {
-  .process-container {
+@media (max-width: 770px) {
+  .process_container {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
-
 @media (max-width: 480px) {
-  .process-container {
+  .process_container {
     grid-template-columns: 1fr;
   }
-}
+} */
 
-
-문의 폼
-.contact-section {
-  max-width: 1200px;
+/* 문의 폼 */
+.contact_section {
+  max-width: 1400px;
   margin: 60px auto;
   padding: 20px;
   border: 1px solid #ddd;
-  background: #fff;
 }
-
-.contact-inner {
+.contact_inner {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
 }
-
-.contact-image {
+.contact_image {
   flex: 1 1 45%;
 }
-
-.contact-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.contact-form {
+.contact_form {
   flex: 1 1 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 16px;
 }
-
-.form-row {
+.form_row {
   display: flex;
   gap: 10px;
 }
-
-.form-group {
+.form_group {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-
-.form-group label {
-  font-size: 14px;
+.form_group label {
+  font-size: 1.4rem;
   margin-bottom: 5px;
 }
-
-.form-group input,
-.form-group textarea {
+.form_group input,
+.form_group textarea {
   border: 1px solid #ccc;
   padding: 10px;
-  font-size: 14px;
   border-radius: 4px;
 }
-
-.form-group textarea {
+/* .form_group textarea {
   resize: vertical;
-}
-
-.checkbox-group {
+} */
+/* .checkbox_group {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-
-.checkbox-group label {
-  margin-bottom: 0;
-}
-
 .required {
   color: red;
 }
-
-.textarea-info textarea {
+.textarea_info textarea {
   width: 100%;
   font-size: 13px;
   color: #555;
@@ -295,34 +233,106 @@
   padding: 10px;
   background: #f9f9f9;
   resize: vertical;
-}
-
-.btn-submit {
+} */
+.btn_submit {
   background: #333;
   color: #fff;
   padding: 12px;
-  border: none;
   border-radius: 4px;
-  font-size: 15px;
+  font-size: 1.5rem;
   cursor: pointer;
   transition: background 0.2s;
 }
-
-.btn-submit:hover {
-  background: #000;
+.btn_submit:hover {
+  background: #111;
 }
-
-@media (max-width: 768px) {
-  .contact-inner {
+@media (max-width: 770px) {
+  .contact_inner {
     flex-direction: column;
   }
-  .form-row {
+  .form_row {
     flex-direction: column;
   }
 }
+ /* intro_content */
+ /* .intro_section {
+  display: flex;
+  width: 100%; min-height: 60vh;
+  background: #f8f8f8;
+}
+.intro_image {
+  flex: 1;
+  background: url('') no-repeat 0 0/cover;
+  background-color: #ccc;
+  background-attachment: fixed;
+}
+.intro_content {
+  flex: 1;
+  padding: 6rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #111;
+}
+.intro_content img {
+  width: 150px; height: 50px;
+  margin-bottom: 14px;
+}
+.intro_content p {
+  font-size: 1.6rem;
+  margin-bottom: 32px;
+  color: #444;
+}
+.intro_content ul {
+  margin-bottom: 24px;
+}
+.intro_content ul li {
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  padding-left: 1rem;
+  margin-bottom: 8px;
+}
+.intro_content ul li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--gray5);
+}
+.intro_btn {
+  display: inline-block;
+  border: 2px solid var(--gray5);
+  color: var(--gray5);
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.intro_btn:hover {
+  background: var(--gray5);
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  .intro_section {
+    flex-direction: column;
+  }
+  .intro_image {
+    height: 300px;
+  }
+  .intro_content {
+    padding: 3rem 2rem;
+  }
+  .intro_content h2 {
+    font-size: 1.6rem;
+  }
+  .intro_btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.6rem;
+  }
+} */
 
-bg
-.wp-block-cover {
+/* 회사 위치 */
+.fixedbg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -332,4 +342,22 @@ bg
   background-color: #ccc;
   background-position: center;
   background-size: cover;
+}
+.fixedbg_inner {
+  text-align: center;
+}
+.fixedbg_inner p {
+  margin: 16px 0 24px;
+}
+.fixedbg_inner a {
+  display: inline-block;
+  padding: 8px 40px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--gray5);
+}
+/* .fixedbg_inner a:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 } */

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js: 산술연산자</title>
+</head>
+<body>
+    <script>
+        /* 
+        산술연산자
+        +
+        -
+        *
+        /
+        %(나머지)
+        ++
+        --
+        **(거든제곱, ES6) 2*2*2*2*2 -> 32 / 2**100
+
+        변수 선언 키워드: var, let(재사용O), const(재사용X)
+        */
+       // 변수 선언
+       let num1 = 5;
+       let num2 = 2;
+       let num3 = num4 = 0;
+
+       document.write("5 + 2 = " + (num1+num2) + '<br>'); // 5 + 2 = 7
+       document.write("5 - 2 = " + (num1-num2) + '<br>'); // 5 - 2 = 3
+       document.write("5 * 2 = " + (num1*num2) + '<br>'); // 5 * 2 = 10
+       document.write("5 / 2 = " + (num1/num2) + '<br>'); // 5 / 2 = 2.5
+       // % 나머지 연산
+       document.write("5 % 2 = " + (num1%num2) + '<br>'); // 5 % 2 = 1
+       // ** 거듭제곱 연산
+       document.write("5 ** 2 = " + (num1**num2) + '<br>'); // 5 ** 2 = 1
+
+        // 증감 연산: ++, --
+        // 전위 연산: ++피연산자, --피연산자
+        // 후위 연산: 피연산자++, 피연산자--
+        document.write("num1++: " + num1++ + '<br>') // num1++ = 
+        document.write("++num1: " + ++num1 + '<br>') // ++num1 = 
+        document.write("num2--: " + num2-- + '<br>') // num2-- = 
+        document.write("--num2: " + --num2 + '<br>') // --num2 = 
+
+    </script>
+</body>
+</html>

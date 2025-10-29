@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상하롤링텍스트</title>
+    <style>
+        body {margin: 0;}
+        ul {list-style: none; padding: 0;}
+        .slider {
+            width: 400px; height: 45px;
+            overflow: hidden;
+            margin: 50px auto;
+            border: 20px solid;
+        }
+        .slides {
+            height: calc(100% * 4);
+            animation: slideRoll 9s infinite ease-in-out;
+        }
+        @keyframes slideRoll {
+            0% {transform: translateY(0);}
+            11.11% {transform: translateY(-25%);}
+            33.33% {transform: translateY(-25%);}
+            44.44% {transform: translateY(-50%);}
+            66.66% {transform: translateY(-50%);}
+            77.77% {transform: translateY(-75%);}
+            100% {transform: translateY(-75%);}
+        }
+        .slides li {
+            display: flex;
+            align-items: center;
+            height: 25%;
+            padding-left: 8px;
+        }
+        .slider li span {
+            /* 긴 문장 ... 표시 */
+            text-overflow: ellipsis;
+            white-space: nowrap; /* 줄바꿈X */
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <ul class="slides">
+            <li><span>JP모건, 코스피 5,000으로 목표치↑"강세장에선 6,000도 가능"JP모건, 코스피 5,000으로 목표치↑</span></li>
+            <li><span>이창용 한은총재 "올해 성장률 1%이상 가능성 커졌다"JP모건, 코스피 5,000으로 목표치↑</span></li>
+            <li><span>종묘·경복궁·수장고'김건희 논란'에 고개 숙인 국가유산청JP모건, 코스피 5,000으로 목표치↑</span></li>
+            <li><span>내란 선동범 몰린 여순사건 피해자, 77년 만에 재심서 무죄JP모건, 코스피 5,000으로 목표치↑</span></li>
+            <li><span>JP모건, 코스피 5,000으로 목표치↑"강세장에선 6,000도 가능"JP모건, 코스피 5,000으로 목표치↑</span></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js: 입출력</title>
+</head>
+<body>
+    <h1>js: 입출력</h1>
+    <p id="result">여기에 출력됩니다.</p>
+    <script>
+        /* 
+        문법
+        - 객체.메서드(argument, arg 등)
+        - 함수()
+        - 객체.속성
+
+        window는 js의 최상위 객체로 키워드 생략 가능
+        출력
+        - alert(): 함수
+        - window.alert(): 윈도우의 메서드
+        - console.log()
+        - document.write()
+
+        입력
+        - prompt(): 함수
+        - window.prompt()
+
+        DOM 요소 선택
+        - document.getElementById('아이디').innerHTML
+        */
+
+        // 경고창 출력
+        // 표현식: 하나의 결과 값을 표현할 수 있는 식
+        // console, alert 의 줄바꿈은 '\n'
+        
+        // window.alert("문자열");
+        // alert('100+10');
+        // alert(100);
+        // alert(100+10); // 에러
+        // alert((100+10));
+        // alert((100+10) + '<br>' + "문자열"); // 에러
+        // alert((100+10) + '\n' + "문자열");
+        // 콘솔 영역에 출력
+        console.log("문자열");
+        console.log(100+10);
+        // body 영역에 출력
+        document.write("문자열"+'<br>');
+        document.write(100+10);
+
+        // body 안의 p태그에 출력
+        var p = document.getElementById('result');
+        p.innerHTML = "Hello";
+
+        // 입력
+        // prompt('메시지', 기본값);
+        var city = prompt('지역을 입력하세요', '');
+        alert('당신이 사는 곳은 ' + city + '입니다');
+    </script>
+</body>
+</html>

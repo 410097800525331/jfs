@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이드 슬라이드</title>
+    <style>
+        /*
+        :where(css4) 우선순위 낮음
+        :is(css4) 우선순위 높음
+        */
+        :where(body, ul) {margin: 0;}
+        ul {padding: 0; list-style: none;}
+        img {vertical-align: top; width: 100%; height: 100%; object-fit: cover;}
+
+        .slider {
+            position: relative;
+            width: 600px; height: 300px;
+            border: 20px solid;
+            margin: 0 auto;
+        }
+        .slides li {
+            position: absolute;
+            width: 600px; height: 100%;
+            opacity: 0;
+            animation: crossfade 9s infinite;
+        }
+        .slides li:nth-child(1) {animation-delay: 0s; opacity: 1;}
+        .slides li:nth-child(2) {animation-delay: 3s;}
+        .slides li:nth-child(3) {animation-delay: 6s;}
+        @keyframes crossfade {
+            0% {opacity: 0;}
+            10% {opacity: 1;}
+            40% {opacity: 1;}
+            50% {opacity: 0;}
+            100% {opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <ul class="slides">
+            <li><img src="../../assets/imgs/20250901085539504042.png" alt="이미지1"></li>
+            <li><img src="../../assets/imgs/20250616093330346112 (1).png" alt="이미지2"></li>
+            <li><img src="../../assets/imgs/20250901085834618047 (1).png" alt="이미지3"></li>
+        </div>
+    </div>
+</body>
+</html>
