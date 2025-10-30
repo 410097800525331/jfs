@@ -1,6 +1,8 @@
 - 단축키(설정(Settings))
 Mouse Wheel Zoom - 휠로 줌
 그룹핑: Emmit: Wrap 어쩌구 - alt + w
+prettier tab, tab 2
+CSS > Format: Newline Between Rules 체크 해제
 
 - vsc 플러그인 세팅
 Korean Language Pack for Visual Studio Code - 한글

@@ -62,11 +62,92 @@
         }
         삼항 연산자: (조건) ? 코드1 : 코드2
         */
+        let result;
+
         if(age >= 19) {
-            document.write('성인입니다'); 
+            result = '성인입니다'; 
         } else {
-            document.write('미성년자입니다.');
+            result = '미성년자1입니다.';
         }
+        document.write(result + '<br><br>');
+
+        // (age >= 19) ? document.writeln('성인입니다') : document.write('미성년자2입니다');
+        result = (age >= 19) ? '성인입니다' : '미성년자2입니다';
+        document.write(result + '<br><br>');
+
+        /* 
+        if(조건) {
+            if(조건)  {
+            코드1;
+            } else {
+            코드2;
+            }
+        } else(조건) {
+            if(조건) {
+            코드1;
+            } else(조건) {
+            코드2;
+            }
+        }
+        */
+       // 변수 선언
+        const gender = "M";
+        age = 21; // 재할당
+        
+        //처리: 나이+성별
+        if(gender === 'F') {
+            if(age >= 19) {
+                result = '성인 여성입니다.';
+            } else {
+                result = '미성인 여성입니다.';
+            }
+        } else {
+            if(age >= 19) {
+                result = '성인 남성입니다.';
+            } else {
+                result = '미성인 남성입니다.';
+            }
+        }
+        document.write('당신은 ' + result + '<br><br>');
+
+        /* 
+        예약어(키워드): true, false, if, else
+        if~else문 세번째 형식
+        if(조건) {
+            코드1;
+        } else if(조건) {
+            코드2; 
+        } else if(조건) {
+            코드3;
+        } else if(조건) {
+            코드4;
+        } else {
+            코드5;
+        }
+        */
+        const point = prompt('당신의 점수를 입력하세요.');
+        let grade;
+        
+        if(point > 100) {
+            result = "잘못 입력하였습니다. 다시 입력해 주세요.";
+        } else if(point >= 90) {
+            grade = "A";
+            result = "참 잘했어요.";
+        } else if(point >= 80) {
+            grade = "B";
+            result = "잘했어요.";
+        } else if(point >=70) {
+            grade = "C";
+            result = "보통이에요";
+        } else if(point >=60) {
+            grade = "D";
+            result = "별로에요.";
+        } else {
+            grade = "F";
+            result = "많이 노력하세요.";
+        }
+        document.write(result + '<br>' + "학생의 학점은 <b style='color: red;'>" + grade + "</b> 입니다.<br><br>")
+
     </script>
 </body>
 </html>

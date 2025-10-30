@@ -43,50 +43,52 @@
     </header> -->
 
     <!-- 내비게이션 -->
-    <header>
-        <h1 class="logo"><a href="#"><img src="" alt="로고"></a></h1>
-        <nav id="gnb">
-           <ul>
-               <li>
-                <a href="#">분양단지</a>
-                <ul>
-                    <li><a href="#">분양중인 단지</a></li>
-                    <li><a href="#">분양예정 단지</a></li>
-                    <li><a href="#">분양완료 단지</a></li>
-                    <li><a href="#">연간분양계획</a></li>
+    <header id="header">
+        <div class="container">
+            <h1 class="logo"><a href="#">경남아너스빌</a></h1>
+            <nav id="gnb">
+                <ul class="main">
+                    <li>
+                        <a href="#">분양단지</a>
+                        <ul class="sub">
+                            <li><a href="#">분양중인 단지</a></li>
+                            <li><a href="#">분양예정 단지</a></li>
+                            <li><a href="#">분양완료 단지</a></li>
+                            <li><a href="#">연간분양계획</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">브랜드</a>
+                        <ul class="sub">
+                            <li><a href="#">브랜드 스토리</a></li>
+                            <li><a href="#">브랜드 아이덴티티</a></li>
+                            <li><a href="#">특화아이템</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">아너스빌 멤버스</a>
+                        <ul class="sub">
+                            <li><a href="#">아너스빌 소식</a></li>
+                            <li><a href="#">청약가이드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">마이아너스빌</a>
+                        <ul class="sub">
+                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li><a href="#">1:1 문의</a></li>
+                            <li><a href="#">A/S 문의</a></li>
+                            <li><a href="#">관심단지 관리</a></li>
+                            <li><a href="#">개인정보 변경</a></li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-               <li>
-                <a href="#">브랜드</a>
-                <ul>
-                    <li><a href="#">브랜드 스토리</a></li>
-                    <li><a href="#">브랜드 아이덴티티</a></li>
-                    <li><a href="#">특화아이템</a></li>
-                </ul>
-            </li>
-               <li>
-                <a href="#">아녀스빌 멤버스</a>
-                <ul>
-                    <li><a href="#">아너스빌 소식</a></li>
-                    <li><a href="#">청약가이드</a></li>
-                </ul>
-            </li>
-               <li>
-                <a href="#">마이아너스빌</a>
-                <ul>
-                    <li><a href="#">자주 묻는 질문</a></li>
-                    <li><a href="#">1:1 문의</a></li>
-                    <li><a href="#">A/S 문의</a></li>
-                    <li><a href="#">관심단지 관리</a></li>
-                    <li><a href="#">개인정보 변경</a></li>
-                </ul>
-            </li>
-           </ul>
-        </nav>
-        <div class="util">
-            <a href="#">SNS</a>
-            <a href="#">로그인</a>
-            <a href="#">회원가입</a>
+            </nav>
+            <div class="util">
+                <a href="#">SNS</a>
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+            </div>
         </div>
     </header>
 
@@ -175,7 +177,7 @@
                 </div>
             </div> <!-- .card-container -->
             <div class="card-container">
-                 <div class="card-image-wrapper">
+                <div class="card-image-wrapper">
                     <img src="./assets/img/20255303432444.jpg" alt="클러스터용인 경남아너스빌 아파트 외관" class="card-image">
                 </div>
                 <div class="card-content">
@@ -222,19 +224,19 @@
     <footer>
         <!-- inquiry: 문의 -->
         <div class="inquiry">
-          <div class="inner">
-            <h2>고객문의</h2>
-            <div class="con-area">
-              <div class="tel-area">
-                <p>더 궁금한 게 있으신가요?</p>
-                <a href="tel:1644-0901"><i class="fa-solid fa-phone"></i>1644-0901</a>
-              </div>
-              <div class="con_btn">
-                  <a href="#" class="faq-btn"><span>자주 묻는 질문</span></a>
-                  <a href="#" class="consult-btn"><span>1:1 문의</span></a>
-              </div>
-            </div><!-- .con-area -->
-          </div><!-- .inner -->
+            <div class="inner">
+                <h2>고객문의</h2>
+                <div class="con-area">
+                    <div class="tel-area">
+                        <p>더 궁금한 게 있으신가요?</p>
+                        <a href="tel:1644-0901"><i class="fa-solid fa-phone"></i>1644-0901</a>
+                    </div>
+                    <div class="con_btn">
+                        <a href="#" class="faq-btn"><span>자주 묻는 질문</span></a>
+                        <a href="#" class="consult-btn"><span>1:1 문의</span></a>
+                    </div>
+                </div><!-- .con-area -->
+            </div><!-- .inner -->
         </div><!-- .inquiry -->
         <!-- info: 정보 -->
         <div class="info">
@@ -249,10 +251,14 @@
                             <li><a href="https://ethics.lg.co.kr/index.do">정도경영 신문고</a></li>
                         </ul>
                         <ul class="sns">
-                            <li><a href="https://www.youtube.com/channel/UCyR3G-Lcsq2yGI388SfdghQ">팜한농<img src="./assets/img/footer_youtube_icon.png" alt="팜한농 유튜브"></a></li>
-                            <li><a href="https://www.youtube.com/@NongDam00">농담<img src="./assets/img/footer_youtube_icon.png" alt="팜한농 유튜브"></a></li>
-                            <li><a href="https://pf.kakao.com/_KsuVxb"><img src="./assets/img/footer_kakao_icon.png" alt="팜한농 카카오 채널"></a></li>
-                            <li><a href="https://blog.naver.com/fhnblog"><img src="./assets/img/footer_naverblog_icon.png" alt="팜한농 블로그"></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCyR3G-Lcsq2yGI388SfdghQ">팜한농<img
+                                        src="./assets/img/footer_youtube_icon.png" alt="팜한농 유튜브"></a></li>
+                            <li><a href="https://www.youtube.com/@NongDam00">농담<img
+                                        src="./assets/img/footer_youtube_icon.png" alt="팜한농 유튜브"></a></li>
+                            <li><a href="https://pf.kakao.com/_KsuVxb"><img src="./assets/img/footer_kakao_icon.png"
+                                        alt="팜한농 카카오 채널"></a></li>
+                            <li><a href="https://blog.naver.com/fhnblog"><img
+                                        src="./assets/img/footer_naverblog_icon.png" alt="팜한농 블로그"></a></li>
                         </ul>
                     </div>
                     <div class="com-info">

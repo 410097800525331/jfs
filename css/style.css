@@ -146,6 +146,17 @@ footer .sns i {
     background: var(--main-color);
     padding: 8px 24px 10px 30px;
 }
+.circle_ani {
+    position: absolute;
+    right: 0; top: 0;
+    width: 188px; height: 188px;
+    transition: linear 5s;
+    animation: circle 50s linear infinite;
+}
+@keyframes circle {
+    0% {transform: rotate(0deg) scale(3);}
+    100% {transform: rotate(720deg) scale(3);}
+}
 
 /* section area: contact */
 #contact .contact {

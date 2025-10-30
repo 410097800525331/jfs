@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변환: transform_origin</title>
+    <style>
+        /* 
+        transform: 값 값 값 ...;
+            이동: translate(), translateX(), translateY()
+            회전: rotate(), rotateX(), rotateY() / 3D
+            기울기: skew(), skewX(), skewY()
+            크기 조절: scale(), scaleX(), scaleY()
+        */
+        /* 
+        transform-origin: x축 y축;
+            x축(가로): %, px, left, right, center
+            y축(세로): %, px, top, bottom, center
+        */
+        div {
+            width: 100px; height: 100px;
+            background: yellowgreen;
+            transition: 1s;
+            margin: 50px;
+        }
+        div:hover {
+            transform: rotate(360deg);
+        }
+        .box1:hover {transform-origin: 50% 50%;} /* 기본값 */
+        .box2:hover {transform-origin: 0%;} /* 왼쪽 중앙 */
+        .box2:hover {transform-origin: left top;}
+        .box2:hover {transform-origin: 50% 0%;} /* 상단 중앙 */
+        .box2:hover {transform-origin: center top;} /* 상단 중앙 */
+    </style>
+</head>
+
+<body>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+</body>
+
+</html>
