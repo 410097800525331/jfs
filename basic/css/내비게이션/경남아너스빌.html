@@ -13,16 +13,21 @@
         body {font: 1.5rem/1.6 'NanumSquare'; background: #ccc;}
 
         
-        .header {
+        #header {
             background-color: #555;
+            overflow: hidden;
         }
-        .header::after {
+        #header::after {
             content: '';
             display: block;
-            width: 100%; height: 220px;
+            width: 100%; height: 0;
             background-color: #fff;
         }
-        .header a {
+        #header:hover::after {
+            height: 220px;
+            transition: 0.5s;
+        }
+        #header a {
             color: #fff;
         }
         .container {
@@ -33,52 +38,71 @@
             height: 95px;
             padding: 0 50px;
         }
-        .gnb {
+        #gnb {
             position: absolute;
-            left: 50%; top: 33px;
+            left: 50%; top: 35px;
             transform: translateX(-50%);
             align-content: flex-start;
         }
-        .main_menu {
+        .main {
             width: 600px;
             display: flex;
             text-align: center;
             font-size: 1.8rem;
             font-weight: 700;
         }
-        .main_menu li {
+        #header .main a:hover {
+            color: #bbb;
+        }
+        .main li {
             width: 150px;
         }
-        .main_menu:hover .sub_menu {
-            /* display: block; */
-            visibility: visible;
-            opacity: 1;
+        .main > li > a::after {
+            content: '';
+            display: block;
+            width: 0; height: 2px;
+            background-color: #bbb;
+            /* margin 빼면 왼쪽 기준 */
+            margin: 0 auto;
+            /* transform: scaleX(0); */
+            /* border-bottom: 5px solid red; */
+        }
+        .main > li > a {
+            display: inline-block;
+        }
+        .main > li > a:hover::after {
+            /* transform: scaleX(1); */
+            width: 100%;
             transition: 0.3s;
         }
-        .sub_menu {
-            /* display: none; */
-            visibility: hidden;
-            opacity: 0;
+        /* .main:hover .sub {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.5s;
+        } */
+        .sub {
+            /* visibility: hidden;
+            opacity: 0; */
             font-size: 1.6rem;
             font-weight: 400;
             margin-top: 44px;
             line-height: 2.4;
             background: #fff;
         }
-        .sub_menu a {
+        #header .sub a {
             color: #333;
         }
     </style>
 </head>
 <body>
-    <header class="header">
+    <header id="header">
         <div class="container">
             <h1 class="logo"><a href="#">경남아너스빌</a></h1>
-            <nav class="gnb">
-               <ul class="main_menu">
+            <nav id="gnb">
+               <ul class="main">
                    <li>
                         <a href="#">분양단지</a>
-                        <ul class="sub_menu">
+                        <ul class="sub">
                             <li><a href="#">분양중인 단지</a></li>
                             <li><a href="#">분양예정 단지</a></li>
                             <li><a href="#">분양완료 단지</a></li>
@@ -87,7 +111,7 @@
                     </li>
                     <li>
                         <a href="#">브랜드</a>
-                        <ul class="sub_menu">
+                        <ul class="sub">
                             <li><a href="#">브랜드 스토리</a></li>
                             <li><a href="#">브랜드 아이덴티티</a></li>
                             <li><a href="#">특화아이템</a></li>
@@ -95,14 +119,14 @@
                     </li>
                     <li>
                         <a href="#">아너스빌 멤버스</a>
-                        <ul class="sub_menu">
+                        <ul class="sub">
                             <li><a href="#">아너스빌 소식</a></li>
                             <li><a href="#">청약가이드</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">마이아너스빌</a>
-                        <ul class="sub_menu">
+                        <ul class="sub">
                             <li><a href="#">자주 묻는 질문</a></li>
                             <li><a href="#">1:1 문의</a></li>
                             <li><a href="#">A/S 문의</a></li>
