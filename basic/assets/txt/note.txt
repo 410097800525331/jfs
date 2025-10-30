@@ -85,3 +85,4 @@ git pull --rebase origin main
 
 D2Coding-Ver1.3.2-20180524.zip
 설치 후 settings(설정) > Font Family > d2coding, Consolas, 'Courier New', monospace 로 수정
+www.gdweb.co.kr

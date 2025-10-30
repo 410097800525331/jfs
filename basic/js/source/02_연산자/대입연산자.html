@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js: 대입연산자</title>
+</head>
+<body>
+    <script>
+        /* 
+        대입 연산자
+        =
+        x += 1;     x = x + 1;      x++
+        x -= 1;     x = x - 1;      x--
+        x *= 1;     x = x * 1;
+        x /= 1;     x = x / 1;
+        x %= 1;     x = x % 1;
+        x **= 1;     x = x ** 1;
+        */
+
+        let x = 10;
+        const y = prompt('1~5 사이의 정수를 입력하세요');
+
+        document.write('x =  ' + x + '<br>');
+        document.write('y =  ' + y + '<br>');
+        x += y;
+        document.write('x += 1에서 x =  ' + x + '<br>');
+        x -= y;
+        document.write('x -= 1에서 x =  ' + x + '<br>');
+        x *= y;
+        document.write('x *= 1에서 x =  ' + x + '<br>');
+        x /= y;
+        document.write('x /= 1에서 x =  ' + x + '<br>');
+        x %= y;
+        document.write('x %= 1에서 x =  ' + x + '<br>');
+        x **= y;
+        document.write('x **= 1에서 x =  ' + x + '<br>');
+
+        let str = 'ECMAScript';
+        str += 6;
+        document.write('str += 6 하면 sty = ' + str + '<br>');
+    </script>
+</body>
+</html>
