@@ -15,6 +15,7 @@
   border-radius: 10px;
   padding: 8px 0;
   z-index: 9998;
+  background-color: #fff;
 }
 .side_menu a:not(:last-child)::after {
   content: "";
@@ -120,58 +121,64 @@
     height: 250px;
   }
 }
-/* 프로세스 */
 
-/* .oem_process {
+/* 프로세스 */
+.oem_process {
+  padding: 48px 0;
+  text-align: center;
+}
+.oem_steps {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
   max-width: 1400px;
-  padding: 60px 20px;
-  margin: 0 auto;
+  margin: 24px auto;
 }
-.process_container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 40px;
-  margin-top: 40px;
+.oem_step {
+  width: 200px;
+  text-align: center;
 }
-.process_item {
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 30px 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
+.oem_circle {
+  position: relative;
+  width: 90px; height: 90px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin: 0 auto 10px;
 }
-애니메이션으로 만들기
-.process_item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.oem_circle span {
+  position: absolute;
+  bottom: -16px;
+  font-weight: 500;
+  color: var(--grayc);
 }
-.process_item img { ㅡㅡ
-  width: 50px;
-  height: 50px;
-  margin-bottom: 20px;
+.oem_step h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 16px 0 8px;
 }
-.process_item h3 {
-  margin-bottom: 8px;
-  color: #333;
-}
-.process_item p {
+.oem_step p {
   font-size: 1.4rem;
 }
-.process_item.highlight {
-  border: 2px solid #00ad00;
-  background: #aedabb; ㅡㅡ
+.arrow {
+  font-size: 1.8rem;
+  color: var(--grayc);
+  align-self: center;
 }
 @media (max-width: 770px) {
-  .process_container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  .oem_steps {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .arrow {
+    transform: rotate(90deg);
   }
 }
-@media (max-width: 480px) {
-  .process_container {
-    grid-template-columns: 1fr;
-  }
-} */
 
 /* 문의 폼 */
 .contact_section {
@@ -360,4 +367,55 @@
   color: #000;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+} */
+
+/* .oem_process {
+  max-width: 1400px;
+  padding: 60px 20px;
+  margin: 0 auto;
+}
+.process_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+.process_item {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+애니메이션으로 만들기
+.process_item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.process_item img { ㅡㅡ
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.process_item h3 {
+  margin-bottom: 8px;
+  color: #333;
+}
+.process_item p {
+  font-size: 1.4rem;
+}
+.process_item.highlight {
+  border: 2px solid #00ad00;
+  background: #aedabb; ㅡㅡ
+}
+@media (max-width: 770px) {
+  .process_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .process_container {
+    grid-template-columns: 1fr;
+  }
 } */
