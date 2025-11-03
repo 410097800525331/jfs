@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js: while문</title>
+</head>
+<body>
+  <script>
+    /* 
+    while문 기본 형식(무한 루프)
+    while(조건식) {
+      코드; (참이면 코드를 반복)
+      증감식;
+    }
+    */
+    
+    // 1부터 100까지 합
+    let x = 1;
+    let sum = 0; // 누적 합계 변수
+    // 누적 합계: sum = sum + x; -> sum += x;
+    while(x <= 100) {
+      sum = sum + x;
+      x++;
+    }
+    document.write('1~100까지 합: ' + sum)
+
+    while(1) { // 무한 반복, 0, -0은 false  1은 true
+      document.write('무한반복');
+    }
+  </script>
+</body>
+</html>

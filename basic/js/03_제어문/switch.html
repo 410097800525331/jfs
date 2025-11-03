@@ -96,6 +96,31 @@
         // setInterval(함수, 시간);
         // 자바스크립트는 시간을 밀리초 단위로 표현한다
         // setInterval(digitalClock, 1000);
+
+        /* 
+        게터(Getter): 설정된 값을 가져온다
+        세터(Setter): 값을 설정한다
+        */
+        let text;
+        const week = new Date().getDay();    // 0(일요일)~6(토요일) 
+        switch(week) {
+            case 1:    // 월요일
+            case 2:    // 화요일
+                text="HTML5";
+                break;
+            case 3:    // 수요일
+            case 4:    // 목요일
+                text="자바스크립트";
+                break;
+            case 5:    // 금요일 
+	        case 6:    // 토요일
+                text="영어";
+                break;
+            case 0:    //일요일
+	        default:
+                text="수영";
+        }
+	    document.write("오늘은 <b>" + text + "</b> 학습하는 날입니다. <p/>");
     </script>
 </body>
 </html>
