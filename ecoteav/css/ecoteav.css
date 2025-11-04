@@ -294,27 +294,21 @@
 } */
 
 /* 회사 위치 */
-/* .fixedbg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
+.main_bg {
+  position: relative;
   color: #fff;
 }
-.fixedbg_inner {
+.bg_inner {
   width: 100%;  height: 500px;
   text-align: center;
-  background: url(../assets/imgs/fixedbg.webp) no-repeat 0 0/cover fixed;
+  background: url(../assets/imgs/main_bg.jpg) no-repeat 0 0/cover fixed;
 }
-.fixedbg_inner p {
+.bg_inner p {
   margin: 16px 0 24px;
 }
-.fixedbg_inner a {
-  display: inline-block;
-  padding: 8px 40px;
-  transition: all 0.3s ease;
-  border: 1px solid var(--gray5);
-} */
+.bg_inner a {
+  color: #fff;
+}
 /* .fixedbg_inner a:hover {
   background-color: #fff;
   color: #000;

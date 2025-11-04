@@ -161,6 +161,11 @@ footer .sns i {
     100% {transform: rotate(720deg) scale(2.2);}
 }
 
+/* section area: about me */
+#profile .inner {
+    display: flex;
+}
+
 /* work + contact common */
 .parallax_bg {
     position: relative;
