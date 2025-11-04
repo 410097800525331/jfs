@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js: break</title>
+</head>
+<body>
+  <script>
+    /* 
+    break
+    - 제어문 내에서 제어문을 탈출하는 키워드
+    */
+    let x = 0, sum = 0;
+    while(1) {
+      // 3의 배수
+      x+=3;
+      if(x>100) break;
+      sum+=x;
+      document.write(x + ' ');
+    }
+    document.write('<br> 1~100까지 3의 배수의 합: ' + sum + '<br>');
+
+    
+    // 나머지(%) 연산자 사용
+    // x % 3 === 0
+    sum = 0;
+    for(let i=1; i<=100; i++) {
+      if(i%3===0) {
+        document.write(i + ' ')
+        sum += i;
+      }
+    }
+    document.write('<br> 1~100까지 3의 배수의 합: ' + sum + '<br>')
+  </script>
+</body>
+</html>

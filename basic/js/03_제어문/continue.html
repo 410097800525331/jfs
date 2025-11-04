@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js: continue</title>
+</head>
+
+<body>
+  <script>
+    /* 
+    break
+    - 제어문 즉시 종료
+    continue
+    - 제어문의 시작 위치로 이동
+    */
+
+    // 나머지(%) 연산자 사용
+    // x % 3 === 0
+
+    let sum = 0;
+    for (let x = 1; x <= 100; x++) {
+      // if문 블록 내부 코드가 한 문장일 경우 {} 생략
+      if (x % 3 !== 0)
+        continue;
+      sum += x;
+      document.write(x + ' ');
+    }
+    document.write('<br> 1~100까지 3의 배수의 합: ' + sum + '<br>');
+
+    /* 
+    label문
+      continue lable;
+      break lable;
+      
+    - 중첩 루프가 깊을 경우 사용
+    - 이름 정의는 변수 이름 정의와 같다
+    - break와 continue 뒤에 사용
+
+    식별자의 이름 정의
+    - 문자, 밑줄(_), 달러($)로 시작한다
+    - 대소문자 구별한다
+    - 한글 사용 가능하나 영문 권장
+    - 예약어(true, false, if, for 등)는 사용X
+    */
+
+    var i, j;
+    outloop:   // label name
+    for (i = 0; i < 3; i++) {
+      inloop:  // label name
+      for (j = 0; j < 3; j++) {
+        if (i === 1 && j === 0) {
+          continue outloop;
+        }
+        document.write("i = " + i + ", j = " + j + "<br>");
+      }
+    }
+  </script>
+</body>
+
+</html>

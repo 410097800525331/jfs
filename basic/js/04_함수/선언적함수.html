@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js: 함수 선언과 호출</title>
+</head>
+<body>
+  <button type="button" onclick="printMsg2('이기자', 30)">정보 확인</button>
+  <script>
+    /* 
+    함수(funvtion) 작성
+    - {제어문}과 마찬가지로 {함수} 선언문 끝에도 ;를 쓰지 않는다
+    - 이름 지정 방법은 변수와 같다
+
+    1. 함수 선언
+    function [함수명]([매개변수1, 매개변수2 ...]) {
+      코드;
+      [return 반환값;]
+    }
+    매개변수(parameter): 변수
+    인자(argument): 값
+
+    2. 익명(무명) 함수 선언
+    var 변수명 = function(매개변수1, 매개변수2, ...) {
+      코드;
+    }
+
+    3. 함수 호출
+    함수명([인자1, 인자2, ...]);
+
+    함수는 반복 코드를 재사용할때 씀
+    */
+    document.write('1함수가 아닙니다.');
+    document.write('2함수가 아닙니다.');
+
+    // 매개변수가 없는 함수
+    fn(); // 호이스팅(Hoisting)
+    // 함수 선언
+    function fn() {
+      document.write('함수입니다. <br>');
+    }
+    // 함수 호출
+    fn();fn();
+
+    const txt1 = '함수 선언 전 호출';
+    const txt2 = '함수 선언 후 호출';
+
+    printMsg(txt1); // 호이스팅
+
+    // 함수 선언
+    function printMsg(msg) {
+      document.write(msg + '<br>');
+    }
+    // 함수 호출
+    printMsg(txt2);
+
+    // 이름이 같으면 아래 함수가 호출된다
+    function printMsg2(name, age) {
+      document.write('이름은 ' + name + '이고, 나이는 ' + age + '살 입니다 <br>');
+    }
+    printMsg2('홍길동', 22);
+    
+  </script>
+</body>
+</html>

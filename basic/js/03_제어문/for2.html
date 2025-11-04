@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS while vs for</title>
+</head>
+
+<body>
+  <script>
+    /* 
+    while문 기본 형식
+      // 조건식이 참(true)이면 코드를 반복!
+      초기식;
+
+      while (조건식) {
+        코드;
+        증감식;
+      }
+    */
+
+    // 1부터 100까지 합
+    let sum = 0;
+    // while (let x = 1; x <= 100; x++) {
+      sum = sum + x;
+    // }
+    document.write('1~100까지 합: ' + sum + '<br>');
+
+    document.write('문자열' + 10 + '<br>');
+    document.write('문자열' * 10 + '<br>');
+    document.write(10 / 0 + '<br>');
+    document.write(10 / -0 + '<br>');
+
+    sum = 0;
+    for (x = 0; 1; x++) {
+      sum = sum + x;
+      if (x === 10001) break;
+    }
+    document.write('1~10000까지 합: ' + sum + '<br>');
+
+  </script>
+</body>
+
+</html>

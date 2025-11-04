@@ -139,8 +139,10 @@ footer .sns i {
 
 /* section area */
 #home {
+    position: relative;
     height: 100vh;
     background: url(../assets/img/main_bg.jpg) no-repeat 50% 50%/cover fixed;
+    overflow: hidden;
 }
 #home h2 {
     /* background: var(--main-color); */
@@ -212,3 +214,4 @@ footer .sns i {
 #contact .addr i {
     margin-right: 16px;
 }
+
