@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js parameter</title>
+</head>
+<body>
+  <script>
+    /* 
+    매개변수와 인자
+    */
+    // 매개변수가 없을 경우
+    function add() {
+      const sum = 1;
+      return sum;
+    }
+    function add1(x) {
+      const sum = x + 1;
+      return sum;
+    }
+    function add2(x, y) {
+      const sum = x + y;
+      return sum;
+    }
+    // 매개변수의 기본값(default)을 설정할 수 있다
+    // 매개변수의 기본값보다 전달한 인자값이 우선 적용된다
+    // 나머지 매개변수(기호는 ...) 형식: ...매개변수명
+    function add3(x, y = 5, z = 10) {
+      const sum = x + y + z;
+      return sum;
+    }
+    // 나머지(rest) 매개변수
+    function add4(x, y, ...z) {
+      const sum = x + y + z;
+      return sum;
+    }
+    const r0 = add();
+    const r1 = add1(2);
+    const r2 = add2(2, 3);
+    const r3 = add3(2, 3, 4);
+    const r4 = add4(2, 3, 4, 5);
+    document.write(`r0 = ${r0} <br>`);
+    document.write(`r0 = ${r1} <br>`);
+    document.write(`r0 = ${r2} <br>`);
+    document.write(`r0 = ${r3} <br>`);
+    document.write(`r0 = ${r4} <br>`);
+  </script>
+</body>
+</html>

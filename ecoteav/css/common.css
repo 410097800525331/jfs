@@ -3,17 +3,15 @@
 
 
 :root {
-    font-size: 10px;
-    --gray5: #555;
-    --grayc: #ccc;
-    --point: #003064
-    scroll-behavior: smooth;
+  font-size: 10px;
+  --gray5: #555;
+  --grayd: #ddd;
+  --point: #214726 scroll-behavior: smooth;
 }
 body {
-    font: 16px/1.5 "Noto Sans KR", sans-serif;
-    color: var(--gray5)
+  font: 16px/1.5 'NexonLv1Gothic', sans-serif;
+  color: var(--gray5)
 }
-
 .btnG {
   display: inline-block;
   padding: 8px 40px;
@@ -23,8 +21,8 @@ body {
   border: 1px solid var(--gray5);
 }
 .btnG:hover {
-    background-color: var(--gray5);
-    color: #fff;
+  background-color: var(--gray5);
+  color: #fff;
 }
 .btnF {
   display: inline-block;
@@ -36,39 +34,42 @@ body {
   color: #fff;
 }
 .btnF:hover {
-    background-color: #fff;
-    color: var(--gray5);
+  background-color: #fff;
+  color: var(--gray5);
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0; padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body, h1, h2, h3, p, ul {
-    margin: 0;
+  margin: 0;
 }
 img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
 }
 video {
-    width: 100%; height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 a {
-    text-decoration: none;
-    color: #333;
+  text-decoration: none;
+  color: var(--gray5);
 }
 button {
-    border: none;
-    background: transparent;
-    cursor: pointer;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 input {
-    border: none;
+  border: none;
 }

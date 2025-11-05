@@ -6,7 +6,6 @@
 /* 메인 배너 */
 .main_banner {
   width: 100%; height: 700px;
-  margin: 140px auto 0;
 }
 .banner_list {
   display: grid;
@@ -81,7 +80,7 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1400px;
-  margin: 60px auto 32px;
+  margin: 140px auto 40px;
 }
 .oem_steps {
   display: flex;
@@ -299,70 +298,14 @@
   color: #fff;
 }
 .bg_inner {
-  width: 100%;  height: 500px;
-  text-align: center;
+  width: 100%;  height: 300px;
   background: url(../assets/imgs/main_bg.jpg) no-repeat 0 0/cover fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .bg_inner p {
   margin: 16px 0 24px;
 }
-.bg_inner a {
-  color: #fff;
-}
-/* .fixedbg_inner a:hover {
-  background-color: #fff;
-  color: #000;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-} */
-
-/* .oem_process {
-  max-width: 1400px;
-  padding: 60px 20px;
-  margin: 0 auto;
-}
-.process_container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 40px;
-  margin-top: 40px;
-}
-.process_item {
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 30px 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-애니메이션으로 만들기
-.process_item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-.process_item img { ㅡㅡ
-  width: 50px;
-  height: 50px;
-  margin-bottom: 20px;
-}
-.process_item h3 {
-  margin-bottom: 8px;
-  color: #333;
-}
-.process_item p {
-  font-size: 1.4rem;
-}
-.process_item.highlight {
-  border: 2px solid #00ad00;
-  background: #aedabb; ㅡㅡ
-}
-@media (max-width: 770px) {
-  .process_container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-@media (max-width: 480px) {
-  .process_container {
-    grid-template-columns: 1fr;
-  }
-} */

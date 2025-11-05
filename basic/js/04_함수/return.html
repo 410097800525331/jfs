@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js 함수 return</title>
+</head>
+<body>
+  <script>
+    /* 
+    선언적 함수
+    function 함수명([매개변수, ...]) {
+      코드;
+      [return 값;]
+    }
+      함수 호출
+      함수명([인자, ...])
+    */
+
+    // 전역변수 vs 지역변수(vs 매개변수)
+    let sum = 12345; // 전역변수
+    let num = 0; // 전역변수
+    // 외부로부터 값(자연수)을 입력받아 
+    function add(name, num) {
+      document.write(name + '이 숫자 ' + num + '을 입력하였습니다. 1부터 ' + num + '까지의 합은 <br>');
+      // 템플릿 리터럴(`) ${변수|표현식|함수호출문}
+      document.write(`${name}이 숫자<b style="color: red;"> ${num}</b>을 입력하였습니다. 1부터 ${num}까지의 합은 `);
+
+      sum = 0; // 전역변수
+      for(let i=1; i<=num; i++) {
+        sum += i;
+      }
+      return sum;
+    }
+    let resilt = add('홍길동', 10); // 전역변수
+    document.write(resilt + '입니다.');
+
+    document.write(add('김길동', 100) + '입니다.<br>');
+
+    // 덧셈 연산 함수
+    function add(x,y) {
+      return x + y
+    }
+    // 뺄셈 연산 함수
+    function subtract(x,y) {
+      return x - y
+    }
+    // 곱셈 연산 함수
+    function miltiply(x,y) {
+      return x * y
+    }
+    // 나눗셈 연산 함수
+    function divide(x,y) {
+      return x / y
+    }
+    // 출력
+    document.write('-----------------------<br>');
+    document.write(add(5, 2) + '<br>');
+    const addtion = add;
+    document.write(`${addtion(5, 2)}<br>`);
+  </script>
+</body>
+</html>

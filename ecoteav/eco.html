@@ -9,11 +9,10 @@
 </head>
 
 <body>
-  <!-- 당신은 어떤 茶인가요? home.smore.im -->
   <div class="wrap">
-    <!-- 메뉴 -->
-    <header id="header">
-      <h1 class="logo"><a href="/jfs/ecoteav/index.html"><img src="/jfs/ecoteav/assets/imgs/ecoteav_logo.png" alt="에코티브 로고"></a></h1>
+    <!-- 메뉴 --> <!-- 당신은 어떤 茶인가요? home.smore.im -->
+    <header class="header">
+      <h1 class="logo"><a href="./index.html"><img src="./assets/imgs/ecoteav_logo.png" alt="에코티브 로고"></a></h1>
       <nav class="main_menu">
         <ul class="gnb">
           <li>
@@ -83,8 +82,28 @@
         </ul>
       </nav>
     </header>
+    <!-- 사이드 메뉴 -->
+    <div class="side_menu">
+      <a href="tel:1234-1234" class="menu_item">
+        <img src="./assets/imgs/ecoteav_logo.png" alt="에코티브 로고">
+        <span>OEM/ODM<br>상담 신청<br>1234-1234</span>
+      </a>
+      <a href="#" class="menu_item">
+        <i class="fa-brands fa-kakao-talk"></i>
+        <span>카카오톡<br>채널<br>kakaotalk</span>
+      </a>
+      <a href="#" class="menu_item">
+        <i class="fa-brands fa-twitch"></i>
+        <span>네이버톡톡<br>Naver<br>talk talk</span> <!-- 로고 수정 필요 -->
+      </a>
+      </a>
+      <a href="#" class="menu_item">
+        <i class="fa-solid fa-chevron-up"></i>
+        <span><b>Top</b></span>
+      </a>
+    </div>
     <!-- 메인 배너 -->
-     <section class="main_banner">
+    <section class="main_banner">
       <ul class="banner_list">
         <li>
           <a href="#">
@@ -217,20 +236,34 @@
             </div>
           </div>
           <!-- <div class="form_group checkbox-group">
-                    <input type="checkbox" id="privacy" name="privacy" required>
-                    <label for="privacy">개인정보 수집 및 이용 동의 <span class="required">*</span></label>
-                </div>
-                <div class="form_group textarea_info">
-                    <textarea readonly>
-                    1. 개인정보의 수집 및 이용목적
-                    - 서비스 이용에 따른 본인 확인, 신규 서비스 등 최신 정보 안내 및 개인 맞춤 서비스 제공
-                    </textarea>
-                </div> -->
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">개인정보 수집 및 이용 동의 <span class="required">*</span></label>
+                    </div>
+                    <div class="form_group textarea_info">
+                        <textarea readonly>
+                        1. 개인정보의 수집 및 이용목적
+                        - 서비스 이용에 따른 본인 확인, 신규 서비스 등 최신 정보 안내 및 개인 맞춤 서비스 제공
+                        </textarea>
+                    </div> -->
           <button type="submit" class="btn_submit">확인</button>
         </form>
       </div>
     </section>
-    <!-- 회사 위치 --> <!-- 버튼 색 수정 필요 -->
+    <!-- intro_content 수정 필요-->
+    <!-- <section class="intro_section">
+        <div class="intro_image"></div>
+        <div class="intro_content">
+            <img src="./assets/imgs/ecoteav_logo.png" alt="에코티브 로고">
+            <p>자연(Tea)과 브랜드, 그리고 삶의 취향이 만나는 곳</p>
+            <ul>
+                <li><b>Customer Focus</b>: 에코티브는 고객의 취향과 철학을 담은 ‘커스텀 티’를 중심으로,<br>차(茶)와 함께하는 감각적인 라이프스타일을 제안합니다.</li>
+                <li><b>Custom Tea</b>: 에코티브는 차(茶)를 중심으로 브랜드와 고객의 일상을 연결하는 감각적인 라이프스타일 브랜드입니다.</li>
+                <li><b>Natural</b>: 에코티브는 자연의 숨결을 차 한 잔에 담아내는, 감각적인 블렌딩티 제조 전문 기업입니다.</li>
+            </ul>
+            <a href="#" class="intro_btn">Shop the range</a>
+        </div>
+        </section> -->
+    <!-- 회사 위치 --> <!-- 이미지 -->
     <div class="main_bg">
       <div class="bg_inner">
           <h2>에코티브</h2>
@@ -239,7 +272,7 @@
       </div>
     </div>
     <!-- footer -->
-    <footer id="footer">
+    <footer class="site_footer">
       <div class="footer_inner">
         <div class="footer_top">
           <ul class="footer_links">
@@ -272,8 +305,96 @@
         </div>
       </div>
     </footer>
-  </div>
-  <script src="./js/main.js"></script>
+    <!-- <section class="oem_process">
+            <h2>OEM/ODM 진행 단계</h2>
+            <div class="process_container">
+                <div class="process_item">
+                <img src="icon1.svg" alt="고객 상담 아이콘">
+                <h3>1. 맞춤 상담</h3>
+                <p>제품의 목적, 수량, 예산 등 고객의 니즈를 면밀히 파악해 최적의 방향을 제안합니다.</p>
+                </div>
+                <div class="process_item">
+                <img src="icon2.svg" alt="샘플 테스트 아이콘">
+                <h3>2. 샘플 개발</h3>
+                <p>요구사항을 바탕으로 샘플을 제작하고, 완성도를 높이기 위한 테스트를 진행합니다.</p>
+                </div>
+                <div class="process_item highlight">
+                <img src="icon3.svg" alt="커스텀 향료 아이콘">
+                <h3>3. 향료 맞춤 제작</h3>
+                <p>필요 시 고객 전용 향료를 개발하여  <strong>차별화된 제품 아이덴티티</strong>를 완성합니다.</p>
+                </div>
+
+                <div class="process_item">
+                <img src="icon4.svg" alt="계약 협의 아이콘">
+                <h3>4. 조건 협의</h3>
+                <p>샘플 결과를 토대로 견적을 제시하고 세부 계약 조건을 협의합니다.</p>
+                </div>
+
+                <div class="process_item">
+                <img src="icon5.svg" alt="패키지 제작 아이콘">
+                <h3>5. 생산 및 패키징</h3>
+                <p>원료 생산부터 포장 디자인까지, 모든 과정을 통합 관리합니다.</p>
+                </div>
+
+                <div class="process_item">
+                <img src="icon6.svg" alt="납품 및 물류대행 아이콘">
+                <h3>6. 납품 및 물류</h3>
+                <p>완제품을 납품하거나 보관·출고 등 물류 전반을 대행 지원합니다.</p>
+                </div>
+            </div>
+        </section> -->
+
+ <!-- .oem_process {
+  max-width: 1400px;
+  padding: 60px 20px;
+  margin: 0 auto;
+}
+.process_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+.process_item {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+애니메이션으로 만들기
+.process_item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.process_item img { ㅡㅡ
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.process_item h3 {
+  margin-bottom: 8px;
+  color: #333;
+}
+.process_item p {
+  font-size: 1.4rem;
+}
+.process_item.highlight {
+  border: 2px solid #00ad00;
+  background: #aedabb; ㅡㅡ
+}
+@media (max-width: 770px) {
+  .process_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .process_container {
+    grid-template-columns: 1fr;
+  }
+} -->
+      </div>
 </body>
 
 </html>
