@@ -11,3 +11,4 @@ const main = document.querySelector('section');
 const headerHeight = header.offsetHeight;
 main.style.paddingTop = `${headerHeight}px`;
 
+

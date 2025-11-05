@@ -199,6 +199,14 @@ button {
 #work button {
     margin: 64px 0 0;
 }
+/* !! */
+/* #shadow {
+    margin: 64px 0 0;
+    width: 200px; height: 50px;
+    background: inherit;
+    color: #000;
+
+} */
 #work button:hover {
     background-color: var(--sub-color);
 }

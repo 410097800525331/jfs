@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>로그인 예제 (prompt 사용)</title>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      flex-direction: column;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 15px 30px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      font-size: 18px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>로그인 프로그램</h1>
+  <div class="result" id="resultBox">로그인 대기 중...</div>
+
+  <script>
+    // ✅ 등록된 계정 목록 (3명)
+    // 배열 []
+    // [값, 값, ...]
+    // 객체 {}
+    // {키:값, 키:값, ...}
+    const users = [
+      { id: "hong", pw: "1234", name: "홍길동" },
+      { id: "kim", pw: "abcd", name: "김철수" },
+      { id: "lee", pw: "0000", name: "이영희" }
+    ];
+
+    // ✅ 사용자 입력 받기 (prompt)
+    const inputId = prompt("아이디를 입력하세요:");
+    const inputPw = prompt("비밀번호를 입력하세요:");
+
+    // ✅ 로그인 검증
+    const user = users.find(u => u.id === inputId && u.pw === inputPw);
+
+    // ✅ 결과 출력
+    const resultBox = document.getElementById("resultBox");
+
+    if (user) {
+      resultBox.innerHTML = `✅ ${user.name}님, 로그인 성공!<br>환영합니다 🎉`;
+      resultBox.style.background = "rgba(0,255,0,0.3)";
+    } else {
+      resultBox.innerHTML = "❌ 로그인 실패! 아이디 또는 비밀번호가 잘못되었습니다.";
+      resultBox.style.background = "rgba(255,0,0,0.3)";
+    }
+  </script>
+</body>
+</html>

@@ -6,7 +6,8 @@
   font-size: 10px;
   --gray5: #555;
   --grayd: #ddd;
-  --point: #214726 scroll-behavior: smooth;
+  --point: #214726
+  scroll-behavior: smooth;
 }
 body {
   font: 16px/1.5 'NexonLv1Gothic', sans-serif;
@@ -15,7 +16,7 @@ body {
 .btnG {
   display: inline-block;
   padding: 8px 40px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   transition: all 0.3s ease;
   border: 1px solid var(--gray5);
@@ -27,7 +28,7 @@ body {
 .btnF {
   display: inline-block;
   padding: 8px 40px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   transition: all 0.3s ease;
   border: 1px solid #fff;
