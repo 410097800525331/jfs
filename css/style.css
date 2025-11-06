@@ -162,9 +162,19 @@ footer .sns i {
 }
 
 /* section area: about me */
-#profile .inner {
+#about .basic p {
+    text-align: left;
+}
+#about .inner {
     display: flex;
 }
+#about .inner div {
+    flex: 50%;
+}
+#about .inner p {
+    flex: 50%;
+}
+
 
 /* work + contact common */
 .parallax_bg {
