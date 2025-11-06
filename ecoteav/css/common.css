@@ -4,9 +4,10 @@
 
 :root {
   font-size: 10px;
+  --gray2: #222;
   --gray5: #555;
   --grayd: #ddd;
-  --point: #214726
+  --main: #98A86D;
   scroll-behavior: smooth;
 }
 body {

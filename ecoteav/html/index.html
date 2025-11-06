@@ -12,78 +12,8 @@
   <!-- 당신은 어떤 茶인가요? home.smore.im -->
   <div class="wrap">
     <!-- 메뉴 -->
-    <header id="header">
-      <h1 class="logo"><a href="/jfs/ecoteav/index.html"><img src="/jfs/ecoteav/assets/imgs/ecoteav_logo.png"
-            alt="에코티브 로고"></a></h1>
-      <nav class="main_menu">
-        <ul class="gnb">
-          <li>
-            <a href="/jfs/ecoteav/html/company/about.html">기업소개</a>
-            <ul class="sub_menu">
-              <li><a href="/jfs/ecoteav/html/company/about.html">에코티브</a></li>
-              <li><a href="/jfs/ecoteav/html/company/ci.html">CI</a></li>
-              <li><a href="/jfs/ecoteav/html/company/location.html">오시는 길</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="/jfs/ecoteav/html/oem_odm/process.html">OEM/ODM</a>
-            <ul class="sub_menu">
-              <li><a href="/jfs/ecoteav/html/oem_odm/process.html">프로세스</a></li>
-              <li><a href="/jfs/ecoteav/html/oem_odm/partners.html">에코티브 협력사</a></li>
-              <li><a href="/jfs/ecoteav/html/oem_odm/b2b_private.html">B2B 결제(PRIVATE)</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="/jfs/ecoteav/html/consultation/blending.html">상담/견적 신청</a>
-            <ul class="sub_menu">
-              <li><a href="/jfs/ecoteav/html/consultation/blending.html">블렌딩 티 상담 신청</a></li>
-              <li><a href="/jfs/ecoteav/html/consultation/fragrance.html">향료 상담 신청</a></li>
-              <li><a href="/jfs/ecoteav/html/consultation/visit.html">방문 상담 신청</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="/jfs/ecoteav/html/package/three_side.html">패키지 제작</a>
-            <ul class="sub_menu">
-              <li><a href="/jfs/ecoteav/html/package/three_side.html">삼방</a></li>
-              <li><a href="/jfs/ecoteav/html/package/roll.html">자동롤</a></li>
-              <li><a href="/jfs/ecoteav/html/package/zipper_stand.html">지퍼스탠드</a></li>
-              <li><a href="/jfs/ecoteav/html/package/box.html">단상자</a></li>
-              <li><a href="/jfs/ecoteav/html/package/design_reference.html">디자인 자료실</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="/jfs/ecoteav/html/shop/herb.html">취급 원료(Shop)</a>
-            <ul class="sub_menu">
-              <li><a href="/jfs/ecoteav/html/shop/herb.html">허브</a></li>
-              <li><a href="/jfs/ecoteav/html/shop/black_tea.html">홍차</a></li>
-              <li><a href="/jfs/ecoteav/html/shop/korean_ingredient.html">국내산 원료</a></li>
-              <li><a href="/jfs/ecoteav/html/shop/signature_flavor.html">시그니쳐 향료</a></li>
-              <li><a href="/jfs/ecoteav/html/shop/sample_request.html">샘플 신청</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="/jfs/ecoteav/html/contact/inquiry.html">문의하기</a>
-            <ul class="sub_menu">
-              <li><a href="/jfs/ecoteav/html/contact/inquiry.html">1:1 문의</a></li>
-              <li><a href="/jfs/ecoteav/html/contact/collaboration.html">협업 문의</a></li>
-              <li><a href="/jfs/ecoteav/html/contact/package_inquiry.html">패키지 문의</a></li>
-              <li><a href="/jfs/ecoteav/html/contact/faq.html">자주 묻는 질문</a></li>
-            </ul>
-          </li>
-          <li><a href="/jfs/ecoteav/html/goods/brand_goods.html">브랜드 굿즈</a></li>
-        </ul>
-      </nav>
-      <nav class="nav_right">
-        <ul>
-          <li><a href="/jfs/ecoteav/html/member/login.html">LOGIN</a></li>
-          <li><a href="/jfs/ecoteav/html/member/join.html">JOIN</a></li>
-          <li><a href="/jfs/ecoteav/html/order/cart.html">CART</a></li>
-          <li><a href="/jfs/ecoteav/html/order/order.html">ORDER</a></li>
-          <li><a href="/jfs/ecoteav/html/member/my_shop.html">MY SHOP</a></li>
-          <li><button type="button" class="search"><i class="fa-solid fa-magnifying-glass"></i></button></li>
-        </ul>
-      </nav>
-    </header>
+    <div id="header" data-include-path="include/header.html"></div>
+    <div id="sidebar" data-include-path="include/sidebar.html"></div>
     <!-- 메인 배너 -->
     <section class="main_banner">
       <ul class="banner_list">
@@ -123,8 +53,9 @@
         </li>
       </ul>
     </section>
+    <div style="height: 500px;"></div>
     <!-- 프로세스 -->
-    <section class="oem_process">
+    <!-- <section class="oem_process">
       <div class="oem_title">
         <h2>OEM / ODM Process</h2>
         <a class="btnG" href="#">프로세스 보러가기 <i class="fa-solid fa-chevron-right"></i></a>
@@ -184,9 +115,9 @@
           <p>완제품을 납품하거나 보관·출고 등 물류 전반을 대행 지원합니다.</p>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- 문의 폼 -->
-    <section class="contact_section">
+    <!-- <section class="contact_section">
       <div class="contact_inner">
         <div class="contact_image">
           <img src="/jfs/ecoteav/assets/imgs/contact.webp" alt="화이트 톤의 깔끔한 사무실 책상">
@@ -218,23 +149,13 @@
               <textarea id="message" name="message" rows="5" required></textarea>
             </div>
           </div>
-          <!-- <div class="form_group checkbox-group">
-                    <input type="checkbox" id="privacy" name="privacy" required>
-                    <label for="privacy">개인정보 수집 및 이용 동의 <span class="required">*</span></label>
-                </div>
-                <div class="form_group textarea_info">
-                    <textarea readonly>
-                    1. 개인정보의 수집 및 이용목적
-                    - 서비스 이용에 따른 본인 확인, 신규 서비스 등 최신 정보 안내 및 개인 맞춤 서비스 제공
-                    </textarea>
-                </div> -->
           <button type="submit" class="btn_submit">확인</button>
         </form>
       </div>
-    </section>
+    </section> -->
     <!-- https://cheumbio.com/ -->
     <!-- 회사 소개 -->
-    <section class="about">
+    <!-- <section class="about">
       <div class="inner">
         <div class="about_text">
           <h2>About Ecotive</h2>
@@ -248,9 +169,9 @@
           <img src="/jfs/ecoteav/assets/imgs/about.png" alt="Ecotive Tea" style="background-color: #ccc;">
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- 제품 소개/납품 사례 -->
-    <section class="intro_section">
+    <!-- <section class="intro_section">
       <div class="intro_block">
         <div class="intro_image">
           <img src="/jfs/ecoteav/assets/imgs/banner_02.jpg" alt="제품 소개 이미지">
@@ -303,51 +224,19 @@
           <a href="#" class="btnG">바로가기</a>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- 회사 위치 --> <!-- 이미지 수정 -->
-    <div class="main_bg">
+    <!-- <div class="main_bg">
       <div class="bg_inner">
         <h3>에코티브</h3>
         <p>당신의 브랜드 가치를 담은 프리미엄 티 제품을 함께 만듭니다.<br>에코티브는 기획부터 생산, 패키지까지 — 귀사의 브랜드를 완성하는 파트너입니다.</p>
         <button type="button" class="btnF"><a href="#">오시는 길</a></button>
       </div>
-    </div>
+    </div> -->
     <!-- footer -->
-    <footer id="footer">
-      <div class="footer_inner">
-        <div class="footer_top">
-          <ul class="footer_links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Privacy policy</a></li>
-            <li><a href="#">Terms of use</a></li>
-            <li><a href="#">Guide</a></li>
-          </ul>
-          <div class="footer_cs">
-            CS CENTER <strong>010-0000-0000</strong>
-          </div>
-        </div>
-        <div class="footer_info">
-          <p>상호명 : 에코티브(ecoteav) &nbsp; 대표자 : 김아영 &nbsp; 이메일 : ecoteav@gmail.com</p>
-          <p>주소 : 06609 서울특별시 서초구 서운로 26길 5 토탈에코빌딩 B1</p>
-          <p>사업자등록번호 : 296-19-02426 &nbsp; 통신판매업신고번호 : 235-47-67891</p>
-          <p>평일 09:00~18:00 &nbsp; 주말 및 공휴일 휴무</p>
-          <p>국민 000000-00-000000 &nbsp; 예금주 : 에코티브(ecoteav)</p>
-        </div>
-        <div class="footer_bottom">
-          <div class="footer_sns">
-            <a href="#"><i class="fa-brands fa-kakao-talk"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitch"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </div>
-          <p class="copyright">
-            Copyrights &copy; 2023 by ecoteav. All Rights Reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
+    <div id="footer" data-include-path="include/footer.html"></div>
   </div>
-  <script src="/jfs/ecoteav/js/main.js"></script>
+  <script src="/jfs/ecoteav/js/include.js"></script>
 </body>
 
 </html>

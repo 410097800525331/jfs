@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>js parameter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Parameter</title>
 </head>
 <body>
-  <script>
-    /* 
-    매개변수와 인자
-    typeof  연산자
-    참고:
-    - NaN(Not a Number): 숫자가 아닌 값
-    - isNaN(값) 함수: 숫자가 아니면 true, 숫자이면 false
-    */
+    <script>
+        /* 
+            매개변수와 인자
 
-    // isNaN()
-    document.write(isNaN(NaN) + '<br>'); // true
-    document.write(isNaN('string') + '<br>'); // true
-    document.write(isNaN(0) + '<br>'); // false
-    document.write(isNaN('0') + '<br>'); // false
-    document.write(isNaN(null) + '<br>'); // false
-    document.write(isNaN(undefined) + '<br>'); // true
-  </script>
+            typeof 연산자
+
+            참고:
+            NaN(Not a Number): 숫자가 아닌 값
+            isNaN(값) 함수
+                - 숫자가 아니면 true
+                - 숫자 이면 false
+        */
+        
+        // isNaN()
+        document.write(isNaN(0)+'<br>'); // false
+        document.write(isNaN('0')+'<br>'); // false
+        document.write(isNaN(Infinity)+'<br>'); // false
+        document.write(isNaN(-Infinity)+'<br>'); // false
+        document.write(isNaN(null)+'<br>'); // false
+        // Uncaught TypeError: Cannot convert a BigInt value to a number
+        // document.write(isNaN(123n)+'<br>'); // 에러
+        document.write(isNaN(Number(123n))+'<br>'); // false
+        
+        document.write(isNaN(NaN)+'<br>'); // true
+        document.write(isNaN('string')+'<br>'); // true
+        document.write(isNaN(undefined)+'<br>'); // true
+        document.write(isNaN([1,2,3])+'<br>'); // true
+        document.write(isNaN({nume: '홍길동'})+'<br>'); // true
+        document.write(isNaN(function(){})+'<br>'); // true
+    </script>
 </body>
 </html>

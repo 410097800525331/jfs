@@ -1,55 +1,105 @@
 @charset 'utf-8';
 
-#footer {
-  background: #f9f9f9;
-  color: var(--gray5);
-  font-size: 14px;
-  padding: 40px 20px;
+.footer_wrap {
+  background: #000;
+  color: #fff;
+  padding: 80px 0;
+  font-size: 1.3rem;
 }
 .footer_inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 20px;
 }
-.footer_top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--grayd);
-  padding-bottom: 15px;
+.footer_left {
+  flex: 1 1 45%;
+  min-width: 320px;
+}
+.footer_logo {
+  font-size: 1.6rem;
   margin-bottom: 20px;
 }
-.footer_links {
+.footer_menu {
   display: flex;
-  gap: 20px;
+  gap: 25px;
+  margin-bottom: 20px;
 }
-.footer_links a:hover {
+.footer_menu a {
+  color: #fff;
+}
+.footer_menu a:hover {
   text-decoration: underline;
 }
-.footer_cs {
-  font-weight: bold;
-}
 .footer_info {
+  font-style: normal;
+  color: #ccc;
+  line-height: 1.7;
   margin-bottom: 20px;
-  color: var(--gray5);
-  font-size: 1.4rem;
 }
-.footer_bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  border-top: 1px solid var(--grayc);
-  padding-top: 15px;
+.footer_copy {
+  color: #777;
+  margin-bottom: 20px;
 }
-.footer_sns a {
-  font-size: 18px;
-  margin-right: 15px;
-}
-.footer_sns a:hover {
-  color: #111;
-}
-.copyright {
-  font-size: 1.3rem;
-  color: var(--gray5);
+.footer_bottom_link {
   margin-top: 10px;
+}
+.footer_bottom_link a {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-right: 16px;
+}
+.footer_bottom_link a:hover {
+  text-decoration: underline;
+}
+/* 오른쪽 영역 */
+.footer_right {
+  flex: 1 1 45%;
+  min-width: 320px;
+}
+.footer_msg {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+.footer_form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form_row {
+  display: flex;
+  gap: 15px;
+}
+.footer_form input,
+.footer_form textarea {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #777;
+  color: #fff;
+  padding: 8px;
+  outline: none;
+}
+.footer_form textarea {
+  height: 100px;
+  resize: none;
+  padding: 8px;
+}
+.footer_form button {
+  background: #fff;
+  color: #000;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.footer_form button:hover {
+  background: var(--grayd);
+}
+@media (max-width: 770px) {
+  .footer_inner {
+    flex-direction: column;
+    gap: 60px;
+  }
 }

@@ -6,44 +6,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>그림자 효과</title>
   <style>
+    img {
+      width: 100%;
+      height: 100%;
+      /* cover는 박스는 가득 채움, 
+            그러나 비율이 박스와 다르면 일부 잘림! */
+      object-fit: cover;
+      /* contain은 이미지가 잘리지 않고 모두 표시,
+            그러나 비율이 박스와 다르면 박스의 빈공간이 생길수 있다. */
+      /* object-fit: contain; */
+    }
+
     p {
-      width: 500px; height: 50px;
+      width: 500px;
+      height: 100px;
       margin: 50px;
-      background-color: orange;
+      background: orange;
+      /* overflow:hidden; */
     }
+
     .p1 {
-      /*
-      ennet: ts
-      box-shadow: x위치 y위치 [흐림] [색];
-      */
-      box-shadow: 2px 2px red;
+      /* 
+                emmet: bsh
+                개별 속성이며, 값의 순서 있다.
+                box-shadow: x위치 y위치 [흐림] [확산] [색] [inset]; 
+                box-shadow: 0 0 0 0 글자색; 기본값
+            */
+      box-shadow: 10px 10px;
+      box-shadow: 10px 10px 5px 12px lightblue;
     }
+
+    /* 안쪽 그림자: inset */
     .p2 {
-      box-shadow: 2px 2px 4px #000;
-      color: #fff;
+      background: #fff;
+      box-shadow: 0px 0px 15px 5px red inset;
     }
+
+    /* Multiple Shadows */
+    /* box-shadow: x위치 y위치 [흐림] [확산] [색] [inset], x위치 y위치 [흐림] [확산] [색] [inset], ...;  */
     .p3 {
-      box-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
-      color: #fff;
+      box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
     }
+
     .p4 {
+      color: white;
       box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-      color: #fff;
     }
-    /* 라인 텍스트 */
-    .p5 {
-      box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-      color: #fff;
+
+    /* 버튼 요소를 가지고 있는 p요소 */
+    p:has(button) {
+      background: transparent;
+    }
+
+    button.p4 {
+      width: 200px;
+      height: 50px;
+      background: inherit;
+      /* 상속 */
+      color: #000;
+      box-shadow: none;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      transition: .2s ease-out;
+    }
+
+    button.p4:hover {
+      box-shadow: 0 0 6px rgba(35, 173, 278, 1);
     }
   </style>
 </head>
 
 <body>
-  <p class="p1">text-shadow: 2px 2px;</p>
-  <p class="p2">text-shadow: 2px 2px;</p>
-  <p class="p3">text-shadow: 2px 2px;</p>
-  <p class="p4">text-shadow: 2px 2px;</p>
-  <p class="p5">text-shadow: 2px 2px;</p>
+  <p class="p1">box-shadow: 2px 2px;</p>
+  <p class="p2">box-shadow: 2px 2px;</p>
+  <p class="p3">box-shadow: 2px 2px;</p>
+  <p class="p4">
+    <img src="https://www.w3schools.com/css/rock600x400.jpg" alt="이미지 박스 그림자">
+  </p>
+  <p><button class="p4">더보기</button></p>
 </body>
 
 </html>

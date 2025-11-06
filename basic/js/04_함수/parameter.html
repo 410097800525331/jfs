@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>js parameter</title>
+  <title>JS Parameter</title>
 </head>
+
 <body>
   <script>
     /* 
-    매개변수와 인자
+        매개변수와 인자
     */
     // 매개변수가 없을 경우
-    function add() {
+    function add0() {
       const sum = 1;
       return sum;
     }
@@ -23,47 +25,84 @@
       const sum = x + y;
       return sum;
     }
-    // 매개변수의 기본값(default)을 설정할 수 있다
-    // 매개변수의 기본값보다 전달한 인자값이 우선 적용된다
-    // 나머지 매개변수(기호는 ...) 형식: ...매개변수명
+    // 기본값(default) 매개변수 (ver.ES6)
+    // 매개변수의 기본값(default)을 설정할 수 있다.
+    // 매개변수의 기본값보다 전달한 인자값이 우선 적용된다.
     function add3(x, y = 5, z = 10) {
       const sum = x + y + z;
       return sum;
     }
-    // 나머지(rest) 매개변수
+
+    // 나머지(rest) 매개변수 (ver.ES6)
+    // 기호: ...
+    // 형식: ...매개변수명 
+    // 항상 마지막 변수로 사용!
     function add4(x, y, ...z) {
       const sum = x + y + z;
       return sum;
     }
-    const r0 = add();
+
+    const r0 = add0();
     const r1 = add1(2);
     const r2 = add2(2, 3);
     const r3 = add3(2, 3, 4);
-    const r4 = add4(2, 3, 4, 5);
-    document.write(`r0 = ${r0} <br>`);
-    document.write(`r0 = ${r1} <br>`);
-    document.write(`r0 = ${r2} <br>`);
-    document.write(`r0 = ${r3} <br>`);
-    document.write(`r0 = ${r4} <br>`);
+    const r4 = add4(2, 3, 4, 5, 6);
+    document.write('r0 = ' + r0 + '<br>');
+    document.write('r1 = ' + r1 + '<br>');
+    document.write('r2 = ' + r2 + '<br>');
+    document.write('r3 = ' + r3 + '<br>');
+    document.write('r4 = ' + r4 + '<br>');
 
     // 매개변수보다 인자의 개수가 작거나 같을 경우
     function add5(x, y, z) {
-      if(x === undefined) {
+      if (x === undefined) {
         sum = 1;
-      } else if(y === undefined) {
+      } else if (y === undefined) {
         sum = x;
-      } else if(z === undefined) {
+      } else if (z === undefined) {
         sum = x + y;
       } else {
         sum = x + y + z;
       }
       return sum;
     }
-    document.write('------------------<br>');
-    document.write(add5()+'<br>');
-    document.write(add5(2)+'<br>');
-    document.write(add5(2, 3)+'<br>');
-    document.write(add5(2, 3, 4)+'<br>');
+
+    document.write('----------------------------<br>');
+    document.write(add5() + '<br>');
+    document.write(add5(2) + '<br>');
+    document.write(add5(2, 3) + '<br>');
+    document.write(add5(2, 3, 4) + '<br>');
+
+    // 인자의 개수에 관계없이 함수 호출!
+    /* 
+        arguments 객체
+            - 함수에 전달된 모든 인수를 자동으로 담는 유사 배열 객체
+            - arguments[index]: index는 0부터 정수
+            - arguments.length: 인자의 개수
+    */
+    function fruit() {
+      console.log(arguments); // ['사과', '딸기', '포도', '수박']
+      console.log(arguments[1]); // 딸기
+      console.log(arguments.length); // 4
+    }
+
+    fruit("사과", '딸기', '포도', '수박');
+
+
+    function add() {
+      let sum = 0;
+      for (let i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+      }
+      document.write('수행결과: ' + sum + '<br>');
+    }
+
+    add(); // 0
+    add(1); // 1
+    add(1, 2); // 
+    add(1, 2, 3); //
+    add(1, 2, 3, 4, 5, 6, 7, 8, 9); // 45
   </script>
 </body>
+
 </html>

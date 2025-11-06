@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js: 배열</title>
+</head>
+<body>
+  <script>
+    /* 
+    배열(array)
+    - 여러 데이터를 모아 놓은 하나의 덩어리
+    - 배열에 저장된 하나의 데이터를 원소라고 한다
+    - 각 원소는 0~n-1의 인덱스로 구분한다
+    형식: [값, 값, ...]
+
+    배열 생성
+    1. 리터럴
+    2. new
+    - const 배열명 = new Array();
+    */
+
+    // 리터럴 방식
+    // const 배열명 = [값, 값, ...];
+
+    const cities = ['서울', , '경기', , '인천'];
+    // 요소 접근
+    function city() {
+      for(let i=0; i<cities.length; i++) {
+        document.write(cities[i]+'<br>');
+      }
+    }
+    city();
+
+    // 요소 추가
+    cities[3] = '광주';
+    cities[4] = '부산';
+    city();
+
+    // 요소 제거
+    cities[3] = undefined;
+    cities[4] = '';
+    city();
+    console.log(cities);
+
+    // 배열로 평균 구하기
+    const nums = [98, 88,, 72, 68,, 99, 82, 78, 85]
+    document.write(nums.length + '<br>');
+
+    let count = sum = 0;
+    for(let i=0; i<nums.length; i++) {
+      if(nums[i] === undefined) {
+        continue;
+      }
+      sum += nums[i];
+      count++;
+    }
+    // 평균(avg): 합계(sum)/총 개수
+    const avg = sum / count;
+    document.write(`총원은 ${nums.length}명에서 ${count}명의 합계는 ${sum}점 이고 평균은 ${avg}이다 <br>`);
+
+    // 다양한 데이터 타입을 값으로 사용할 수 있다
+    const x = 5;
+    const arr = [100, 'string', true, x]
+    document.write(arr);
+
+    document.write('<br>----------------------<br>');
+
+    // 객체 생성 - new Array()
+    // const 배열명 = new Array([값, 값, ...]);
+    /* 
+    메모리(RAM) 공간:
+    - stack(스택): 변수
+    - heap(힙): 객체 요소
+    */
+    const city1 = '서울';
+    const city2 = '서울';
+    document.write((city1 == city2) + '<br>');
+
+    // 객체 요소의 데이터는 힙에 저장되고, 배열 변수에는 요소가 저장된 힙(메모리)의 주소에 저장된다.
+    const cities2 = ['서울', '경기', '인천'];
+    const cities3 = ['서울', '경기', '인천'];
+
+    const cities4 = new Array('서울', '경기', '인천');
+    const cities5 = new Array('서울', '경기', '인천');
+
+    document.write(cities2 + '<br>');
+    document.write(cities2[0] + '<br>');
+
+    document.write((cities2 == cities3) + '<br>'); // false
+    document.write((cities4 == cities5) + '<br>'); // false
+    document.write((cities3 == cities4) + '<br>'); // false
+
+    /*
+    instanceof 연산자(객체를 구분하는 연산자)
+    사용법: 피연산자 instanceof 피연산자
+    - 객체의 인스턴스이면 true, 아니면 false
+    */
+    document.write((cities2 instanceof Array) + '<br>'); // true
+    document.write((cities4 instanceof Array) + '<br>'); // true
+
+    // Array.isArray(인스턴스)
+    // 배열이면 true, 아니면 false
+    document.write((Array.isArray(city1)) + '<br>'); // false
+    document.write((Array.isArray(date)) + '<br>'); // false
+    document.write((Array.isArray(cities4)) + '<br>'); // true
+    document.write((Array.isArray(str)) + '<br>'); // false
+    document.write((typeof cities4) + '<br>'); // object
+
+  </script>
+</body>
+</html>
