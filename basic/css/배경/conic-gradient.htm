@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그라디언트(Gradient)</title>
+  <style>
+    /* 
+            conic-gradient() 함수
+            background-image: conic-gradient([from 각도] [at 위치,] 색 [degree], 색 [degree], ...);
+                - from 각도: 회전 각도, 기본값은 0deg
+                - at x위치 y위치: 중심점 위치, 기본값은 50%, 50%
+                - 색 뒤에 deg는 색의 분포
+        */
+    p {
+      width: 500px;
+      height: 200px;
+      color: white;
+      font-size: 30px;
+    }
+
+    #grad1 {
+      background-image: conic-gradient(red, yellow, green);
+    }
+
+    #grad2 {
+      background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+    }
+
+    #grad3 {
+      background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+    }
+
+    #grad4 {
+      /* from 0deg가 기본값 */
+      background-image: conic-gradient(from 90deg, red, yellow, green);
+    }
+
+    #grad5 {
+      /* at 50% 50%가 기본값 */
+      background-image: conic-gradient(at 90% 45%, red, yellow, green);
+    }
+
+    /* background-image: repeating-conic-gradient() */
+    #grad6 {
+      background-image: repeating-conic-gradient(red 10%, yellow 20%);
+    }
+  </style>
+</head>
+
+<body>
+  <p id="grad1">background-image: conic-gradient(red, yellow, green);</p>
+  <p id="grad2">background-image: conic-gradient(red, yellow, green);</p>
+  <p id="grad3">background-image: conic-gradient(red, yellow, green);</p>
+  <p id="grad4">background-image: conic-gradient(red, yellow, green);</p>
+  <p id="grad5">background-image: conic-gradient(red, yellow, green);</p>
+  <p id="grad6">background-image: conic-gradient(red, yellow, green);</p>
+</body>
+
+</html>
