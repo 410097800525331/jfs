@@ -1,30 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>css white-space</title>
+  <title>CSS white-space</title>
   <style>
     /* 
-    white-space
-    - 요소 내부의 공백을 처리하는 방법을 지정합니다
-    - normal(기본값)
-    - nowrap: 줄바꿈X
-    - pre
-    - pre-line
-    - pre-wrap
-    */
+            white-space
+                - 요소 내부의 공백을 처리(spacebar, enter, tab)하는 방법을 지정합니다.
+                - normal(기본값)
+                - nowrap: 줄바꿈❌
+                - pre
+                - pre-line
+                - pre-wrap
+        */
+
     p {
-      width: 200px;
+      /* width: 200px; */
       border: 1px solid;
     }
-    p.a {white-space: normal;} /* whsn 줄바꿈O, 엔터 적용 가능*/
-    p.b {white-space: nowrap;} /* whs 줄바꿈X*/
-    p.b {white-space: pre;} /* whsp */
-    p.d {white-space: pre-line;} /* whspl */
-    p.e {white-space: pre-wrap;} /* whspw */
+
+    /* 자동 줄바꿈: 텍스트가 요소의 가로 폭보다 많을 경우 자동으로 줄바꿈 */
+    /* 자동 줄바꿈⭕, enter/tab/spacebar❌ */
+    p.a {
+      white-space: normal;
+    }
+
+    /* whsn */
+    /* 자동 줄바꿈/enter/tab/spacebar❌ */
+    p.b {
+      white-space: nowrap;
+    }
+
+    /* whs */
+    /* 자동 줄바꿈❌, enter/tab/spacebar⭕ */
+    p.c {
+      white-space: pre;
+    }
+
+    /* whsp */
+    /* 자동 줄바꿈⭕, enter⭕, tab/spacebar❌ */
+    p.d {
+      white-space: pre-line;
+    }
+
+    /* whspl */
+    /* 자동 줄바꿈/enter/tab/spacebar⭕ */
+    p.e {
+      white-space: pre-wrap;
+    }
+
+    /* whspw */
   </style>
 </head>
+
 <body>
   <p class="a">
     This is some text. This is some text. This is some text.
@@ -56,11 +86,13 @@
     This is some text. This is some text. This is some text.
     This is some text. This is some text. This is some text.
   </p>
+
   <pre>
+This is some           text. This is some text. This is some text.
     This is some text. This is some text. This is some text.
-                   This is some text. This is some text. This is some text.
-          This is some text. This is some text. This is some text.
-     This is some text. This is some text. This is some text.
-  </pre>
+        This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.    
+    </pre>
 </body>
+
 </html>

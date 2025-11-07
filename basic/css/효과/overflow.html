@@ -1,55 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>css overflow 속성</title>
+  <title>CSS text-overflow</title>
   <style>
     /* 
-    overflow 속성
-    1. visible (기본값)
-    2. hidden
-    3. scroll: 스크롤 생성
-    4. auto
-    5. clip
-    */
-    .wrap {
-      display: flex;
-      gap: 30px;
-    }
-    .wrap div {
-      width: 300px; height: 150px;
-      background-color: orange;
-    }
-    .div1 {overflow: visible;}
-    .div2 {overflow: hidden;}
-    .div3 {overflow: scroll;}
-    .div4 {overflow: auto;}
-    .div5 {overflow: clip;}
-    .div6 {overflow: scroll;}
-    .div7 {overflow: auto;}
-    .div8 {
-      overflow: auto;
-      overflow-x: hidden;
-    }
-    .div9 {
-      overflow: scroll;
-      overflow-y: hidden;
+            text-overflow
+                - 표시되지 않는 오버플로된 콘텐츠를 사용자에게 어떻게 표시할지 지정합니다. 
+                - 잘라내거나, 생략(ellipsis) 부호(...)를 표시하거나, 사용자 지정 문자열을 표시할 수 있습니다.
+                - clip (기본값)|ellipsis
+        */
+
+    div.a {
+      width: 300px;
+      height: 30px;
+      border: 1px solid;
       white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      /* txo */
+    }
+
+    div.a:hover {
+      /* overflow: visible; */
+      text-overflow: clip;
     }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="div1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aliquid libero voluptatem illo eos dignissimos quas eius at alias eveniet deserunt neque animi consequuntur cupiditate, veniam dolorem tenetur iusto delectus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dolorum eligendi a sequi, natus repellendus odit delectus optio ea, voluptatem expedita commodi asperiores veniam enim amet maiores explicabo! Tenetur, totam.</div>
-    <div class="div2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus vero quidem at ea pariatur vitae omnis ad eum fuga esse deserunt excepturi, totam, porro ab facere voluptatibus numquam! Ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nulla ab possimus minima odio dolores atque animi fuga deleniti dignissimos id alias eveniet, nam facere unde maxime quasi quae. Necessitatibus.</div>
-    <div class="div3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et soluta minima illo ab, id exercitationem blanditiis tempore animi tempora aut excepturi ut esse incidunt repellat unde ullam. Et, expedita veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam fuga, repellendus amet, doloremque voluptates facere dolorum illum cum repudiandae at soluta eligendi eius earum non pariatur. Eius dolor eligendi voluptatum.</div>
-    <div class="div8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et soluta minima illo ab, id exercitationem blanditiis tempore animi tempora aut excepturi ut esse incidunt repellat unde ullam. Et, expedita veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam fuga, repellendus amet, doloremque voluptates facere dolorum illum cum repudiandae at soluta eligendi eius earum non pariatur. Eius dolor eligendi voluptatum.</div>
-    <div class="div9">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et soluta minima illo ab, id exercitationem blanditiis tempore animi tempora aut excepturi ut esse incidunt repellat unde ullam. Et, expedita veniam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam fuga, repellendus amet, doloremque voluptates facere dolorum illum cum repudiandae at soluta eligendi eius earum non pariatur. Eius dolor eligendi voluptatum.</div>
-    <div class="div4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quod, aut autem eius, ab consectetur repudiandae quae veritatis, est delectus harum voluptas doloribus labore reiciendis consequuntur voluptate et minus excepturi! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit necessitatibus dicta minus odit commodi, facilis aperiam repellat quae aut beatae nemo accusamus corporis magni, nisi sed fugit architecto, qui delectus.</div>
-    <div class="div5">Lorem ipsum dolor sit amet consectetur adipisicing elit. In vitae, quibusdam ratione cumque ullam consequatur libero quis suscipit exercitationem eaque ipsum! Ipsam velit animi dicta accusantium cupiditate dolorum, soluta odit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, corporis enim in quo dolorum molestias suscipit consequuntur, eius sit quaerat ipsa possimus provident odio quasi dolores et delectus quia ex!</div>
-    <div class="div6">Lorem ipsum dolor sit amet consectetur adi</div>
-    <div class="div7">Lorem ipsum dolor sit amet consectetur ad</div>
+  <div class="a">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio nesciunt veniam nam quidem atque ullam
+    quod expedita itaque. Perspiciatis optio consectetur alias commodi illo impedit nihil incidunt distinctio quo quae.
   </div>
 </body>
+
 </html>
