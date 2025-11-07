@@ -4,34 +4,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>css 플렉스 아이템</title>
+  <title>CSS 플렉스 아이템</title>
   <style>
     /* 
-    flex items
-    - order: 플렉스 항목의 표시 순서를 지정
-    - flex-grow: Flex 항목이 나머지 Flex 항목에 비해 얼마나 커질지 지정합니다.
-    - flex-shrink: Flex 항목이 나머지 Flex 항목에 비해 얼마나 줄어들지 지정합니다.
-    - flex-basis: 플렉스 항목의 초기 길이를 지정
-    - align-self: Flex 항목에 대한 정렬을 지정
-    - flexflex-grow , flex-shrink, 및 의 약어 속성 flex-basis
-    */
+    CSS Flex Items(플렉스 항목)
+        order
+            - 플렉스 항목의 표시 순서를 지정
+        flex-grow
+            - 나머지 플렉스 항목에 비해 플렉스 항목이 얼마나 성장할지 지정
+        flex-shrink
+            - 플렉스 항목이 나머지 플렉스 항목에 비해 얼마나 줄어들지 지정
+        flex-basis
+            - flex 항목의 초기 길이를 지정
+        flex 
+            - 약칭 속성입니다 
+            - flex: grow shrink basis;
+            - flex: 0 1 auto; (기본값)
+        align-self
+            - flex 항목에 대한 교차축 정렬을 지정
+      */
     .flex-container {
       display: flex;
-      background-color: lightblue;
+      background: dodgerblue;
       font-size: 30px;
       text-align: center;
+      height: 200px;
+      align-items: center;
     }
+
     .flex-container div {
-      width: 100px;
-      background: #f1f1f1;
+      background: #F1F1F1;
       margin: 10px;
+      width: 100px;
+      padding: 10px;
     }
+
     /* 
     align-self
-    - align-items와 속성 값이 같다
-    - 교차축 정렬
+        - align-items와 속성 값이 같다.
+        - 개별 아이템의 교차축 정렬
+        - align-items와 동시 적용하면, align-self가 적용된다.
     */
-    .flex-container div:nth-child(3) {align-self: start;}
+    .flex-container div:nth-child(3) {
+      align-self: flex-start;
+      /* asfs */
+      align-self: flex-end;
+      /* asfe */
+      align-self: center;
+      /* asc */
+      align-self: stretch;
+    }
   </style>
 </head>
 

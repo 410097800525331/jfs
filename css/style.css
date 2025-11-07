@@ -1,300 +1,360 @@
 @charset "utf-8";
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css'); /* 폰트어썸 */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); /* Lato font */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+/* 폰트어썸 */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* Lato font */
 
 /* font: 1. CDN 2. @font-face */
 @font-face {
-    font-family: Lato-Regular; /* 사용자 정의 폰트명 */
-    src: url(/jfs/assets/font/Lato-Regular.ttf); /* 상대주소 */
+  font-family: Lato-Regular;
+  /* 사용자 정의 폰트명 */
+  src: url(/jfs/assets/font/Lato-Regular.ttf);
+  /* 상대주소 */
 }
 @font-face {
-    font-family: Lato-Thin;
-    src: url(https://410097800525331.github.io/jfs/assets/font/Lato-Thin.ttf); /* 절대주소 */
+  font-family: Lato-Thin;
+  src: url(https://410097800525331.github.io/jfs/assets/font/Lato-Thin.ttf);
+  /* 절대주소 */
 }
 
 /* reset */
-:root {scroll-behavior: smooth; font-size: 10px;}
-* {box-sizing: border-box;}
-body, h1, h2, h3, p, ul {margin: 0;}
-ul {padding: 0; list-style: none;}
-a {text-decoration: none;}
-iframe {width: 100%; height: 100%;}
-button {border:none; cursor: pointer;}
-img {width: 100%; height: 100%; object-fit: cover; vertical-align: middle;}
+:root {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+* {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
 
 /* typo */
 :root {
-    --white-color: #fff;
-    --main-color: #333;
-    --sub-color: #ccc;
+  --white-color: #fff;
+  --main-color: #333;
+  --sub-color: #ccc;
 }
 body {
-    font: 1.5rem/1.6 "Lato-Reguler", sans-serif;
+  font: 1.5rem/1.6 "Lato-Reguler", sans-serif;
 }
 /* header area */
 header a {
-    color: var(--white-color);
+  color: var(--white-color);
 }
 /* footer area */
-footer a, footer p {
-    color: var(--white-color);
+footer a,
+footer p {
+  color: var(--white-color);
 }
 footer .top_btn a {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 footer .sns i {
-    font-size: 2.4rem;
+  font-size: 2.4rem;
 }
 /* section area */
 h2 {
-    font-weight: 400;
-    font-size: 2.4rem;
-    color: var(--white-color);
-    letter-spacing: 1rem; /* ls 자간 */
-    /* text-transform: uppercase; tt 대문자 */
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: var(--white-color);
+  letter-spacing: 1rem;
+  /* ls 자간 */
+  /* text-transform: uppercase; tt 대문자 */
 }
 /* section area:contact */
 #contact {
-    color: #777;
+  color: #777;
 }
 h2 {
-    font-size: 3.6rem;
+  font-size: 3.6rem;
 }
 h3 {
-    font-size: 2.4rem;
+  font-size: 2.4rem;
 }
 #contact a {
-    color: #777;
+  color: #777;
 }
 #contact button {
-    color: #fff;
+  color: #fff;
 }
 #contact .addr {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 textarea {
-    font: 1.5rem/1.6 "Lato-Reguler", sans-serif;
+  font: 1.5rem/1.6 "Lato-Reguler", sans-serif;
 }
 /* 가상 요소 선택자: :placeholder */
 ::placeholder {
-    font: 1.5rem/1.6 "Lato-Reguler", sans-serif;
-    color: var(--sub-color);
+  font: 1.5rem/1.6 "Lato-Reguler", sans-serif;
+  color: var(--sub-color);
 }
 
 /* common */
 h2 {
-    position: absolute;
-    left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 h3 {
-    text-align: center;
-    margin: 64px 0 10px;
+  text-align: center;
+  margin: 64px 0 10px;
 }
 h3+p {
-    text-align: center;
+  text-align: center;
 }
 
 /* header area */
 header {
-    position: fixed;
-    z-index: 9999;
+  position: fixed;
+  z-index: 9999;
 }
 header .gnb ul {
-    display: flex;
+  display: flex;
 }
 header .gnb li a {
-    display: inline-block;
-    padding: 8px 16px;
+  display: inline-block;
+  padding: 8px 16px;
 }
 header .gnb li a:hover {
-    background: var(--sub-color);
+  background: var(--sub-color);
 }
 header .gnb li i {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 /* footer area */
 footer {
-    background: #111;
-    text-align: center;
-    padding: 100px;
+  background: #111;
+  text-align: center;
+  padding: 100px;
 }
 footer:hover {
-    background: var(--main-color);
+  background: var(--main-color);
 }
 footer .top_btn {
-    display: inline-block;
-    background: var(--sub-color);
-    padding: 8px 16px;
+  display: inline-block;
+  background: var(--sub-color);
+  padding: 8px 16px;
 }
 footer .top_btn i {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 footer .sns {
-    margin: 24px;
+  margin: 24px;
 }
 footer .sns i {
-    margin: 0 -3px;
+  margin: 0 -3px;
 }
 
 /* section area */
 #home {
-    position: relative;
-    height: 100vh;
-    background: url(../assets/img/main_bg.jpg) no-repeat 50% 50%/cover fixed;
-    overflow: hidden;
+  position: relative;
+  height: 100vh;
+  background: url(../assets/img/main_bg.jpg) no-repeat 50% 50%/cover fixed;
+  overflow: hidden;
 }
 #home h2 {
-    /* background: var(--main-color); */
-    padding: 8px 24px 10px 30px;
+  /* background: var(--main-color); */
+  padding: 8px 24px 10px 30px;
 }
 .circle_ani {
-    position: absolute;
-    right: 0; top: 0;
-    width: 188px; height: 188px;
-    transition: linear 5s;
-    animation: circle 50s linear infinite;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 188px;
+  height: 188px;
+  transition: linear 5s;
+  animation: circle 50s linear infinite;
 }
 @keyframes circle {
-    0% {transform: rotate(0deg) scale(2.2);}
-    100% {transform: rotate(720deg) scale(2.2);}
+  0% {
+    transform: rotate(0deg) scale(2.2);
+  }
+  100% {
+    transform: rotate(720deg) scale(2.2);
+  }
 }
 
 /* section area: about me */
 #about .basic p {
-    text-align: left;
+  text-align: left;
 }
 #about .basic .inner {
-    display: flex;
+  display: flex;
 }
 #about .inner p {
-    text-align: left;
+  text-align: left;
 }
 #about .inner div {
-    flex: 50%;
+  flex: 50%;
 }
 #about .inner p {
-    flex: 50%;
+  flex: 50%;
 }
 #about .progressbar {
-    background: #f1f1f1;
-    color: #fff;
+  background: #f1f1f1;
+  color: #fff;
 }
 #about .progressbar div {
-    /* height: 35px;
+  /* height: 35px;
     line-height: 35px; */
-    padding: 6px;
-    background: #616161;
+  padding: 6px;
+  background: #616161;
 }
 #about .progressbar:nth-of-type(1) div {
-    width: 80%;
+  width: 80%;
 }
-#about .progressbar:nth-of-type(1) div {
-    width: 70%;
+#about .progressbar:nth-of-type(2) div {
+  width: 70%;
+}
+#about .progressbar:nth-of-type(3) div {
+  width: 90%;
 }
 #about .count ul {
-    display: flex;
+  display: flex;
+  text-align: center;
+  height: 135px;
+  background: #616161;
+  color: #fff;
 }
 #about .count ul li {
-    flex: 25%;
+  flex: 25%;
+}
+#about .count span {
+  display: block;
+  font-size: 2.4rem;
 }
 
 /* work + contact common */
 .parallax_bg {
-    position: relative;
-    height: 400px;
-    background: no-repeat 50% 50%/cover fixed;
+  position: relative;
+  height: 400px;
+  background: no-repeat 50% 50%/cover fixed;
 }
 .container {
-    width: 900px;
-    margin: 48px auto 96px;
-    text-align: center; /* 수정 필요 */
+  width: 900px;
+  margin: 48px auto 96px;
+  text-align: center;
+  /* 수정 필요 */
 }
 button {
-    background: #f1f1f1;
-    padding: 12px 24px;
-    margin-top: 10px;
-    border-radius: 4px;
+  background: #f1f1f1;
+  padding: 12px 24px;
+  margin-top: 10px;
+  border-radius: 4px;
 }
 
 /* section area: work */
 #work .parallax_bg {
-    background-image: url(/jfs/assets/img/parallax2.jpg);
+  background-image: url(/jfs/assets/img/parallax2.jpg);
 }
 #work .portfolio {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 #work .portfolio li {
-    width: 213px; height: 162px;
-    border: 1px solid #ccc;
+  width: 213px;
+  height: 162px;
+  border: 1px solid #ccc;
 }
 #work button {
-    margin: 64px 0 0;
+  margin: 64px 0 0;
 }
 #shadow {
-    margin: 64px 0 0;
-    width: 200px;
-    height: 50px;
-    background: inherit; /* 상속 */
-    color: #000;
-    box-shadow: none;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    transition: 0.2s ease-out;
+  margin: 64px 0 0;
+  width: 200px;
+  height: 50px;
+  background: inherit;
+  /* 상속 */
+  color: #000;
+  box-shadow: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  transition: 0.2s ease-out;
 }
 #work button:hover {
-    background-color: var(--sub-color);
+  background-color: var(--sub-color);
 }
 
 /* section area: contact */
 #contact .contact {
-    width: 600px;
+  width: 600px;
 }
 #contact .parallax_bg {
-    background-image: url(/jfs/assets/img/parallax3.jpg) ;
+  background-image: url(/jfs/assets/img/parallax3.jpg);
 }
 #contact .map {
-    width: 280px; height: 160px;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-right: 32px;
+  width: 280px;
+  height: 160px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 32px;
 }
 #contact .container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 #contact .contact p {
-    margin: 24px 0 16px;
+  margin: 24px 0 16px;
 }
 #contact .frm_input {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
 #contact input {
-    width: 100%; height: 45px;
-    padding-left: 16px;
+  width: 100%;
+  height: 45px;
+  padding-left: 16px;
 }
 #contact input:first-of-type {
-    margin-right: 7px;
+  margin-right: 7px;
 }
-#contact textarea  {
-    width: 100%; height: 150px;
-    resize: none; /* 크기 조절 X */
-    margin-top: 10px;
-    padding: 16px;
+#contact textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  /* 크기 조절 X */
+  margin-top: 10px;
+  padding: 16px;
 }
 #contact button {
-    background: #111;
-    float: right;
+  background: #111;
+  float: right;
 }
 #contact i {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 #contact .addr i {
-    margin-right: 16px;
+  margin-right: 16px;
 }
 
 

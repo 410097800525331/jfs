@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>js 배열 접근 조작</title>
+  <title>JS 배열 접근 조작</title>
 </head>
+
 <body>
-  <button type="button" onclick="addFn();">1~100까지 합</button>
   <script>
-    /* 
-    배열 데이터의 접근/조작
-    */
-    // 1~100까지 합
 
     // 빈 배열 생성
     const nums = [];
 
-    // 배열 요소 추가 - 1~100까지 숫자 데이터
-    // 배열명[인덱스] = 값;
-    /* 
-      nums[0] = 1;
-      nums[1] = 2;
-      nums[2] = 3;
-      nums[3] = 4;
-      ...
-      nums[99] = 100;
-    */
-    function insertFn() {
-      for(let i=0; i<=100; i++) {
-        nums[i] = i+1;
+    // 조회
+    function selectFn() {
+      // 1~100까지 숫자를 출력
+      for (let i = 0; i < 100; i++) {
+        nums[i] = i + 1;
+        document.write(nums[i] + ' ');
       }
-      // 조회
-      function selectFn() {
-        // 1~100까지 숫자를 출력
-        for(let i=0; i<=addFn.length; i++) {
-          nums[i] = i + 1;
-          document.write(nums[i] + ' ');
+      document.write('<br>');
+    }
+    selectFn();
+
+    // 1~100까지 숫자 중에서 홀수는 0으로 수정(update)
+    function updateFn() {
+      for (let i = 0; i < 100; i++) {
+        // i를 2로 나누었을 때 나머지가 0과 같으면 짝수
+        // 짝수 번째 인덱스에 홀수 값이 저장되어 있다.
+        /* 
+            인덱스 0 -> 값 1
+            인덱스 1 -> 값 2
+            인덱스 2 -> 값 3
+            인덱스 3 -> 값 4
+                ...
+            인덱스 99 -> 값 100
+        */
+        if (i % 2 === 0) {
+          nums[i] = 0;
         }
+        continue;
       }
-      selectFn()
     }
-    function addFn() {
-      selectFn();
-      let sum = 0;
-      for(let i=0; i<=100; i++) {
-        sum += i;
+
+    function zeroFn() {
+      updateFn();
+      for (let i = 0; i < nums.length; i++) {
+        document.write(nums[i] + ' ');
       }
-      document.write(sum);
-      document.write('<br><a href="배열접근조작.html">뒤로가기</a>')
+      document.write('<br><a href="배열접근조작2.html">새로고침</a>')
     }
-    // addFn()
   </script>
+
+  <button type="button" onclick="zeroFn();">홀수 값은 0으로 수정하기</button>
 </body>
+
 </html>

@@ -1,14 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>css text-decoration</title>
+  <title>CSS text-decoration</title>
   <style>
-    
+    /* 
+            개별속성
+                text-decoration-line (ver.CSS3)
+                    - 기본값: a태그는 underline, 그외 기타 태그는 none
+                    - none: 없음
+                    - underline: 밑줄
+                    - overline: 윗줄
+                    - line-through: 취소선
+
+                text-decoration-style (ver.CSS3)
+                    - 기본값: solid
+                    - solid: 실선
+                    - double: 이중실선
+                    - dotted: 점선 ......
+                    - dashed: 데시선 -------
+                    - wavy: 물결 ~~~~~~ (border는 없다.)
+                text-decoration-thinkness (ver.CSS4)
+                    - 기본값: auto
+                    - auto
+                    - from-font
+                    - 단위: px, rem, em, %
+                text-decoration-color (ver.CSS3)
+                    - 기본값: 글자색
+
+            속기속성
+                text-decoration: line [style] [thinkness] [color];
+        */
+
+    div {
+      margin: 50px;
+    }
+
+    div.a {
+      text-decoration-line: overline;
+      text-decoration-style: dashed;
+      /* tds */
+      /* 두께는 글자 크기에 영향을 받는다. */
+      text-decoration-thickness: auto;
+      /* 기본값 */
+      font-size: 50px;
+      color: red;
+      text-decoration: blue dashed auto overline;
+    }
+
+    div.b {
+      /* 개별속성 */
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
+      text-decoration-thickness: 5px;
+      /* tdth */
+      text-decoration-color: rgba(255, 0, 0, .5);
+
+      /* 속기속성 */
+      text-decoration: underline dotted 5px red;
+    }
+
+    div.c {
+      text-decoration-line: line-through;
+      /* tdl */
+      text-decoration-style: solid;
+      /* 글자 크기(높이)의 50% */
+      text-decoration-thickness: 50%;
+      font-size: 30px;
+    }
+
+    div.d {
+      text-decoration-line: overline underline;
+      text-decoration-style: wavy;
+    }
+
+    a {
+      /* 링크 텍스트의 밑줄 제거 */
+      text-decoration: none;
+      /* tdn */
+    }
+
+    a:hover {
+      text-decoration: underline wavy;
+      /* tdu */
+    }
   </style>
 </head>
+
 <body>
-  
+  <div class="a">text-decoration-line</div>
+  <div class="b">text-decoration-line</div>
+  <div class="c">text-decoration-line</div>
+  <div class="d">text-decoration-line</div>
+  <!-- <u>underline</u>
+    <ins>삽입, insert</ins>
+    <s>line-through</s>
+    <del>삭제, delete</del> -->
+  <a href="#">a태그의 경우는 기본이 밑줄</a>
 </body>
+
 </html>
