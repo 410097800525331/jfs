@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css 플렉스 아이템</title>
+  <style>
+    /* 
+    flex items
+    - order: 플렉스 항목의 표시 순서를 지정
+    - flex-grow: Flex 항목이 나머지 Flex 항목에 비해 얼마나 커질지 지정합니다.
+    - flex-shrink: Flex 항목이 나머지 Flex 항목에 비해 얼마나 줄어들지 지정합니다.
+    - flex-basis: 플렉스 항목의 초기 길이를 지정
+    - align-self: Flex 항목에 대한 정렬을 지정
+    - flexflex-grow , flex-shrink, 및 의 약어 속성 flex-basis
+    */
+    .flex-container {
+      display: flex;
+      background-color: lightblue;
+      font-size: 30px;
+      text-align: center;
+    }
+    .flex-container div {
+      width: 100px;
+      background: #f1f1f1;
+      margin: 10px;
+    }
+    /* 
+    flex-basis: 숫자(단위);
+    - 초기 길이를 지정
+    - 기본값 0
+    - 단위: px, em, rem, %
+    */
+    /* flex: grow shrink bacic; */
+    .flex-container div:nth-child(3) {flex: 1 0 150px;}
+  </style>
+</head>
+
+<body>
+  <div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+</body>
+
+</html>

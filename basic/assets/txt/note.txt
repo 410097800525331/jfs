@@ -3,6 +3,7 @@ Mouse Wheel Zoom - 휠로 줌
 그룹핑: Emmit: Wrap 어쩌구 - alt + w
 prettier tab, tab 2
 CSS > Format: Newline Between Rules 체크 해제
+바로가기 키(설정에서 4번째 맨위 제외) live 검색 show 프리뷰 단축키를 alt+q
 
 - vsc 플러그인 세팅
 Korean Language Pack for Visual Studio Code - 한글
@@ -15,6 +16,8 @@ Image preview - 이미지 미리보기
 CSS Navigation - class 연동
 Color Highlight - CSS 컬러 표시해줌
 TabOut - 탭누르면 끝으로
+Live Preview / 바로가기 키(설정에서 4번째 맨위 제외) live 검색 show 프리뷰 단축키를 alt+q
+
 
 Figma for VS Code - 피그마 연동
 open in browser(단축키: shift+alt+b, alt+b) - 브라우저 선택

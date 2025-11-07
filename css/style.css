@@ -165,8 +165,11 @@ footer .sns i {
 #about .basic p {
     text-align: left;
 }
-#about .inner {
+#about .basic .inner {
     display: flex;
+}
+#about .inner p {
+    text-align: left;
 }
 #about .inner div {
     flex: 50%;
@@ -174,7 +177,28 @@ footer .sns i {
 #about .inner p {
     flex: 50%;
 }
-
+#about .progressbar {
+    background: #f1f1f1;
+    color: #fff;
+}
+#about .progressbar div {
+    /* height: 35px;
+    line-height: 35px; */
+    padding: 6px;
+    background: #616161;
+}
+#about .progressbar:nth-of-type(1) div {
+    width: 80%;
+}
+#about .progressbar:nth-of-type(1) div {
+    width: 70%;
+}
+#about .count ul {
+    display: flex;
+}
+#about .count ul li {
+    flex: 25%;
+}
 
 /* work + contact common */
 .parallax_bg {
@@ -273,3 +297,85 @@ button {
     margin-right: 16px;
 }
 
+
+
+/* about area */
+/* #s2 {
+    width: 100%; height: 100%;
+    background: url(../assets/img/about_bg.png) no-repeat 0 0/cover;
+}
+#s2 .s2_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+}
+#s2 .s2_container .s2_inner {
+    width: 24%; height: 90vh;
+    padding: 24px 16px;
+}
+#s2 .s2_container .s2_inner:nth-child(1) {
+    width: 33%;
+}
+#s2 .s2_inner .my_photo {
+    width: 400px; height: 700px;
+    background-color: #ccc;
+    margin: 0 auto;
+}
+#s2 .s2_inner h3 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+#s2 .s2_inner ul {
+    margin-bottom: 24px;
+}
+#s2 .s2_inner li {
+    margin-bottom: 6px;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+#s2 .s2_inner li span:first-child {
+    display: inline-block;
+    width: 80px;
+}
+#s2 .s2_inner li i {
+    margin-right: 8px;
+}
+#s2 .s2_inner .s2_inner2 li span:first-child {
+    display: inline-block;
+    width: 140px;
+}
+#s2 .s2_inner .s2_inner3 {
+    display: flex;
+    flex-direction: column;
+}
+#s2 .s2_inner .s2_inner3 i {
+    width: 36px; height: 36px;
+    border: 1px dashed #333;
+    line-height: 36px;
+    font-size: 2.4rem;
+}
+#s2 .s2_inner4 li {
+    margin-bottom: 16px;
+}
+#s2 .s2_inner4 span:nth-child(2) {
+    display: inline-block;
+    width: 300px; height: 30px;
+    border: 1px solid #333;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+#s2 .s2_inner4 li p {
+    height: 100%;
+    text-align: right;
+    padding-right: 8px;
+    border-radius: 5px;
+    background-color: #ccc;
+}
+#s2 .s2_inner4 li p.skill1 {width: 80%;}
+#s2 .s2_inner4 li p.skill2 {width: 90%;}
+#s2 .s2_inner4 li p.skill3 {width: 30%;}
+#s2 .s2_inner4 li p.skill4 {width: 60%;}
+#s2 .s2_inner4 li p.skill5 {width: 80%;}
+#s2 .s2_inner4 li p.skill6 {width: 70%;}
+#s2 .s2_inner4 li p.skill7 {width: 65%;} */

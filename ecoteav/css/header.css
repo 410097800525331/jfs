@@ -1,9 +1,5 @@
 @charset 'utf-8';
 
-/* #header>* {
-  display: inline-block;
-  vertical-align: middle;
-} */
 #header {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -34,6 +30,7 @@
   /* white-space: nowrap; */
   font-weight: 500;
   padding: 8px 0;
+  color: #111;
   transition: color 0.3s;
 }
 nav ul li a {
@@ -89,6 +86,9 @@ nav ul.sub_menu li::after,
   font-size: 1.4rem;
   transition: color 0.3s;
 }
+.sub_menu li:hover a {
+  color: var(--main)
+}
 .nav_right ul {
   display: flex;
   gap: 1.5rem;
@@ -97,6 +97,10 @@ nav ul.sub_menu li::after,
 .nav_right button {
   font-size: 1.4rem;
   transition: color 0.3s;
+}
+.nav_right i {
+  margin-bottom: 0px;
+  font-size: 1.8rem;
 }
 .nav_right a:hover,
 .nav_right button:hover {
@@ -140,6 +144,7 @@ nav ul.sub_menu li::after,
   }
   .main_menu.active {
     left: 0;
+    background: var(--main);
   }
   .gnb {
     flex-direction: column;

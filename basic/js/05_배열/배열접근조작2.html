@@ -32,12 +32,13 @@
       }
       // 조회
       function selectFn() {
-        insertFn();
         // 1~100까지 숫자를 출력
         for(let i=0; i<=addFn.length; i++) {
-          document.write(nums[i] + '<br>');
+          nums[i] = i + 1;
+          document.write(nums[i] + ' ');
         }
       }
+      selectFn()
     }
     function addFn() {
       selectFn();

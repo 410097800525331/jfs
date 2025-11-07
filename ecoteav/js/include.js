@@ -35,13 +35,13 @@ function initHeaderScript() {
   if (!header || !main) return;
 
   // 스크롤 시 헤더 스타일
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header.classList.add('active');
-    } else {
-      header.classList.remove('active');
-    }
-  });
+  // window.addEventListener('scroll', () => {
+  //   if (window.scrollY > 50) {
+  //     header.classList.add('active');
+  //   } else {
+  //     header.classList.remove('active');
+  //   }
+  // });
 
   // 메인 영역 패딩
   const headerHeight = header.offsetHeight;
@@ -60,6 +60,7 @@ function initHeaderScript() {
   //     headerNav.classList.remove('active');
   //   }
   // });
+  
   // // 모바일 햄버거
   // const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   // const mainMenu = document.getElementById('mainMenu');

@@ -10,57 +10,62 @@
 </head>
 
 <body>
-  <div class="floating-sidebar">
-        <div class="menu-item" onclick="window.open('https://pf.kakao.com/', '_blank')">
-            <div class="icon">
-                <div class="talk-icon">TALK</div>
-            </div>
-            <div class="label">카톡상담</div>
-        </div>
-
-        <div class="menu-item" onclick="alert('유튜브로 이동합니다')">
-            <div class="icon">
-                <svg viewBox="0 0 24 24" fill="#FF0000">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
-            </div>
-            <div class="label">유튜브</div>
-        </div>
-
-        <div class="menu-item" onclick="alert('이벤트 페이지로 이동합니다')">
-            <div class="icon">
-                <svg viewBox="0 0 24 24" fill="#333">
-                    <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/>
-                </svg>
-            </div>
-            <div class="label">이벤트</div>
-        </div>
-
-        <div class="menu-item" onclick="alert('예약하기 페이지로 이동합니다')">
-            <div class="icon">
-                <svg viewBox="0 0 24 24" fill="#333">
-                    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
-                </svg>
-            </div>
-            <div class="label">예약하기</div>
-        </div>
-
-        <div class="menu-item" onclick="window.location.href='tel:1544-6062'">
-            <div class="icon">
-                <svg viewBox="0 0 24 24" fill="#333">
-                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                </svg>
-            </div>
-            <div class="label">전화상담</div>
-            <div class="phone-number">1544<br>6062</div>
-        </div>
+  <div class="floating_container">
+    <div class="floating_bar">
+      <a href="#" class="button_content">
+        <p>카톡상담</p>
+        <i class="fa-brands fa-kakao-talk"></i>
+      </a>
     </div>
-
-    <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        <svg viewBox="0 0 24 24" fill="#333">
-            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
-        </svg>
+    <div class="floating_bar">
+      <a href="#" class="button_content">
+        <p>샘플신청</p>
+        <i class="fa-solid fa-mug-hot"></i>
+      </a>
     </div>
+    <div class="floating_bar">
+      <a href="#" class="button_content">
+        <p>디자인 자료실</p>
+        <i class="fa-regular fa-paste"></i>
+      </a>
+    </div>
+    <div class="floating_bar">
+      <a href="#" class="button_content">
+        <p>전화상담</p>
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
+    <div class="floating_bar" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+      <div class="button_content">
+        <i class="fa-solid fa-chevron-up"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="sidebar">
+    <a href="#" class="menu_item">
+      <i class="fa-brands fa-kakao-talk"></i>
+      <p>카톡상담</p>
+    </a>
+    <a href="#" class="menu_item">
+      <i class="fa-brands fa-instagram"></i>
+      <p>인스타</p>
+    </a>
+    <a href="#" class="menu_item">
+      <i class="fa-solid fa-mug-hot"></i>
+      <p>샘플신청</p>
+    </a>
+    <a href="#" class="menu_item">
+      <i class="fa-regular fa-paste"></i>
+      <p>디자인<br>자료실</p>
+    </a>
+    <a href="#" class="menu_item">
+      <i class="fa-solid fa-phone"></i>
+      <p>전화상담</p>
+      <div href="#" class="phone_number"">1234<br>1234</div>
+    </a>
+  </div>
+  <div class="scroll_top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"><i class="fa-solid fa-chevron-up"></i></div> -->
 </body>
 
 </html>
