@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css filter</title>
+  <style>
+    /* 
+    filter
+    - 기본값: none
+    - grayscale(100%): 흑백화
+    - blur(): 흐림
+    - brightness(): 밝기
+    - contrast(): 대비
+    - drop-shadow(): 그림자
+    - grayscale():
+    - hue-rotate(): 색상
+    - invert(): 색 반전
+    - opacity(): 불투명도
+    - saturate(): 채도
+    - sepia(): 흑백화 + 1색 추가
+    */
+    img:nth-child(1) {filter: grayscale(100%);}
+    img:nth-child(2) {filter: opacity(30%);}
+    img:nth-child(3) {filter: hue-rotate(90deg);}
+    img:nth-child(4) {filter: sepia(100%);}
+    img:hover {
+      filter: none;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="">
+  <img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="">
+  <img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="">
+  <img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="">
+</body>
+
+</html>
