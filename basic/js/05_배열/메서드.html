@@ -18,18 +18,17 @@
     / 기존 데이터를 바꾼다
     3. reverse: 배열 반대로 정렬 
     4. sort: 오름차순 정렬 - 숫자, 문자(한글, 영문)
+    6. splice: 기존 데이터 삭제
     
-    6. splice
-    7. pop
-    8. push
+    7. push: 데이터 입력
+    8. pop
     9. shift
     10. unshift
     11. forEach
-    12. map
-    13. filter
-    14. indexOf
+    12. map: 새 배열 생성
+    13. filter: 새 배열 생성
+    14. indexOf: 
     15. lastIndexOf
-    16. 
     */
    
     // 배열이름.메서드()
@@ -115,7 +114,72 @@
     document.write(result + '<br>');
     document.write(kdata + '<br><br>');
 
+    // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ여기부터 map 전까지 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
     document.write('splice -------------------------------<br>');
+    // 배열.splice(시작index, [삭제개수], [요소1, 요소2, ...])
+    // 기존 배열이 변경
+    document.write(kdata + '<br>');
+    document.write(kdata.slice(1, 3) + '<br>');
+    result = kdata.splice(1, 2); // 1번 인덱스부터 2개를 삭제하여 반환
+    document.write(result + '<br>');
+    document.write(kdata + '<br>');
+    // [서울, 대구, 인천, 대전, 세종]
+    result = kdata.splice(1, 1, '수원', '용인');
+    document.write(result + '<br>');
+    document.write(kdata + '<br>');
+    // 요소 삭제 - 음수 인덱스
+    result = kdata.splice(-2, 1);
+    document.write('요소 삭제: ' + result + '<br>');
+    // [서울, 수원, 용인, 인천, 대전, 세종]
+
+    // 배열명.splice(시작 index, 삭제 개수, ...아이템)
+    // 시작 인덱스부터 삭제개수만큼 반환
+    result = kdata.splice(2, Number.MAX_VALUE);
+    document.write(result + '<br>'); // [용인, 인천, 대전, 세종]
+    document.write(kdata + '<br><br>'); // [서울, 수원]
+
+    
+    document.write('forEach -------------------------------<br>');
+    // forEach
+    let datas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let sum = 0;
+    
+    datas.forEach(function(val) {
+      sum += val;
+    })
+    document.write(`1~10까지의 합: ${sum} <br><br>`);
+    console.log(datas);
+    
+    document.write('push & pop -------------------------------<br>');
+    // push & pop
+    document.write('shift -------------------------------<br>');
+    // shift
+    document.write('unshift -------------------------------<br>');
+    // unshift
+
+    document.write('map -------------------------------<br>');
+    // map(콜백함수)
+    // 배열명.map(function(val, [idx], [arr]){});
+    result = datas.map(function(val){
+      return val * val;
+    })
+    document.write(`새 배열: ${datas}<br>`);
+    document.write(`기존 배열: ${result}<br>`);
+
+    document.write('filter -------------------------------<br>');
+    // filter(콜백함수)
+    // 배열명.filter(function(val, [idx], [arr]){
+    //   return 조건식;
+    // });
+    result = datas.filter(function(val){
+      return val >= 6;
+    })
+    document.write(`새 배열: ${datas}<br>`);
+    document.write(`기존 배열: ${result}<br>`);
+
+    document.write('indexOf -------------------------------<br>');
+    // indexOf(콜백함수)
 
   </script>
 </body>

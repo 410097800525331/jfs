@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>에코티브 - 브랜드굿즈제작, 티백OEM/ODM, 블렌딩티 개발, 향료 개발</title>
+  <link rel="stylesheet" href="/jfs/ecoteav/css/ecoteav.css">
+  <link rel="stylesheet" href="/jfs/ecoteav/css/download.css">
+</head>
+
+<body>
+  <div id="header" data-include-path="/jfs/ecoteav/html/include/header.html"></div>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 class="brand_title">칼선(AI) 다운로드</h1>
+        <p class="subtitle">삼방 / 자동롤 / 지퍼스탠드 / 단상자 — AI 파일을 바로 다운로드하세요.</p>
+      </div>
+      <div>
+        <small class="subtitle">다운로드 가능한 항목: 7개</small>
+      </div>
+    </div>
+    <div class="layout">
+      <main>
+        <div class="controls">
+          <input class="search_input" id="search_input" placeholder="파일명 검색 (예: 자동롤)" />
+          <select class="filter_select" id="filter_select">
+            <option value="all">전체보기</option>
+            <option value="sambang">삼방 칼선</option>
+            <option value="autorol">자동롤</option>
+            <option value="zipper">지퍼스탠드</option>
+            <option value="box">단상자</option>
+          </select>
+          <button class="btn btn_secondary" id="reset_btn">초기화</button>
+        </div>
+        <div class="file_list" id="file_list">
+          <!-- 파일 항목은 JS로 삽입됩니다. -->
+        </div>
+      </main>
+      <aside class="panel" id="detail_panel">
+        <h3>파일 미리보기 & 정보</h3>
+        <div class="preview_box" id="preview_box">파일을 선택하면 미리보기가 표시됩니다.</div>
+        <div class="meta_row">
+          <div class="muted">파일명: <span id="meta_name">-</span></div>
+          <div class="muted">용량: <span id="meta_size">-</span></div>
+        </div>
+        <div class="meta_row">
+          <div class="muted">포맷: AI</div>
+          <div class="muted">버전: 1.0</div>
+        </div>
+        <div style="display:flex; gap:8px; margin-top:12px">
+          <a id="download_link" class="btn btn_primary" href="#" download>다운로드</a>
+          <button class="btn btn_secondary" id="open_folder_btn">폴더 열기</button>
+        </div>
+        <hr style="margin:12px 0;border:none;border-top:1px solid #f0f0f3" />
+        <div style="font-size:0.9rem;color:#666">주의: AI 파일은 원본 벡터 파일입니다. 편집 시 Adobe Illustrator(권장)를 사용하세요.</div>
+      </aside>
+    </div>
+  </div>
+  <div id="footer" data-include-path="/jfs/ecoteav/html/include/footer.html"></div>
+  <script src="/jfs/ecoteav/js/include.js"></script>
+  <script src="/jfs/ecoteav/js/include.js"></script>
+</body>
