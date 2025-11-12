@@ -10,48 +10,56 @@
 <body>
   <p id="var1">아이디1: getElementById</p>
   <p id="var2">아이디2: querySelector</p>
-
-  <p class="var3">클래스3: getElementsByClassName</p>
-  <p class="var4">클래스4: </p>
-  <p>p태그5</p>
+  <p class="var3">클래스3: getElementsByClassName()[0]</p>
+  <p class="var3">클래스4: querySelectorAll()[1]</p>
+  <p>태그5: getElementsByTagName</p>
 
   <script>
     /* 
-    객체
-        1. 표준 내장(Built-in) 객체: JS에서 제공!
-            - Date, Array, String, Math, Number, Boolean, ...
-        2. BOM 객체: 웹브라우저 제공!
-            - window, location, ...
-            - DOM 객체: document
-        3. 사용자 정의 객체: 개발자가 만들어서 사용!
-            - car, person, user, ...
+        객체
+            1. 표준 내장(Built-in) 객체: JS에서 제공!
+                - Date, Array, String, Math, Number, Boolean, ...
+            2. BOM 객체: 웹브라우저 제공!
+                - window, location, ...
+                - DOM 객체: document
+            3. 사용자 정의 객체: 개발자가 만들어서 사용!
+                - car, person, user, ...
 
-    객체(object) 생성
-        const obj = {
-            속성: 값,
-            ...
-        } 
+        객체(object) 생성
+            const 객체명 = {
+                속성: 값,
+                ...
+                메서드: function(){}
+            } 
     */
 
     const car = {
       name: '소나타',
       speed: 100,
       color: 'white',
-      start: function(){return `${name}가 출발합니다`},
-      stop: function(a){return `속도가 100에서 ${speed}가 출발합니다`},
-      accel: function(a, b){return `속도가 100에서 ${color}가 출발합니다`}
+      // 객체 내에서 사용한 this는 객체 자신을 가리킨다.
+      start: function () { return `${this.name}가 출합니다.` },
+      stop: function (a) { return `속도가 100에서 ${a}로 줄었습니다.` },
+      accel: function (a, b) { return `속도가 ${a}에서 ${b}로 가속되었습니다.` }
     }
     // 객체.메서드();
     document.write('잘가, write!');
 
-    // getElementById()
-    //  - 문서의 id를 가진 요소를 가져온다(선택)
-    //  - CSS의 선택자 역할(#, ., 태그명, ...)
+    /* 
+        단일 요소
+            const 변수명 = document.getElementById('아이디명');
+            const 변수명 = document.querySelector('CSS선택자');
+        같은 요소가 여러 개
+            const 변수명 = document.getElementsByClassName('클래스명')[인덱스];
+            const 변수명 = document.getElementsByTagName('태그명').item(인덱스);
+            const 변수명 = document.querySelectorAll('CSS선택자')[인덱스]; 
+    */
     const var1 = document.getElementById('var1');
     const var2 = document.querySelector('#var2');
-    const var3 = document.getElementById('var1');
-    const var4 = document.querySelector('#var2');
-    const var5 = document.getElementById('var1');
+
+    const var3 = document.getElementsByClassName('var3')[0];
+    const var4 = document.querySelectorAll('.var3').item(1);
+    const var5 = document.getElementsByTagName('p')[4];
 
 
     // innerHTML 속성
@@ -71,6 +79,10 @@
     console.log(var2.textContent);
     // 객체.textContent = 값; (setter)
     var2.textContent = `<b>${car.name}</b> 입니다.`;
+
+    var3.innerHTML = car.start();
+    var4.innerHTML = car.stop(0);
+    var5.innerHTML = car.accel(0, 100);
   </script>
 </body>
 

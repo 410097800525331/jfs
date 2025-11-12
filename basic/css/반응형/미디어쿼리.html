@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +24,34 @@
     https://getbootstrap.kr/
     */
 
+    /* orientation: portrait (세로) */
+    /* orientation: landscape (가로) */
+    /* 최대 767px -> 767px 이하의 장치 중 + 가로 방향 */
+    @media (max-width: 767px) and (orientation: landscape) {
+      body {
+        background: lightseagreen;
+      }
+    }
+
+    /* 최소 768px -> 768px 이상의 장치: 테블릿(768px), 데스크탑(1920px) */
+    @media (min-width: 768px) {
+
+      /* CSS 기록 */
+      body {
+        background: lightcoral;
+      }
+    }
+
+    /* 최소 1024px -> 1024px 이상의 장치: 데스크탑 */
+    @media (min-width: 1024px) {
+
+      /* CSS 기록 */
+      body {
+        background: lightgoldenrodyellow;
+      }
+    }
+
+
     /* 전체 */
     @media(orientation: landscape) {
       body {
@@ -30,26 +59,36 @@
       }
 
     }
+
     @media (max-width: 1024px) {
-      body{
+      body {
         background: #f9f9f9;
       }
     }
+
     /* 테블릿, 데스크탑 */
     @media (max-width: 768px) and (orientation: landscape) {
-      body{
-      background: #ccc;
+      body {
+        background: #ccc;
+      }
     }
-  }
+
     /* 폰 */
     @media (max-width: 600px) {
-      body{
-      background: #555;
+      body {
+        background: #555;
+      }
     }
-  }
+
+    /* 모든 장치: 폰(360px) */
+    body {
+      background: lightblue;
+    }
   </style>
 </head>
+
 <body>
-  
+
 </body>
+
 </html>
