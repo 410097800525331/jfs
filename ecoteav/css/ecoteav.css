@@ -82,15 +82,15 @@
   max-width: 1400px;
   margin: 140px auto 40px;
 }
-.oem_steps {
+/* .oem_steps {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
   margin: 24px auto 70px;
-}
-.oem_step {
+} */
+/* .oem_step {
   width: 200px;
   text-align: center;
 }
@@ -132,7 +132,7 @@
   .arrow {
     transform: rotate(90deg);
   }
-}
+} */
 
 /* 문의 폼 */
 .contact_section {

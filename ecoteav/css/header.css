@@ -43,7 +43,7 @@ nav ul li::after {
   position: absolute;
   bottom: -2px; left: 50%;
   width: 0; height: 2px;
-  background-color: var(--main);
+  background-color: var(--sub);
   transition: all 0.3s ease;
   transform: translateX(-50%);
   z-index: 2;
@@ -87,7 +87,7 @@ nav ul.sub_menu li::after,
   transition: color 0.3s;
 }
 .sub_menu li:hover a {
-  color: var(--main)
+  color: var(--sub)
 }
 .nav_right ul {
   display: flex;

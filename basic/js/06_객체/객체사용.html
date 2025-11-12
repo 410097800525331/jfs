@@ -8,8 +8,12 @@
 </head>
 
 <body>
-  <p id="var1">p#var1</p>
-  <p id="var2">p#var2</p>
+  <p id="var1">아이디1: getElementById</p>
+  <p id="var2">아이디2: querySelector</p>
+
+  <p class="var3">클래스3: getElementsByClassName</p>
+  <p class="var4">클래스4: </p>
+  <p>p태그5</p>
 
   <script>
     /* 
@@ -32,7 +36,10 @@
     const car = {
       name: '소나타',
       speed: 100,
-      color: 'white'
+      color: 'white',
+      start: function(){return `${name}가 출발합니다`},
+      stop: function(a){return `속도가 100에서 ${speed}가 출발합니다`},
+      accel: function(a, b){return `속도가 100에서 ${color}가 출발합니다`}
     }
     // 객체.메서드();
     document.write('잘가, write!');
@@ -41,7 +48,10 @@
     //  - 문서의 id를 가진 요소를 가져온다(선택)
     //  - CSS의 선택자 역할(#, ., 태그명, ...)
     const var1 = document.getElementById('var1');
-    const var2 = document.getElementById('var2');
+    const var2 = document.querySelector('#var2');
+    const var3 = document.getElementById('var1');
+    const var4 = document.querySelector('#var2');
+    const var5 = document.getElementById('var1');
 
 
     // innerHTML 속성
