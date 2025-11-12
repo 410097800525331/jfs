@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 객체</title>
+</head>
+
+<body>
+  <script>
+    /* 
+        객체(Object) ?
+            - 현실 세계의 모든 것(유형, 무형)을 객체로 표현한다.
+            - 유형: 예) 사람, 동물, 자동차, 냉장고, Tv, ...
+            - 무형: 예) 계좌, 계약, 춤, ...
+            - 키(속성)와 값의 쌍으로 구성한다.
+
+        객체의 유형
+            - 내장 객체
+                - 전역 객체: Date, Array, String, ...
+                - BOM(Browser Object Model) 
+                    : window
+                        - document(DOM: Document Object Model)
+                        - screen, location, navigator, history, frames, XMLHttpRequest
+            - 사용자 정의 객체
+
+
+        예) 자동차를 객체로 모델링
+            - 특성: 회사명(company), 모델명(name), 색상(color), 도어 수(door), 속도(speed), ... -> 속성
+            - 동작: 시동 걸기(start), 속도 내기(accel), 멈추기(stop), 변속하기(transe), ... -> 메서드()
+                        
+
+        객체(Object) 생성(선언)
+            const 변수 = {
+                속성: 속성값, 
+                메서드: function(){}, 
+                ...
+                속성:값
+            }
+            const car = {
+                'company': '현대', 
+                'name': '소나타',
+                'color': '흰색',
+                'door': 4,
+                'speed': 200,
+                'start': function(){return this.speed+10},
+                'accel': function(){어떻게 동작하나?},
+                'stop': function(){어떻게 동작하나?}
+            }
+
+            - this: this는 car를 가리킨다, 즉 car.speed+10
+        
+        객체 참조
+            - 객체의 속성에 접근할 때는 마침표(.) 또는 대괄호([])를 사용한다.
+
+            변수['키']
+            변수.키
+            car['company']
+            car.company
+            car.speed = 200;
+            car.speed = car.speed + 10
+            car.start();
+        
+        객체.속성
+        객체.메서드()
+            arr.length
+            arr2.foreach()
+
+            const Array = {
+                length: ?????
+                foreach: function(ele, idx, arr){~~~}
+            }
+
+
+    */
+
+    // 객체 생성
+    const data = {
+      'f0': 100,
+      'f1': 200,
+      'f2': 300
+    };
+    // 객체 참조(select, 선택, 조회)
+    console.log(data + '<br>'); // [object Object]
+    document.write(data['f0'] + '<br>'); // 100
+    document.write(data["f1"] + '<br>'); // 200
+    document.write(data.f2 + '<br>'); // 300
+
+    // 객체 추가(insert, 삽입)
+    data['f3'] = 400;
+    data.f4 = 500;
+    document.write(data["f3"] + '<br>'); // 200
+    document.write(data.f4 + '<br>'); // 300
+
+    // 객체 변경(update, 수정)
+    data.f2 = 500;
+    document.write(data.f2 + '<br>'); // 500
+
+  </script>
+</body>
+
+</html>

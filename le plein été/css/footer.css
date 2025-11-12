@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; height: 1200px;
+  padding: 20px 0;
+  color: #fff;
+  background: #111;
+}
+.footer_form {
+  
+  flex: 1;
+}
+.footer_form span {
+  color: #ff0000;
+}
+.right_group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}

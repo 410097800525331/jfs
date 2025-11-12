@@ -17,6 +17,7 @@ CSS Navigation - class 연동
 Color Highlight - CSS 컬러 표시해줌
 TabOut - 탭누르면 끝으로
 Live Preview / 바로가기 키(설정에서 4번째 맨위 제외) live 검색 show 프리뷰 단축키를 alt+q
+ESLint - 
 
 
 Figma for VS Code - 피그마 연동
@@ -53,6 +54,9 @@ https://cdnjs.com - 폰트어썸 등 cdn
 구글폰트, 다폰트, 눈누, 어도비폰트
 비디오
 https://www.pexels.com/ko-kr/ (픽셀즈 닷컴)
+프리 html5
+부트스트랩
+https://getbootstrap.kr/
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ w3schools.com 언어
 클라이언트(Client) 컴퓨터

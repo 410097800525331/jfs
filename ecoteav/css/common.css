@@ -2,26 +2,16 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 
-/* 
-1024 768 3
-*/
+/* 1920 768 375 */
 :root {
+  --gray: #777;
+  --sub: #C1AFA1;
   font-size: 10px;
-  --gray2: #222;
-  --gray5: #555;
-  --grayd: #f5f5f5;
-  --main: #98A86D;
   scroll-behavior: smooth;
 }
 body {
   font: 16px/1.5 'NanumSquare', sans-serif;
-  color: var(--gray5)
-}
-.line_block {
-  display: inline-block;
-  width: 2px; height: 90px;
-  background: var(--main);
-  margin: 32px auto;
+  color: var(--gray2)
 }
 input[type="text"],
 input[type="email"],
@@ -47,6 +37,12 @@ textarea {
 }
 body, h1, h2, h3, p, ul {
   margin: 0;
+}
+section {
+  margin: 40px 0;
+}
+label span {
+  color: red;
 }
 img {
   width: 100%;
@@ -75,15 +71,18 @@ button {
 input {
   border: none;
 }
-label input {
-  cursor: pointer;
-}
 input[type="radio"],
-input[type="checkbox"] {
-  cursor: pointer;
-}
+input[type="checkbox"],
+label input, 
 select {
   cursor: pointer;
+}
+
+.line_block {
+  display: inline-block;
+  width: 2px; height: 90px;
+  background: #555;
+  margin: 32px auto;
 }
 
 /* 버튼 */
@@ -113,7 +112,7 @@ select {
   background-color: #fff;
   color: var(--gray5);
 }
-.btnB {
+.footer_btnF {
   background: #fff;
   color: #111;
   border: 1px solid #111;
@@ -122,10 +121,10 @@ select {
   cursor: pointer;
   transition: all 0.3s;
 }
-.btnB:hover {
-  background: var(--grayd);
+.footer_btnF:hover {
+  background: #ccc;
 }
-.btn1 {
+.footer_btnB {
   background: #111;
   color: #fff;
   padding: 15px 0;
@@ -133,7 +132,7 @@ select {
   cursor: pointer;
   transition: all 0.3s;
 }
-.btn1:hover {
-  background: var(--gray5);
+.footer_btnB:hover {
+  background: #333;
   color: #fff;
 }

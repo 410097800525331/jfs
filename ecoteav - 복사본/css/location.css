@@ -1,0 +1,29 @@
+@charset 'utf-8';
+
+.office {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 40px 20px;
+}
+.office h1 {
+  margin-bottom: 20px;
+}
+.map_wrap iframe {
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.office_info {
+  margin-top: 20px;
+  line-height: 1.8;
+}
+.divider {
+  margin: 30px 0;
+  border-top: 1px solid #ccc;
+}
+.directions h3, h4 {
+  margin: 8px 0;
+}
+.by_car ol,
+.by_public ol {
+  margin-left: 20px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js 2차원 배열</title>
+</head>
+<body>
+  <button type="button" onclick="oddArr();">홀수 배열</button>
+  <button type="button" onclick="allArr();">전체 배열</button>
+  <script>
+    /* 
+    자바스크립트는 다차원 배열의 의미가 없다.
+    - 배열의 값은 기본/참조 데이터를 모두 값으로 가질 수 있다.
+    예) [1, 'string', true, [1,2,3]]
+    */
+   
+    // 배열 생성
+    const arr = [
+      // [10, 20,[1, ['a', 'b', 'c'], 3], 30, 40, 0],
+      [1, 3, 5, 0],
+      [2, 4, 6, 8, 0],
+    ];
+    // 배열 참조
+    document.write('<br>' + arr[0][4] + '<br>');
+    document.write(arr[0][3] + '<br>');
+    // 배열 수정
+    arr[0][4] = 50;
+    arr[1][4] = 100;
+    document.write(arr[0][4] + '<br>');
+    document.write(arr[1][4] + '<br>');
+    
+    function oddArr (){
+      const oddArr = arr[0];
+      // for (let i = 0; i < oddArr.length; i++) {
+      //   document.write(oddArr[i] + ' ');
+      // }
+      oddArr.forEach(function(val, idx) {
+        document.write(oddArr[idx] + ' ');
+      });
+      document.write('<br><a href = "2차원배열.html">새로고침</a>')
+    }
+    function allArr (){
+      // arr.length는 2이다.
+      for (let i = 0; i < arr.length; i++) {
+        // for (let j = 0; j < arr[i].length; j++) {
+        //   document.write(arr[i][j] + ' ');
+        // }
+        
+        // [값, 값, ...] == [item1, item2, ...] == arr = [ele1, ele2, ...]
+        // arr.forEach(function(val, idx1) {
+        //   arr[idx1].forEach(function(val, idx2) {
+        //     document.write(arr[idx1][idx2] + ' ');
+        //   });
+        // });
+
+        // 화살표 함수
+        arr.forEach((val, idx1) => {
+          arr[idx1].forEach((val, idx2) =>
+            document.write(arr[idx1][idx2] + ' ')
+          );
+          document.write('<br>')
+        });
+      }
+      document.write('<br><a href = "2차원배열.html">새로고침</a>')
+    }
+    const arr2 = [];
+    // 배열에 값 입력
+    for (let i = 0; i < 5; i++) {
+      arr2[i]=[i+'-'+0, i+'-'+1, i+'-'+2];
+      
+    }
+    // arr2.forEach((ele, i) => {
+    //   arr2[i]=[i+'-'+0, i+'-'+1, i+'-'+2];
+    // });
+
+    // 배열 값 출력
+    arr2.forEach((ele, i) => {
+      arr2[i].forEach((ele, j) => {
+        document.write(arr2[i][j] + ' ');
+      });
+      document.write('<br>');
+    });
+  </script>
+</body>
+</html>
