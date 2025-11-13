@@ -18,6 +18,7 @@ Color Highlight - CSS 컬러 표시해줌
 TabOut - 탭누르면 끝으로
 Live Preview / 바로가기 키(설정에서 4번째 맨위 제외) live 검색 show 프리뷰 단축키를 alt+q
 ESLint - 
+Bootstrap Class Autocomplete - 
 
 
 Figma for VS Code - 피그마 연동
