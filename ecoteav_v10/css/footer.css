@@ -1,0 +1,85 @@
+@charset 'utf-8';
+
+.footer_wrap {
+  background: #111;
+  color: #fff;
+  padding: 80px 0;
+  font-size: 1.3rem;
+}
+.footer_inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.footer_left {
+  flex: 1 1 45%;
+  min-width: 320px;
+}
+.footer_menu {
+  display: flex;
+  gap: 25px;
+  margin: 20px 0;
+}
+.footer_menu a {
+  color: #fff;
+}
+.footer_menu a:hover {
+  text-decoration: underline;
+}
+.footer_info {
+  font-style: normal;
+  color: #ccc;
+  line-height: 1.7;
+}
+.footer_copy,
+.footer_bottom_link {
+  color: #777;
+  margin: 16px 0;
+}
+.footer_bottom_link a,
+.footer_bottom_link i {
+  font-size: 1.7rem;
+  margin-right: 8px;
+}
+/* 오른쪽 영역 */
+.footer_right {
+  flex: 1 1 45%;
+  min-width: 320px;
+}
+.footer_msg {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+.footer_form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form_row {
+  display: flex;
+  gap: 15px;
+}
+.footer_form input,
+.footer_form textarea {
+  width: 100%;
+  color: #fff;
+  padding: 8px;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #777;
+}
+.footer_form textarea {
+  height: 100px;
+  resize: none;
+  padding: 8px;
+}
+@media (max-width: 768px) {
+  .footer_inner {
+    flex-direction: column-reverse;
+    gap: 60px;
+  }
+}

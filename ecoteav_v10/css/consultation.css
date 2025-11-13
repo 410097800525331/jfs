@@ -1,0 +1,69 @@
+@charset 'utf-8';
+
+.consult_wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+p.desc {
+  line-height: 1.7;
+  margin: 16px 0 24px;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.form_group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.form_item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 260px;
+}
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.checkbox_group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+.checkbox_group label {
+  font-weight: 400;
+}
+.checkbox_group input {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.file_upload {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.privacy_box {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+  .form_item {
+    min-width: 100%;
+  }
+}
+.map_wrap {
+  padding: 60px 0 16px;
+}
+.map_wrap iframe {
+  max-width: 860px;
+}
