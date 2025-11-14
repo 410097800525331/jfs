@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열 내 배열</title>
+</head>
+<body>
+  <div id="car"></div>
+  <script>
+    /*
+    배열안의 값을 배열 값으로 지정
+    const arr = [값, 값, ...];
+    const arr = [값, ...];
+    */
+    const car = [
+      ['소나타', '검정', 100],
+      ['지프', '흰색', 70],
+      ['제네시스', '쥐색', 150],
+      ['그랜저', '멍색', 200],
+      ['벤츠', '냥색', 40]
+    ];
+    const div = document.querySelector('#car');
+    div.innerHTML = `car[2][1]: ${car[2][1]}`;
+    // for (let i = 0; i < car.length; i++) {
+    //   div.innerHTML += `<h2>[car${i+1} 속성]</h2><p>${car[i]}</p>`;
+    // }
+    car.forEach((ele, i) => {
+      div.innerHTML += `<h2>[car${i+1} 속성]</h2><p>${car[i]}</p>`;
+    });
+  </script>
+</body>
+</html>

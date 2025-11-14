@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js DOM</title>
+  <style>
+    button {
+      display: block;
+    }
+    .bgc {
+      background-color: lightblue;
+    }
+    .dn {
+      display: none;
+    }
+    .db {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>DOM</h1>
+  <p>여기는 돔 설명하는 곳입니다.</p>
+
+  <script>
+    /* 
+    DOM(문서 객체 모델)
+    - 웹 문서를 메모리로 읽어 들여 트리(Tree) 구조로 변환
+    어디에 사용?
+    - HTML 구조와 내용, CSS 스타일 변경에 사용
+
+    1. 요소 선택
+    - document.getElementById('아이디')
+    - document.getElementByClassName('클래스')
+    - document.getElementByTagName('태그')
+    - document.querySelector('선택자')
+    - document.querySelectorAll('선택자')
+
+    2. 요소 생성 + 연결
+    - document.createElement('태그명')
+    - document.createTextNode('텍스트')
+    - 부모요소.appendChild('자식요소');
+
+    2-1 요소 복제
+    - 요소.cloneNode(deep)
+    deep: true이면 자식까지 복제, false이면 선택한 요소만 복제
+
+    3. 문서 삽입(연결)
+    - 요소.innerHTML
+    - 요소.textContent
+    - 요소.innerHTML = '텍스트';
+    - 요소.textContent = '텍스트';
+
+    4. 속성(Attribute) 지정하기
+    - 요소.HTML속성 = HTML속성;
+    - 요소.setAttribute('HTML속성', 'HTML속성값')
+    예) div.className = 'div1';
+    예) img.src = '경로/이미지명';
+    예) div.setAttribute('class', 'div1');
+    예) img.setAttribute('src', '경로/이미지명');
+
+    5. 속성 가져오기
+    - 요소.HTML속성;
+    - 요소.getAttribute('HTML속성');
+
+    6. 스타일: 요소의 스타일과 값을 지정
+    - 객체.style.CSS속성 = 'CSS속성값';
+    - 객체.style.csstext = '속성:값; 속성:값; ...';
+
+    7. 스타일: 클래스 이름만 정의 + CSS로 속성과 값을 지정
+    
+    - 객체.classList.add('클래스명1', '클래스명2' ...) 클래스 추가
+    - 객체.classList.remove('클래스명') 클래스 제거
+    - 객체.classList.toggle('클래스명') 클래스 추가/제거
+    - 객체.classList.contains('클래스명') 클래스 유무 확인
+
+    8. 이벤트
+    - 객체.on이벤트명 = 콜백함수;
+    - 객체.on이벤트명 = function(){};
+    - 객체.on이벤트명 = () =>{};
+    - 객체.addEventListener('이벤트명', 콜백함수);
+    */
+
+    // p 생성
+    const p2 = document.createElement('p');
+    const img = document.createElement('img');
+    const img2 = document.createElement('img');
+    const btn = document.createElement('button');
+
+    // 요소 복제
+    const btn2 = btn.cloneNode();
+    const btn3 = btn.cloneNode();
+
+    // 텍스트 노드 생성
+    const text = document.createTextNode('보인다!!!');
+    
+    // p 선택
+    const p1 = document.querySelector('p');
+
+    // p1에 자식으로 p2 추가
+    document.body.appendChild(p2);
+    document.body.appendChild(img);
+    document.body.appendChild(img2);
+    document.body.appendChild(btn);
+    document.body.appendChild(btn2);
+    document.body.appendChild(btn3);
+
+    p2.appendChild(text);
+    btn.textContent = '숨기기';
+    btn2.textContent = '보이기';
+    btn3.textContent = '보이기/숨기기';
+
+    // 이미지태그 src 속성 추가
+    img.src = 'https://www.codewithharry.com/img/notes/js.webp';
+    img2.src = 'https://www.codewithharry.com/img/notes/js.webp';
+    img.setAttribute('width', '100px');
+    const w100 = img.getAttribute('width');
+    img2.setAttribute('width', w100);
+
+    // 이미지에 테두리 지정
+    img.style.border = '5px solid #000';
+
+    // 이벤트
+    btn.addEventListener('click', ()=>{
+    // <img class = "dn">
+      // img.style.display = 'none';
+      img.classList.add('dn');
+    });
+    btn2.addEventListener('click', ()=>{
+    // <img class = "dn db">
+      img.classList.remove('dn');
+    });
+    btn3.onclick = ()=>{
+      img.classList.toggle('dn');
+    };
+
+    // bgc 가지고 있으면 true, 아니면 false
+    if(p1.classList.contains('bgc')) {
+      document.body.style.background = 'yellow';
+      // location.href = "https://www.naver.com"
+      // p1.classList.remove('bgc');
+    } else {
+      document.body.style.background = 'pink';
+      // location.href = "https://www.google.com"
+      // p1.classList.add('bgc');
+    };
+  </script>
+</body>
+</html>

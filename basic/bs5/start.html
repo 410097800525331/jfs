@@ -13,8 +13,6 @@
 </head>
 <body>
   <!-- 
-  p-0 / m-0
-
   - 컨테이너 클래스
   container-fluid: 가로 크기 100%
   container: width: 1290px; padding 0 12px; / 중단점(576이하(xs), 576(sm), 768(md), 992(lg), 1200(xl), 1400(xxl))을 기준으로 최대 크기는 정해져 있다
@@ -29,11 +27,16 @@
   bg-primary(파랑), bg-secondary(회색), bg-success(녹색), bg-danger(붉은색), bg-warning(밝은주황), bg-info(하늘), bg-light(밝은회색), bg-dark(검정), bg-white(흰색), bg-transparent(배경색x)
   - 텍스트 클래스
   text-primary, text-secondary, text-success, text-danger, text-warning, text-info, text-light, text-dark, text-white, text-muted
-  -->
-
-  <!-- 
   - 텍스트 정렬
   text-start, text-end, text-center
+  -->
+  
+  <!-- 
+  w-0, w-25, w-50, w-75, w-100, w-auto
+  h-0, h-25, h-50, h-75, h-100, h-auto
+  
+  {속성}{상하좌우}-{중단점}-{숫자}
+  m -> t, b, s(완), e(오), y(상하), x(좌우), 중단점: xs, sm, md, lg, xl, xxl, 숫자: 0~5, auto
   -->
 <div class="container-fluid p-5 bg-dark text-white text-center">
   <h1>My First Bootstrap Page</h1>
@@ -41,7 +44,7 @@
 </div>
   
 <div class="container mt-5">
-  <div class="row">
+  <div class="row bg-light vh-100 pt-5">
     <div class="col-md-6 col-xl-3">
       <h3>Column 1</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js Date 객체</title>
+</head>
+<body>
+  <script>
+    /* 
+    Date 객체
+    생성자 오버로딩(Overloading)
+    - 매개변수(인자)의 입력에 따라 서로 다른 객체가 생성되는 것
+    
+    Date 생성자 함수
+    function Date() {} -> 기본 생성자
+    function Date(ms) {this.ms = ms;}
+    function Date(y, m d) {this.y = y; this.m = m; this.d = d;}
+
+    */
+   
+    // 객체 생성
+    const d1 = new Date();
+    const d2 = new Date(1491803527400);
+    const d3 = new Date("October 15, 2018 06:18:07");
+    const d4 = new Date(2018, 11, 25, 18, 30, 29);
+
+    // 객체
+    console.log(d1);
+    console.log(d2);
+    console.log(d3);
+    console.log(d4);
+
+    // 메서드
+    console.log(d1.getFullYear());
+    console.log(d1.getMonth()+1);
+    console.log(d1.getDate);
+    console.log(d1.getDay);
+    console.log(d1.getHours);
+    console.log(d1.getMinutes);
+    console.log(d1.getSeconds);
+    console.log(d1.getMilliseconds);
+
+
+  </script>
+</body>
+</html>
