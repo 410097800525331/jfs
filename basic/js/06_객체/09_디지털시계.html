@@ -4,27 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>js 디지털 시계</title>
+  <title>JS 디지털시계</title>
 </head>
 
 <body>
-    <div id="digClock"></div>
   <script>
     function digClock() {
       const today = new Date();
 
-      const day = `${today.getMonth() +1}월 ${today.getDate()}일 `;
+      const day = `${today.getMonth() + 1}월 ${today.getDate()}일 `;
       const time = `${today.getHours()}시 ${today.getMinutes()}분 ${today.getSeconds()}초`;
-      
-      // console.log(day + time);
-      // window 객체의 메서드, 함수
-      // setInterval(함수, 시간(밀리초))
 
-      // setTimeout 시간 후 1번 실행
+      console.log(day + time);
+      // window객체의 메서드, 함수
+      // setTimeout(콜백함수, 시간)
+      // - 시간 후 1번 실행, 시간은 ms(밀리초)
       // setTimeout('digClock()', 1000);
     }
     digClock();
-    // setInterval은 매 시간마다 반복
+
+    // setInterval(콜백함수, 시간)
+    // - 매 시간마다 반복, 시간은 ms(밀리초)
     setInterval('digClock()', 1000);
   </script>
 </body>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    /* 
+    이벤트의 종류
+    1) window
+    - error
+    - resize(반응형)
+    - scroll
+
+    2) document
+    - ready
+
+    3) mouse
+    - click
+    - mouseenter
+    - mouseleave
+    - mousedown
+    - mouseup
+    - mousemove
+    - dblclick
+    ...
+
+    4) keyboard
+    - keypress(권장x)
+    - keydown
+    - keyup
+
+    5) form
+    - submit
+    - focus
+    - blur
+    - change
+    - select
+
+    효과 메서드
+    hide()
+    show()
+    */
+
+    // jQuery(document).ready(function(){});
+    $(()=>{
+      $('p').hide();
+      $('#a1').click(()=>{
+        $('p:nth-of-type(1)').show();
+      });
+      $('.a2').click(()=>{
+        $('p:nth-of-type(2)').show();
+      });
+      // 단, 화살표함수에서 $(this)는 자기 자신이 아니다
+      $('p').click(function(){
+        $(this).hide();
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>퀴즈</h1>
+  <h2>문1. 대한민국의 수도는?</h2>
+  <button type="button" id="a1">정답</button>
+  <p>서울입니다.</p>
+  <h2>문2. 대한민국의 국보1호는?</h2>
+  <button type="button" class="a2">정답</button>
+  <p>숭례문입니다.</p>
+</body>
+</html>

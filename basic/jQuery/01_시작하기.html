@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리 시작하기</title>
+  <!-- 오리지널 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- 구글 CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- CDNJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- 다운로드 파일 연결 -->
+  <script src="jquery-3.7.1.min.js"></script>
+  <script>
+    /* 
+    제이쿼리란?
+    - 자바스크립트 라이브러리
+    - 크로스 브라우징에 효과적(웹페이지가 일관된 화면과 기능 제공)
+
+    window.addEventListener("이벤트종류", 콜백함수);
+    window.addEventListener("DOMContentLoaded", function(){});
+    window.addEventListener("DOMContentLoaded", ()=>{});
+    */
+   
+    // 바닐라 스크립트
+    // DOMContentLoaded: DOM의 내용이 모두 로드됐을 때
+    window.addEventListener("DOMContentLoaded", function () {
+      document.querySelector('p').innerHTML = '웹 프로그래밍';
+    });
+
+    // 제이쿼리
+    // 객체.메서드()
+    // jQuery(document).메서드()
+
+    // jQuery(document).ready(()=>{});
+    // $(document).ready(()=>{});
+    $(()=>{
+      $('p').html('웹 프로그래밍');
+    });
+  </script>
+</head>
+
+<body>
+  <p></p>
+</body>
+
+</html>

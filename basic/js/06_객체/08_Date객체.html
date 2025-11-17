@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>js Date 객체</title>
+  <title>JS Data객체</title>
 </head>
+
 <body>
   <script>
-    /* 
-    Date 객체
-    생성자 오버로딩(Overloading)
-    - 매개변수(인자)의 입력에 따라 서로 다른 객체가 생성되는 것
-    
-    Date 생성자 함수
-    function Date() {} -> 기본 생성자
-    function Date(ms) {this.ms = ms;}
-    function Date(y, m d) {this.y = y; this.m = m; this.d = d;}
+    /*
+        Date 객체
+            // 생성자 오버로딩(Overloading)
+            // - 매개 변수의 입력에 따라 서로 다른 객체가 생성되는 것
 
+        // Date 생성자 함수
+        function Date() {} -> 기본 생성자
+        function Date(ms) {this.ms = ms;}
+        function Date(y, m, d) {this.y = y; this.m=m; this.d=d;}
     */
-   
+
     // 객체 생성
     const d1 = new Date();
+    // 날짜 기준: 1970-01-01 00:00:00.00
+    // 3000은 3000밀리초(ms)
     const d2 = new Date(1491803527400);
+    // 월은 0(January)~11(December),
     const d3 = new Date("October 15, 2018 06:18:07");
     const d4 = new Date(2018, 11, 25, 18, 30, 29);
 
@@ -33,15 +37,41 @@
 
     // 메서드
     console.log(d1.getFullYear());
-    console.log(d1.getMonth()+1);
-    console.log(d1.getDate);
-    console.log(d1.getDay);
-    console.log(d1.getHours);
-    console.log(d1.getMinutes);
-    console.log(d1.getSeconds);
-    console.log(d1.getMilliseconds);
+    console.log(d1.getMonth() + 1);
+    console.log(d1.getDate());
+    console.log(d1.getDay());
+    console.log(d1.getHours());
+    console.log(d1.getMinutes());
+    console.log(d1.getSeconds());
 
+    console.log(d1.getMilliseconds());
+    console.log('1970-1-1 이후 현재까지 몇 초가 지났나요?' + d1.getTime() + '밀리초가 지났습니다.');
+    console.log('1970-1-1 이후 현재까지 몇 일이 지났나요?' + d1.getTime() / 1000 / 60 / 60 / 24 + '일 지났습니다.');
+
+    console.log(d4.setFullYear(2025, 11, 14));
+
+    // Fri Nov 14 2025
+    console.log(d1.toDateString());
+    // 2025-11-14T02:04:35.507Z
+    console.log(d1.toISOString());
+    // 2025-11-14T02:05:08.489Z
+    console.log(d1.toJSON());
+
+    // 2025. 11. 14.  
+    console.log(d1.toLocaleDateString());
+    // 오전 11:05:30 
+    console.log(d1.toLocaleTimeString());
+    // 2025. 11. 14. 오전 11:06:00 
+    console.log(d1.toLocaleString());
+
+    // Fri Nov 14 2025 11:06:36 GMT+0900 (한국 표준시)
+    console.log(d1.toString());
+    // 11:08:20 GMT+0900 (한국 표준시)  
+    console.log(d1.toTimeString());
+    // Fri, 14 Nov 2025 02:08:32 GMT
+    console.log(d1.toUTCString());
 
   </script>
 </body>
+
 </html>
