@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메서드</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    /*
+    1) 이벤트 메서드
+    1. window: error, resize(반응형), scroll
+    2. document: ready
+    3. mouse: click, mouseenter, mouseleave, mousedown, mouseup, mousemove, dblclick,  ...
+    4. keyboard: keypress(권장x), keydown, keyup
+    5. form: submit, focus, blur, change, select
+
+    2) 효과 메서드
+    - hide()
+    - show()
+
+    3) 탐색 메서드
+    - eq()
+
+    4) html 메서드
+    - text(): 내용을 가져온다/지정한다
+    - html(): '' (태그 인식)
+
+    5) css 메서드
+    - addClass()
+    - removeClass()
+    - toggleClass()
+    - hasClass(): 클래스 포함 여부
+    css('속성', '값'): 하나의 속성
+    css({'속성:값', '속성:값', ...}): 하나 이상의 속성
+    css({속성:'값', ...}): 하나 이상의 속성, 카멜표기법
+    */
+
+    // jQuery(document).ready(function(){});
+    $(()=>{
+      $('button').click(function(){
+        // $('p').css('background-color', 'yellow');
+        // $('p').css('font-size', '200%');
+        $('p').css({backgroundColor: 'yellow', fontSize: '200%'});
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <p>김길동</p>
+  <div>02-123-4567</div>
+  <p>이길동</p>
+  <div>042-567-2929</div>
+  <p>홍길동</p>
+  <div>051-278-9485</div>
+  <br><br>
+  <button>이름 강조</button>
+</body>
+
+</html>

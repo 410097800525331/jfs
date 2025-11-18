@@ -8,13 +8,35 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script>
     // 마우스 이벤트
-    $('div').mouseenter(()=>{
-      $('p')
+    $(() => {
+      let num = 0;
+      $('div').mouseenter(function () {
+        // :nth-child(n) n은 1, 2, ..., eq(n) n은 0, 1, ...
+        // $('p:nth-child(2)').text(num++);
+
+        // $('p:eq(n)')는 선택자
+        // $('p').eq()는 메서드
+        $('p:first').text('마우스 <b>들어감</b>(enter)');
+        $('p:last').text(++num);
+      });
+      // $('div').mouseleave(function () {
+      //   $('p:eq(1)').html('마우스 <b>나감</b>(leave)');
+      //   $('p').eq(1).text(`최종 횟수: ${num}`);
+      // });
+      $('div').mousedown(function () {
+        $('p').eq(0).hide();
+        $('p').eq(1).text('메시지 사라짐');
+      });
+      $('div').mouseup(function () {
+        $('p').eq(0).show();
+        $('p').eq(1).text(`최종 횟수: ${num}`);
+      });
     });
   </script>
   <style>
     div.out {
-      width: 200px; height: 100px;
+      width: 300px;
+      height: 100px;
       border: 1px solid #000;
       text-align: center;
       background-color: yellow;

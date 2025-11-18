@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 스타일 변경</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    .important {
+      font-weight: bold;
+      /* 
+      xx-small(), x-small(), small(), smaller()
+      medium(16px)
+      large(18px), x-large(19.2px), xx-large(24px), larger(32px)
+      */
+      font-size: xx-large;
+    }
+    .blue {
+      color: blue;
+    }
+    .red {
+      border: 1px solid blue;
+      color: red;
+    }
+  </style>
+  <script>
+    /*
+    css 스타일 변경
+    .addClass('클래스명'): 클래스 추가
+    .removeClass('클래스명'): 클래스 제거
+    */
+    $(()=>{
+      $('button').eq(0).click(()=>{
+        $('h1, h2, p:first').addClass('red', 'blue');
+
+        // $('p:last').css('font-size', 'xx-large');
+        // $('p:last').css('font-weight', 'bold');
+        // 속성명은 카멜표기법 사용 시 '' 생략 가능
+        // $('p:last').css({fontSize: 'xx-large', fontWeight: 'bold'});
+        $('p:last').addClass('important');
+      });
+      $('button').eq(1).click(()=>{
+        $('h1, h2, p:first').removeClass('red');
+        $('p:last').removeClass('important');
+      });
+      const $btn = $('button');
+
+      $btn.eq(2).click(()=>{
+        $('h1, h2, p').toggleClass('red');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h1>HTML5</h1>
+  <h2>CSS3</h2>
+  <p>자바스크립트</p>
+  <p>제이쿼리</p><br>
+  <button type="button">addClass</button>
+  <button type="button">removeClass</button>
+  <button type="button">toggleClass</button>
+</body>
+
+</html>

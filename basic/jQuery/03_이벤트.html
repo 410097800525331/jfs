@@ -7,7 +7,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script>
     /* 
-    이벤트의 종류
+    이벤트 메서드
     1) window
     - error
     - resize(반응형)
@@ -18,10 +18,10 @@
 
     3) mouse
     - click
-    - mouseenter
-    - mouseleave
-    - mousedown
-    - mouseup
+    - mouseenter: 요소 안에 마우스가 들어간다
+    - mouseleave: 요소 밖으로 마우스가 나간다
+    - mousedown: 요소를 누른다
+    - mouseup: 요소를 누르고 뗀다
     - mousemove
     - dblclick
     ...
@@ -39,8 +39,15 @@
     - select
 
     효과 메서드
-    hide()
-    show()
+    - hide()
+    - show()
+
+    탐색 메서드
+    - eq()
+
+    html, css 메서드
+    - text(): 내용을 가져온다/지정한다
+    - html(): '' (태그 인식)
     */
 
     // jQuery(document).ready(function(){});
