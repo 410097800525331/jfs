@@ -68,6 +68,9 @@
 .progress:nth-of-type(2) .progress-bar {width: 75%;}
 .progress:nth-of-type(3) .progress-bar {width: 85%;}
 /* contact */
+input {
+  height: 45px;
+}
 textarea {
   height: 200px;
   resize: none;
