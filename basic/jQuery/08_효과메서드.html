@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>효과메서드</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <!-- 제이쿼리UI 라이브러리 -->
+  <!-- animate() 메서드 사용 시 색과 가속도를 사용 가능하게 한다 -->
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script> -->
+  <script>
+    /* 
+    효과 메서드
+    $('선택자').hide([속도], [가속도], [함수]);
+    $(selector).show([speed], [easing], [callback]);
+    - speed: 400(기본값, 단위: ms)
+    - "slow", "fast", or milliseconds
+    - callback: 효과 메서드가 끝나면 수행할 함수
+
+    서서히 나타남/사라짐
+    $(selector).fadeIn(speed, [easing], [callback]);
+    $(selector).fadeOut(speed, [easing], [callback]);
+    $(selector).fadeToggle(speed, [easing], [callback]);
+    $(selector).fadeTo(speed, opacity(0~1), [easing], [callback]);
+
+    슬라이드
+    $(selector).slideDown(speed, [easing], [callback]);
+    $(selector).slideUp(speed, [easing], [callback]);
+    $(selector).slideToggle(speed, [easing], [callback]);
+
+    애니메이션
+    $(selector).animate({styles}, [speed], [easing], [callback]);
+    $(selector).animate({params}, [speed], [callback]);
+    - {params}: {CSS속성: 값, ...}
+    - easing: swing(기본값, 가속), linear(등속) / 제이쿼리 UI 설정 시 더 많은 easing 값을 사용 가능
+
+    애니메이션 중지
+    $(selector).stop([stopAll],[goToEnd]).애니메이션관련메서드();
+
+    HTML/CSS 메서드
+    css("속성명"); // 속성 값을 가져오기
+    css("속성명", "값"); // 속성 값으로 지정하기
+    css({params});
+    css({"속성": "값", "속성": "값, ..."}); // 하나 이상의 속성 값 지정
+    
+    animate({"속성": "값", "속성": "값, ..."}); // 하나 이상의 속성 값으로 애니메이션
+    - 일부 속성은 사용 불가(배경식 지정x, 추가 가속도x, 변형x 등)
+    */
+    $(()=>{
+
+    });
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
