@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 움직임</title>
+  <style>
+    .moving {
+      border: 1px solid #ccc;
+      margin: 20px auto 0 auto;
+      text-align: right;
+      width: 700px;
+    }
+    .moving img {
+      cursor: pointer;
+      position: relative;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <script>
+    $(()=>{
+      const img = $('img');
+      const imgObj = $('img').width(150);
+      const imgW = imgObj.width();
+      const boxW = $('.moving').width();
+
+      function move(e, sp){
+        $(e.currentTarget).animate({left: - boxW + imgW}, sp); /* imgObj.width() */
+      }
+      img.eq(0).on('click', e => move(e, 1000));
+      img.eq(1).on('click', e => move(e, 800));
+      img.eq(2).on('click', e => move(e, 1500));
+      $('button').on('click', ()=>{
+        img.animate({left: 0});
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="init">
+    <button type="button">초기화</button><br>
+  </div>
+  <div class="moving">
+    <img src="https://marketplace.canva.com/fyjcY/MAGqfwfyjcY/1/tl/canva-line-filled-cute-character-expressions-surprised-puppy-MAGqfwfyjcY.png" alt="이미지2"><br>
+    <img src="https://marketplace.canva.com/0i0ts/MAGmIO0i0ts/1/tl/canva-cute-cartoon-puppy-with-bow-MAGmIO0i0ts.png" alt="이미지3"><br>
+    <img src="https://mblogthumb-phinf.pstatic.net/20160320_155/rabbitcat_14584632589491c2m0_JPEG/%BA%F1%BC%F5%C4%B3%B8%AF%C5%CD.jpg?type=w800" alt="이미지1"><br>
+  </div>
+</body>
+
+</html>

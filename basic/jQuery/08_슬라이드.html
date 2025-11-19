@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>슬라이드</title>
+  <style>
+    #slide,
+    #panel,
+    #flip {
+      padding: 5px;
+      text-align: center;
+      background-color: #ccc;
+      border: solid 1px #c3c3c3;
+    }
+    #panel {
+      padding: 70px;
+      display: none;
+      background-color: #f9f9f9;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <script>
+    $(() => {
+      $('#slide').on('click', ()=>{
+        $('#panel').slideDown();
+      });
+      $('#panel').on('click', e =>
+        $(e.currentTarget).slideUp()
+      );
+      $('#flip').on('click', () =>{
+        $('#panel').slideToggle();
+      });
+      $('#stop').on('click', () =>{
+        $('#panel').stop();
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <button id="stop">Stop sliding</button>
+  <div id="slide">[오늘의 공지사항]</div>
+  <div id="panel">오늘은 수요일 ..<br>ㅠ</div>
+  <div id="flip">Toggle slide</div>
+  <p></p>
+
+</body>
+
+</html>

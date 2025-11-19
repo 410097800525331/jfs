@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +37,8 @@
     - easing: swing(기본값, 가속), linear(등속) / 제이쿼리 UI 설정 시 더 많은 easing 값을 사용 가능
 
     애니메이션 중지
-    $(selector).stop([stopAll],[goToEnd]).애니메이션관련메서드();
+    $(selector).stop([clearQueue],[jumpToEnd]).애니메이션관련메서드();
+
 
     HTML/CSS 메서드
     css("속성명"); // 속성 값을 가져오기
@@ -47,12 +49,96 @@
     animate({"속성": "값", "속성": "값, ..."}); // 하나 이상의 속성 값으로 애니메이션
     - 일부 속성은 사용 불가(배경식 지정x, 추가 가속도x, 변형x 등)
     */
-    $(()=>{
+    $(() => {
+      function imgWidth(w) {
+        $('img').animate({width: w * 100});
+      }
+      // on('이벤트', 함수) 메서드를 사용한 이벤트 처리
+      // 크기
+      $('button').eq(0).on('click', ()=>{
+        imgWidth(1);
+      });
+      $('button').eq(1).click(()=>{
+        imgWidth(2);
+      });
+      $('button').eq(2).click(()=>{
+        imgWidth(3);
+      });
 
+      // 크기+위치
+      $('button').eq(4).on('click', ()=>{
+        $('img').css({position: 'relative'}).animate({
+          width: 100,
+          top: 300
+        }, 2000, 'easeInOutBounce');
+      });
+      $('button').eq(3).on('click', ()=>{
+        $('img').css({position: 'relative'}).stop().animate({
+          width: 250,
+          top: 0
+        });
+      });
+
+      $('button').eq(5).on('click', ()=>{
+        $('img').hide(slow);
+      });
+      $('button').eq(6).on('click', ()=>{
+        $('img').show(fast);
+      });
+      $('button').eq(7).on('click', ()=>{
+        $('img').toggle(3000);
+      });
+      
+      // fade 효과
+      $('button').eq(8).on('click', ()=>{
+        $('img').fadeIn();
+      });
+      $('button').eq(9).on('click', ()=>{
+        $('img').fadeOut();
+      });
+      $('button').eq(10).on('click', ()=>{
+        $('img').fadeToggle();
+      });
+      $('button').eq(11).on('click', ()=>{
+        $('img').fadeTo(200, 0.5);
+      });
     });
   </script>
+  <style>
+    .css_pic {
+      height: 430px;
+      text-align: center;
+    }
+    .css_pic img {
+      width: 250px;
+    }
+  </style>
 </head>
+
 <body>
-  
+  <div class="css_pic">
+    버튼을 누르면 그림의 크기가 바뀝니다.</p>
+    <div>
+      <button type="button">0가로 100픽셀</button>
+      <button type="button">1가로 200픽셀</button>
+      <button type="button">2가로 300픽셀</button>
+      <br><br>
+      <button type="button">3확대+위치</button>
+      <button type="button">4축소+위치</button>
+      <br><br>
+      <button type="button">5hide</button>
+      <button type="button">6show</button>
+      <button type="button">7toggle</button>
+      <br><br>
+      <button type="button">8fadeIn</button>
+      <button type="button">9fadeOut</button>
+      <button type="button">10fadeToggle</button>
+      <button type="button">11fadeTo</button>
+      <br><br>
+    </div>
+    <img src="https://file2.nocutnews.co.kr/nocut/news/meta/20221014164346.jpg" alt="펭귄">
+  </div>
+
 </body>
+
 </html>
