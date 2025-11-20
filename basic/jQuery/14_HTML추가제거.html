@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리 추가 메서드</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <script>
+    /*
+    <p>::before 내용 ::after</p>
+    p:: after -> 내용 이후
+    p:: before -> 내용 이전
+
+    앞<p>시작 content 끝</p>뒤
+
+    요소 추가
+    $(선택자).append(내용)
+    append()- 요소의 끝에 콘텐츠를 삽입
+    prepend()- 요소의 시작 부분에 콘텐츠를 삽입
+    after()- 요소 뒤에 콘텐츠를 삽입
+    before()- 요소 앞에 콘텐츠를 삽입
+
+    요소 제거
+    remove()- 요소(및 해당 자식 요소)를 제거
+    empty()- 요소에서 자식 요소를 제거
+
+    */
+    $(() => {
+      $("p").append("append.");
+      $("p").prepend("prepend.");
+      $("p").after("after.");
+      $("p").before("before.");
+
+      // HTML 요소를 직접 값으로
+      const txt1 = "<p>Text.</p>";
+      // jQuery 방식으로 HTML 요소 생성
+      const txt2 = $("<p></p>").text("Text.");
+      // 순수 JS 방식으로 HTML 요소 생성
+      const txt3 = document.createElement("p");
+      // 순수 JS 방식으로 요소 생성 후 값 지정
+      txt3.innerHTML = "Text.";
+
+      $("body").append(txt1, txt2, txt3);      // Append the new elements
+
+      
+    });
+  </script>
+</head>
+
+<body>
+  <p>나는 문장이다.</p>
+</body>
+
+</html>

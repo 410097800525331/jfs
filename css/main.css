@@ -69,7 +69,11 @@
 .progress:nth-of-type(3) .progress-bar {width: 85%;}
 /* contact */
 input {
-  height: 45px;
+  height: 38px;
+}
+#name,
+#email {
+  width: calc(50% - 4px);
 }
 textarea {
   height: 200px;
