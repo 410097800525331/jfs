@@ -60,6 +60,8 @@ https://www.pexels.com/ko-kr/ (픽셀즈 닷컴)
 https://getbootstrap.kr/
 reset.css
 https://meyerweb.com/eric/tools/css/reset/
+넷틀리파이
+https://www.netlify.com/
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ w3schools.com 언어
 클라이언트(Client) 컴퓨터

@@ -5,52 +5,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>제이쿼리 추가 메서드</title>
-  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
   <script>
     /*
-    <p>::before 내용 ::after</p>
-    p:: after -> 내용 이후
-    p:: before -> 내용 이전
+        요소 추가
+            요소.append(내용, 내용, ...)- 요소의 끝에 내용 삽입
+            요소.prepend(내용, 내용, ...)- 요소의 시작 부분에 내용 삽입
+            요소.after(내용, 내용, ...)- 요소 뒤에 내용 삽입
+            요소.before(내용, 내용, ...)- 요소 앞에 내용 삽입
 
-    앞<p>시작 content 끝</p>뒤
-
-    요소 추가
-    $(선택자).append(내용)
-    append()- 요소의 끝에 콘텐츠를 삽입
-    prepend()- 요소의 시작 부분에 콘텐츠를 삽입
-    after()- 요소 뒤에 콘텐츠를 삽입
-    before()- 요소 앞에 콘텐츠를 삽입
-
-    요소 제거
-    remove()- 요소(및 해당 자식 요소)를 제거
-    empty()- 요소에서 자식 요소를 제거
+        요소 삭제
+            요소.remove([선택자, 선택자])- 요소 제거한다.
+            요소.empty()- 요소의 내용을 비운다.
 
     */
-    $(() => {
-      $("p").append("append.");
-      $("p").prepend("prepend.");
-      $("p").after("after.");
-      $("p").before("before.");
 
-      // HTML 요소를 직접 값으로
+    $(() => {
+      $("p").append("append");
+      $("p").prepend("prepend");
+      $("p").after("after");
+      $("p").before("before");
+
+      // HTML 요소로 생성
       const txt1 = "<p>Text.</p>";
-      // jQuery 방식으로 HTML 요소 생성
+      // jQuery 로 생성
       const txt2 = $("<p></p>").text("Text.");
-      // 순수 JS 방식으로 HTML 요소 생성
+      // DOM 으로 생성
       const txt3 = document.createElement("p");
-      // 순수 JS 방식으로 요소 생성 후 값 지정
+      // DOM 생성 후 값 지정
       txt3.innerHTML = "Text.";
 
-      $("body").append(txt1, txt2, txt3);      // Append the new elements
+      $("body").append(txt1, txt2, txt3);
 
-      
+      // #div1 요소를 지운다. (그 내용도 함께 지워진다.)
+      $("#div1").remove();
+      $('p').remove('.test');
+      $('p').remove('.test, .demo');
+      // #div1 요소의 내용만 지운다.
+      $("#div2").empty();
     });
   </script>
 </head>
 
 <body>
   <p>나는 문장이다.</p>
+  <div id="div1">나는 <span>문장</span>이다.</div>
+  <div id="div2">나는 <span>문장</span>이다.</div>
+
+  <p class="test">This is p element with class="test".</p>
+  <p class="test">This is p element with class="test".</p>
+  <p class="demo">This is p element with class="demo".</p>
 </body>
 
 </html>

@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>제이쿼리 요소의 크기</title>
+  <style>
+    #div1 {
+      height: 200px;
+      width: 300px;
+      padding: 10px;
+      margin: 3px;
+      border: 1px solid blue;
+      background-color: lightblue;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(() => {
+      // 변수 선언
+      let txt = "";
+
+      // box-sizing: border-box; 로 하면 결과가 다르게 나타남!
+      // 이유? 패딩과 테두리가 콘텐츠 안쪽으로 지정되기 때문
+      // 콘텐츠의 크기만
+      txt += "width(): " + $("#div1").width() + "</br>";
+      txt += "height(): " + $("#div1").height() + "</br>";
+
+      // 패딩 포함
+      txt += "innerWidth(): " + $("#div1").innerWidth() + "</br>";
+      txt += "innerHeight(): " + $("#div1").innerHeight() + "</br>";
+      // 패딩+테두리 포함
+      txt += "outerWidth(): " + $("#div1").outerWidth() + "</br>";
+      txt += "outerHeight(): " + $("#div1").outerHeight() + "</br>";
+      // 패딩+테두리+여백 포함
+      txt += "outerWidth(true): " + $("#div1").outerWidth(true) + "</br>";
+      txt += "outerHeight(true): " + $("#div1").outerHeight(true) + "</br>";
+
+      // 출력
+      $("#div1").html(txt);
+    });
+  </script>
 </head>
+
 <body>
-  
+  <div id="div1"></div>
 </body>
+
 </html>
