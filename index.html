@@ -18,14 +18,27 @@
 
 <body>
   <!-- header -->
-  <header class="container-fluid">
-    <nav class="container gnb">
-      <ul class="row">
-        <li class="col"><a href="/jfs/index.html">HOME</a></li>
-        <li class="col"><a href="/jfs/sub/about.html"><i class="fa-solid fa-user"></i>ABOUT</a></li>
-        <li class="col"><a href="/jfs/sub/work.html"><i class="fa-solid fa-grip"></i>PORTFOLIO</a></li>
-        <li class="col"><a href="/jfs/sub/contact.html"><i class="fa-solid fa-envelope"></i>CONTACT</a></li>
-      </ul>
+  <header id="header" class="container-fluid p-0 fixed-top">
+    <nav class="navbar navbar-expand-sm bg-white navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-dark" href="#home">HOME</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#about"><i class="fa-solid fa-user me-2"></i>ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#work"><i class="fa-solid fa-grip me-2"></i>PORTFOLIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#contact"><i class="fa-solid fa-envelope me-2"></i>CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
   <!-- home section -->
@@ -36,7 +49,7 @@
         src="./assets/img/portfolio.svg" alt="나의 작품"></div>
   </div>
   <!-- about section -->
-  <div id="about" class="container-fluid px-0">
+  <div id="about" class="container-fluid px-0 pt-5">
     <h3 class="text-center pt-5 mt-5 fs-2">나에 대해서</h3>
     <p class="text-center mt-4 mb-5">나는 코딩을 좋아한다.</p>
     <div class="container pb-5">
@@ -81,15 +94,15 @@
       <div class="skill">
         <p class="text-center m-5">Program Skills</p>
         <div class="inner">
-          <p class="ls10px">Front-end</p>
+          <p class="ls10px mt-2">Front-end</p>
           <div class="progress rounded-0">
             <div class="progress-bar bg-secondary"><span>90%</span></div>
           </div>
-          <p class="ls10px">Back-end</p>
+          <p class="ls10px mt-2">Back-end</p>
           <div class="progress rounded-0">
             <div class="progress-bar bg-secondary"><span>75%</span></div>
           </div>
-          <p class="ls10px">Design</p>
+          <p class="ls10px mt-2">Design</p>
           <div class="progress rounded-0">
             <div class="progress-bar bg-secondary"><span>85%</span></div>
           </div>
@@ -143,8 +156,13 @@
         <div class="col-7 contact">
           <ul class="addr list-unstyled">
             <li><i class="fa-solid fa-location-dot me-2"></i>성남시, 분당구</li>
-            <li><i class="fa-solid fa-phone me-2"></i>Phone: <a href="tel:010-1234-5678" class="text-dark text-decoration-none">+82 10-1234-5678</a></li>
-            <li><i class="fa-solid fa-envelope me-2"></i>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=seulgi041014@gmail.com" target="_blank" class="text-dark  text-decoration-none">mail@gmail.com</a>, <a href="https://mail.naver.com/write/popup?srvid=note&to=seulgi041014@naver.com" target="_blank" class="text-dark  text-decoration-none">mail@naver.com</a></li>
+            <li><i class="fa-solid fa-phone me-2"></i>Phone: <a href="tel:010-1234-5678"
+                class="text-dark text-decoration-none">+82 10-1234-5678</a></li>
+            <li><i class="fa-solid fa-envelope me-2"></i>Email: <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=seulgi041014@gmail.com" target="_blank"
+                class="text-dark  text-decoration-none">mail@gmail.com</a>, <a
+                href="https://mail.naver.com/write/popup?srvid=note&to=seulgi041014@naver.com" target="_blank"
+                class="text-dark  text-decoration-none">mail@naver.com</a></li>
           </ul>
           <p>위의 연락처로 <i class="fa-solid fa-phone-volume"></i> 주시거나, 아래에 메모 남겨주세요.</p>
           <!-- <form action="https://formspree.io/f/xgvdnewp" method="post"> -->
@@ -154,7 +172,9 @@
               <input id="email" class="col-6 my-1" type="email" name="email" placeholder="이메일을 기록하세요." required>
               <textarea class="col-12 w-100 my-1" name="message" id="" placeholder=" 메시지를 기록하세요." required></textarea>
             </div>
-            <div class="row frm-btn justify-content-end mt-2"><button type="submit" class="btn btn-dark px-4 rounded-1 col-4"><i class="fa-regular fa-paper-plane"></i>메시지 보내기</button></div>
+            <div class="row frm-btn justify-content-end mt-2"><button type="submit" id="btnForm"
+                class="btn btn-dark px-3 rounded-1 col-4"><i class="fa-solid fa-paper-plane me-2"></i>메시지 보내기</button>
+            </div>
           </form>
         </div>
       </div>
@@ -162,7 +182,8 @@
   </div>
   <!-- footer -->
   <footer class="container-fluid bg-dark text-white text-center py-5">
-    <div class="top_btn"><a class="text-white btn btn-outline-light text-dark" href="#top"><i class="fa-solid fa-arrow-up"></i>To the top</a></div>
+    <div class="top_btn"><a class="text-white btn btn-outline-light text-dark" href="#top"><i
+          class="fa-solid fa-arrow-up me-2"></i>To the top</a></div>
     <div class="sns my-4">
       <a class="text-white" href="#"><i class="fs-4 fa-brands fa-kakao-talk"></i></a>
       <a class="text-white" href="#"><i class="fs-4 fa-brands fa-instagram"></i></a>
