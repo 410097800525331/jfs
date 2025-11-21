@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scrollTop</title>
+  <style>
+    div {
+      width: 100px;
+      height: 150px;
+      border: 1px solid black;
+      overflow: auto;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $('div').on('scroll', () => {
+      let st = $('div').scrollTop();
+      console.log(st);
+    });
+  </script>
+</head>
+
+<body>
+  <div>
+    This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.</div><br>
+
+  <button>Return the vertical position of the scrollbar</button>
+  <p>Move the scrollbar down and click the button again.</p>
+</body>
+
+</html>

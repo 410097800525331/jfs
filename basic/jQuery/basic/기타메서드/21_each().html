@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>기타 메서드</title>
+  <title>each</title>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script>
     /* 
@@ -35,6 +35,9 @@
         $('li').each(function(){
           alert($(this).text());
         });
+        // $('li').each((idx, ele)=>{
+        //   alert($(ele).text());
+        // });
       });
     });
   </script>
