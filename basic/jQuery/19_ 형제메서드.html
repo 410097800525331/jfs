@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>탐색 메서드</title>
+  <style>
+    .siblings * {
+      display: block;
+      border: 2px solid lightgrey;
+      color: lightgrey;
+      padding: 5px;
+      margin: 15px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    /* 
+    조상
+    parent([filter])
+    parents([filter])
+    parentsUntil([stop], [filter])
+    - 요소의 조상 중 선택자의 자식까지
+
+    자손
+    children([filter])
+    - 요소의 자식 선택
+    find([filter])
+    - 요소의 하위 요소 선택
+    
+    형제
+    siblings([filter])
+    - 요소의 형제 요소들을 선택
+    next()
+    - 요소의 다음 요소 1개 선택
+    nextAll()
+    - 요소의 다음 요소 모두 선택
+    nextUntil([stop])
+    - 요소~stop요소까지 사이 요소 모두 선택
+
+    prev()
+    - 요소의 이전 요소 1개 선택
+    prevAll()
+    - 요소의 이전 요소 모두 선택
+    prevUntil([stop])
+    - 요소~stop요소까지 사이 요소 모두 선택
+
+    필터
+    first()
+    last()
+    eq()
+    filter()
+    not()
+    */
+    $(() => {
+      // h2의 형제들 선택
+      $("h2").siblings('p').css({ border: "2px solid red" });
+
+      // h2의 다음 요소 선택
+      $("h2").next().css({ borderLeft: "5px solid blue" });
+      $("h2").nextAll().css({ color: "blue" });
+      // h2와 h6 사이 요소 선택(h2와 h6은 제외)
+      $("h2").nextUntil('h6').css({ borderRight: "5px solid orange" });
+
+      // h2의 이전 요소 선택
+      $("h2").prev().css({ borderLeft: "5px solid green" });
+      $("h2").prevAll().css({ color: "green" });
+      // h2와 p 사이 요소 선택(h2와 p는 제외)
+      $("h2").prevUntil('p').css({ borderRight: "5px solid yellow" });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="siblings">
+    <div>div (parent)
+      <p>p</p>
+      <span>span</span>
+      <h2>h2</h2>
+      <h3>h3</h3>
+      <h4>h4</h4>
+      <h5>h5</h5>
+      <h6>h6</h6>
+      <p>p</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

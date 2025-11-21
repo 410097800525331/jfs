@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>탐색 메서드</title>
+  <style>
+    body > div {
+      width: 500px;
+    }
+    
+    div {
+      margin: 20px;
+    }
+    .descendants * {
+      display: block;
+      border: 2px solid lightgrey;
+      color: lightgrey;
+      padding: 5px;
+      margin: 15px;
+    }
+
+    .ancestors * {
+      display: block;
+      border: 2px solid lightgrey;
+      color: lightgrey;
+      padding: 5px;
+      margin: 15px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    /* 
+    조상
+    parent([filter])
+    parents([filter])
+    parentsUntil([stop], [filter])
+    - 요소의 조상 중 선택자의 자식까지
+
+    자손
+    children([filter])
+    - 요소의 자식 선택
+    find([filter])
+    - 요소의 하위 요소 선택
+    
+    형제
+    siblings()
+    next()
+    nextAll()
+    nextUntil()
+    prev()
+    prevAll()
+    prevUntil()
+
+    필터
+    first()
+    last()
+    eq()
+    filter()
+    not()
+    */
+    $(() => {
+      // $("div").children().css({ "color": "red", "border": "2px solid red" });
+      // $("ul").children().css({ "color": "red", "border": "2px solid red" });
+
+      // div의 하위 요소중 span.first 선택 
+      $("div").find('span.first').css({ "border": "2px solid blue" });
+
+    });
+  </script>
+</head>
+
+<body>
+  <div class="descendants">div (current element)
+    <p class="first">p (child)
+      <span>span (grandchild)</span>
+    </p>
+    <p class="second">p (child)
+      <span class="first">span (grandchild)</span>
+    </p>
+  </div>
+
+  <div class="ancestors">
+    <div style="width:500px;">div (great-grandparent)
+      <ul>ul (grandparent)
+        <li>li (direct parent)
+          <span>span</span>
+        </li>
+      </ul>
+    </div>
+
+    <div style="width:500px;">div (grandparent)
+      <p>p (direct parent)
+        <span>span</span>
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>

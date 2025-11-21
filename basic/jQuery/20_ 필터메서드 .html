@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>탐색 메서드</title>
+  <style>
+    body>div {
+      border: 1px solid black;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    /* 
+    조상
+    parent([filter])
+    parents([filter])
+    parentsUntil([stop], [filter])
+    - 요소의 조상 중 선택자의 자식까지
+
+    자손
+    children([filter])
+    - 요소의 자식 선택
+    find([filter])
+    - 요소의 하위 요소 선택
+    
+    형제
+    siblings([filter])
+    - 요소의 형제 요소들을 선택
+    next()
+    - 요소의 다음 요소 1개 선택
+    nextAll()
+    - 요소의 다음 요소 모두 선택
+    nextUntil([stop])
+    - 요소~stop요소까지 사이 요소 모두 선택
+
+    prev()
+    - 요소의 이전 요소 1개 선택
+    prevAll()
+    - 요소의 이전 요소 모두 선택
+    prevUntil([stop])
+    - 요소~stop요소까지 사이 요소 모두 선택
+
+    필터
+    first()
+    last()
+    eq(index)
+    filter([기준], [function(index)])
+    not([criteria], [function(index)])
+    */
+    $(() => {
+      $("div").first().css({ border: "2px solid yellow" });
+      $("div:first").css({ border: "2px solid yellow" });
+      $("div").eq(1).css({ border: "2px solid yellow" });
+
+      $("div").last().css({ border: "2px solid red" });
+      $("div:last").css({ border: "2px solid red" });
+      // $("div").eq(4).css({ border: "2px solid red" });
+      $("div").eq(-1).css({ borderLeft: "15px solid red" });
+
+      $("div").eq(1).css({ border: "2px solid blue" });
+      // $("div:eq(1)").css({border: "2px solid blue"});
+
+      // .intro를 선택
+      $('p.intro').css({textDecoration: 'overline'});
+      $('p').find('.intro').css({textDecoration: 'overline'});
+      $('p.intro').css({textDecoration: 'underline'});
+      $('p').filter('.intro').css({textDecoration: 'underline'});
+
+      // .intro를 갖지 않은 p 요소 선택
+      $('span:not(".intro")').css({borderTop: '5px solid black'});
+      $('span').not('.intro').css({borderTop: '5px solid black'});
+    });
+  </script>
+</head>
+
+<body>
+  <h1 class="intro">Welcome to My Homepage</h1>
+
+  <p>This is a paragraph.</p>
+
+  <div style="border: 1px solid black;">
+    <p>A paragraph in a div.</p>
+    <p>Another paragraph in a div.</p>
+  </div>
+  <br>
+
+  <div style="border: 1px solid black;">
+    <p>A paragraph in another div.</p>
+    <p class="intro">Another paragraph in another div.</p>
+  </div>
+  <br>
+
+  <div style="border: 1px solid black;">
+    <p>A paragraph in another div.</p>
+    <p>Another paragraph in another div.</p>
+  </div>
+  <br>
+
+  <div style="border: 1px solid black;">
+    <p class="intro">A paragraph in another div.</p>
+    <p>Another paragraph in another div.</p>
+  </div>
+  <br>
+
+  <div style="border: 1px solid black;">
+    <p class="intro">A <span>ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</span> another div.</p>
+    <p>Another paragraph in another div.</p>
+  </div>
+
+</body>
+
+</html>
