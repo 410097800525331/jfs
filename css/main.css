@@ -29,14 +29,14 @@
   background: no-repeat 50% 50%/cover fixed;
 }
 #about .parallax_bg {
-  background-image: url(/jfs/assets/img/parallax1.jpg);
+  background-image: url(../assets/img/parallax1.jpg);
   background-position: bottom;
 }
 #work .parallax_bg {
-  background-image: url(/jfs/assets/img/parallax2.jpg);
+  background-image: url(../assets/img/parallax2.jpg);
 }
 #contact .parallax_bg {
-  background-image: url(/jfs/assets/img/parallax3.jpg);
+  background-image: url(../assets/img/parallax3.jpg);
 }
 /* home 애니메이션 */
 .circle_ani {

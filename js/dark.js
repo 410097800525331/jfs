@@ -9,7 +9,7 @@ function applyThemeByTime() {
 
   // 19시(7PM) ~ 7시(7AM) 사이는 다크모드
   // if (hour >= 19 || hour < 7) {
-  if (hour >= 12 || hour < 7) {
+  if (hour >= 17 || hour < 7) {
     home.classList.add('dark');
     // info.textContent = `현재 시각: ${hour}시 → 다크모드 자동 적용 🌙`;
     // toggleBtn.textContent = '☀️ 라이트 모드 전환';
