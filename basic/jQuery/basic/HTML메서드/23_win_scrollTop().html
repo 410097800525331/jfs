@@ -4,31 +4,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>scrollTop</title>
+  <title>제이쿼리 스크롤 이벤트</title>
   <style>
+    body {
+      margin: 0;
+    }
+
     div {
-      width: 100px;
-      height: 150px;
-      border: 1px solid black;
-      overflow: auto;
+      position: relative;
+      top: 200px;
+      /* 창(window) 스크롤바 생김 */
+      height: 2000px;
+      background: yellow;
+    }
+
+    p {
+      position: absolute;
+      top: 200px;
+      left: 100px;
+      border: 1px solid red;
+      margin: 0;
     }
   </style>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script>
-    $('div').on('scroll', () => {
-      let st = $('div').scrollTop();
-      console.log(st);
+    /* 
+        이벤트
+            scroll
+
+        기타 메서드
+            scrollTop(): 수직 스크롤 양
+            scrollLeft(): 수평 스크롤 양
+
+            $(selector).scrollTop()
+            $(selector).scrollTop(position)
+
+            offset().top: 요소의 위치(창 기준)
+            position().top: 요소의 위치(부모 기준)
+    */
+    $(() => {
+
+      // p 요소의 창의 최상단에서 부터의 위치
+      // const pTop = $('p').offset().top;
+      // const pLeft = $('p').offset().left;
+      // console.log(`top: ${pTop} left: ${pLeft}`);
+
+      const pObj = $('p').offset();
+      console.log(`top: ${pObj.top} left: ${pObj.left}`);
+
+      // const pTop = $('p').position().top;
+      // const pLeft = $('p').position().left;
+      // console.log(`top: ${pTop} left: ${pLeft}`);
+
+      // 창이 스크롤되면
+      $(window).scroll(() => {
+        // 창의 스크롤 양을
+        let wst = $(window).scrollTop();
+        // 소수점을 버림해서
+        let intNumber = Math.floor(wst);
+        // p요소의 내용으로 가져오기
+        $('p').text(intNumber);
+
+        // 만약 창 스크롤 양이 200이상이면
+        if (intNumber >= 200) {
+          $('div').css({ background: 'lightgreen' });
+        } else {
+          $('div').css({ background: 'yellow' });
+        }
+        // div의 배경색을 바꾼다.
+
+      });
     });
   </script>
 </head>
 
 <body>
-  <div>
-    This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.
-    This is some text. This is some text. This is some text.</div><br>
-
-  <button>Return the vertical position of the scrollbar</button>
-  <p>Move the scrollbar down and click the button again.</p>
+  <div class="section">
+    <p>여기에 출력된다.</p>
+  </div>
 </body>
 
 </html>

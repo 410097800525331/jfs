@@ -4,20 +4,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>scrollTop</title>
+  <title>제이쿼리 기타 메서드</title>
   <style>
     div {
+      border: 1px solid black;
       width: 100px;
       height: 150px;
-      border: 1px solid black;
-      overflow: auto;
+      /* 스크롤바 생김 */
+      overflow: scroll;
+      overflow-x: hidden;
     }
   </style>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script>
-    $('div').on('scroll', () => {
-      let st = $('div').scrollTop();
-      console.log(st);
+    /* 
+        이벤트
+            scroll
+
+        기타 메서드
+            scrollTop(): 스크롤 양
+            $(selector).scrollTop()
+            $(selector).scrollTop(position)
+
+            offset().top: 요소의 위치(창 기준)
+            position().top: 요소의 위치(부모 기준)
+    */
+    $(() => {
+      // 버튼을 클릭하면
+      // $('button').on('click', ()=>{
+      //     // div의 스크롤 양 확인
+      //     let st = $('div').scrollTop();
+      //     console.log(st);
+      // });
+      $('div').on('scroll', () => {
+        // div의 스크롤 양 확인
+        let st = $('div').scrollTop();
+        /* 
+            Math 객체
+                Math.round(숫자) -> 반올림
+                Math.floor(숫자) -> 버림
+                Math.ceil(숫자) -> 올림
+        */
+        console.log(Math.floor(st));
+      });
     });
   </script>
 </head>
@@ -25,9 +54,9 @@
 <body>
   <div>
     This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.
-    This is some text. This is some text. This is some text.</div><br>
+    This is some text. This is some text. This is some text. This is some text. This is some text. </div><br>
 
-  <button>Return the vertical position of the scrollbar</button>
+  <button type="button">Return the vertical position of the scrollbar</button>
   <p>Move the scrollbar down and click the button again.</p>
 </body>
 
