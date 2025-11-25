@@ -15,18 +15,11 @@
       let str;
 
       // 반복객체.each(function(idx, ele){ 반복할 내용; });
-      $('p').each(function(idx, ele){
-        // num = $('p').eq(idx).find('span').attr('data-count');
-        num = $(ele).find('span').attr('data-count');
-
-        switch(num) {
-          case 55: str = '55입니다'; break;
-          case 25: str = '25입니다'; break;
-          case 20: str = '20입니다'; break;
-          case 35: str = '35입니다'; break;
-        }
-        console.log(str);
-      });
+      // $('p').each(function(idx, ele){
+      //   // num = $('p').eq(idx).find('span').attr('data-count');
+      //   num = $(ele).find('span').attr('data-count');
+      // });
+      
       const num0 = $('p').eq(0).find('span').attr('data-count');
       const num1 = $('p').eq(1).find('span').attr('data-count');
       const num2 = $('p').eq(2).find('span').attr('data-count');
