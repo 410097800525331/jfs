@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카운터(자동)</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <script>
+    $(() => {
+      // 객체.attr(속성명) -> 속성에 해당하는 값을 가져온다
+
+      let num;
+      let str;
+
+      // 반복객체.each(function(idx, ele){ 반복할 내용; });
+      $('p').each(function(idx, ele){
+        // num = $('p').eq(idx).find('span').attr('data-count');
+        num = $(ele).find('span').attr('data-count');
+
+        switch(num) {
+          case 55: str = '55입니다'; break;
+          case 25: str = '25입니다'; break;
+          case 20: str = '20입니다'; break;
+          case 35: str = '35입니다'; break;
+        }
+        console.log(str);
+      });
+      const num0 = $('p').eq(0).find('span').attr('data-count');
+      const num1 = $('p').eq(1).find('span').attr('data-count');
+      const num2 = $('p').eq(2).find('span').attr('data-count');
+      const num3 = $('p').eq(3).find('span').attr('data-count');
+      let i0 = 0;
+      let i1 = 0;
+      let i2 = 0;
+      let i3 = 0;
+
+      function counter() {
+        // break: 반복문(선택문)을 벗어남
+        if (i0 <= num0) {
+          $('p').eq(0).find('span').text(i0++);
+        }
+        if (i1 <= num1) {
+          $('p').eq(1).find('span').text(i1++);
+        }
+        if (i2 <= num2) {
+          $('p').eq(2).find('span').text(i2++);
+        }
+        if (i3 <= num3) {
+          $('p').eq(3).find('span').text(i3++);
+        }
+      }
+
+      // const 변수명 = setInterval(콜백함수, 시간(밀리초ms -> 1000 = 1초))
+      // 매 시간마다 반복
+      setInterval(counter, 100);
+      // clearInterval(변수명)
+    });
+  </script>
+</head>
+
+<body>
+  <!-- 
+  data-*
+  사용자 정의 속성
+  -->
+  <p><span data-count="55">0</span>+</p>
+  <p><span data-count="25">0</span>+</p>
+  <p><span data-count="20">0</span>+</p>
+  <p><span data-count="35">0</span>+</p>
+</body>
+
+</html>
