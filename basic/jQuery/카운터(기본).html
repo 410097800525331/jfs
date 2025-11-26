@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카운터 버튼</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+</head>
+
+<body>
+  <span class="count" data-target="2">0</span>+
+  <span class="count" data-target="4">0</span>+
+  <span class="count" data-target="40">0</span>+
+  <span class="count" data-target="5">0</span>+
+
+  <script>
+    // 자동 카운터
+    // .count 각각 함수를 실행
+    $(".count").each(function () {
+      let target = parseInt($(this).attr("data-target"));
+      let current = 0;
+      let duration = 1000;
+      let interval = 20;
+      let step = Math.ceil(target / (duration / interval));
+
+      let timer = setInterval(() => {
+        current += step;
+
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+
+        $(this).text(current);
+      }, interval);
+    });
+  </script>
+</body>
+
+</html>

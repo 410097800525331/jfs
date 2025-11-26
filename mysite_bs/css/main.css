@@ -18,11 +18,11 @@
 }
 /* bg */
 #home .bgimg {
-  background: url(../assets/img/light_main_bg.jpg) no-repeat 50% 50%/cover fixed;
+  background: url(../assets/img/dark_main_bg.jpg) no-repeat 50% 50%/cover fixed;
 }
 #home.dark .bgimg {
   filter: brightness(60%);
-  background-image: url(../assets/img/dark_main_bg.jpg);
+  background-image: url(../assets/img/light_main_bg.jpg);
 }
 .parallax_bg {
   height: 400px;

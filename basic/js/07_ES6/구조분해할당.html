@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>구조 분해 할당</title>
+</head>
+
+<body>
+  <script>
+    // 배열 구조분해할당(선언)
+    const arr = [1, 2, 3];
+    // 구조분해할당
+    // - 좌변의 순서대로 변수에 할당
+    // [a, b, c] = [1, 2, 3];
+    const [a, b, c] = arr;
+
+    console.log('a = ' + a); // 1
+    console.log('b = ' + b); // 2
+    console.log('c = ' + c); // 3
+
+    const [x, y, z = 100] = [10, 20];
+    console.log('x = ', x);
+    console.log('x = ', y);
+    console.log('x = ', z); // 100 (값이 없으면 기본값)
+
+    // 객체 구조분해할당
+    const user = { name: '홍길동', age: 25 };
+    const { name, age } = user;
+
+    console.log(name); // 홍길동
+    console.log(age);  // 25
+  </script>
+</body>
+
+</html>

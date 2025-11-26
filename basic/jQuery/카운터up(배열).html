@@ -4,42 +4,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>카운터(자동)</title>
+  <title>카운터(4개)</title>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
   <script>
     $(() => {
-      const counters = [];
 
+      const counters = [];
+      // const ii = [];
       $('p').each(function (idx, ele) {
         const span = $(ele).find('span');
         let num = span.attr('data-count');
-        // console.log(Number(num));
-        console.log(parseInt(num));
 
-        // 배열 값 추가
+        // 배열에 값 추가
         counters.push(num);
+        // ii.push(0);
         console.log(counters);
 
         let i = 0;
+        // ['55', '25', '20', '35']
         function counter() {
-          counters.forEach(item =>{
-            if(i <= item) {
-              span.text(i++);
-            }
-          });
+          if (i <= counters[idx]) {
+            span.text(i++);
+          }
         }
-        setInterval(counter, 100);
+
+        setInterval(counter, 50);
       });
+
+
+
+
+
     });
   </script>
 </head>
 
 <body>
   <!-- 
-  data-*
-  사용자 정의 속성
-  -->
+        data-* 
+        사용자 정의 속성
+     -->
   <p><span data-count="55">0</span>+</p>
   <p><span data-count="25">0</span>+</p>
   <p><span data-count="20">0</span>+</p>
