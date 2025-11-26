@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카운터 스크롤</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    section {
+      height: 100vh;
+    }
+
+    #counters {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #eee;
+    }
+
+    .counter {
+      font-size: 4em;
+      font-weight: bold;
+      margin: 20px;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    .counter.active {
+      opacity: 1;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+</head>
+
+<body>
+  <section>
+    <h1>스크롤 아래로 내려보세요</h1>
+  </section>
+
+  <section>
+    <div id="counters">
+      <div class="counter" data-target="20">0</div>
+      <div class="counter" data-target="50">0</div>
+      <div class="counter" data-target="30">0</div>
+    </div>
+  </section>
+
+  <script>
+    $(function () {
+      let counted = false; // 한 번만 실행
+
+      function runCounter() {
+        var scrollTop = $(window).scrollTop(),
+          windowHeight = $(window).height(),
+          countersTop = $("#counters").offset().top;
+
+          console.log('windowHeight: ' + windowHeight)
+          console.log('countersTop: ' + countersTop)
+
+        if (!counted && scrollTop + windowHeight > countersTop + 100) {
+          counted = true;
+
+          $(".counter").each(function () {
+            const $this = $(this);
+            const target = parseInt($this.attr("data-target"));
+            let count = 0;
+            const speed = 50;
+
+            $this.addClass("active");
+
+            var counterInterval = setInterval(()=>{
+              // count += Math.ceil(target / 100);
+              count++;
+              if (count >= target) {
+                // count = target;
+                clearInterval(counterInterval);
+              }
+              $this.text(count);
+              console.log($(this));
+            }, speed);
+          });
+        }
+      }
+
+      $(window).on("scroll", runCounter);
+      runCounter(); // 새로고침 시도
+    });
+  </script>
+</body>
+
+</html>

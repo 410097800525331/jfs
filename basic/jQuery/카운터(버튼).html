@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>카운터 버튼</title>
+  <title>카운터</title>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
   <script>
-    $(()=>{
+    $(() => {
+      // num 변수 선언
       let num = 0;
-      $('button').on('click', ()=>{
+
+      // 버튼을 클릭하면
+      $('button').click(() => {
+        // p요소에 num을 하나씩 증가 시켜 지정
         $('p').text(++num);
       });
     });
   </script>
 </head>
+
 <body>
   <button>버튼</button>
   <p>0</p>
 </body>
+
 </html>

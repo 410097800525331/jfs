@@ -4,42 +4,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>카운터(자동)</title>
+  <title>카운터(4개)</title>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
   <script>
     $(() => {
-      // 객체.attr(속성명) -> 속성에 해당하는 값을 가져온다
-
-      let num;
-
+      // 객체.attr(속성명) -> 속성에 해당하는 값을 가져온다.
+      // const num = $('p:eq(3) span').attr('data-count');
       // 반복객체.each(function(idx, ele){ 반복할 내용; });
       $('p').each(function (idx, ele) {
         // num = $('p').eq(idx).find('span').attr('data-count');
-        num = $(ele).find('span').attr('data-count');
+        let num = $(ele).find('span').attr('data-count');
         console.log(Number(num));
 
         i = 0;
         function counter() {
-          // break: 반복문(선택문)을 벗어남
           if (i <= Number(num)) {
             $(ele).find('span').text(i++);
           }
         }
 
-      // const 변수명 = setInterval(콜백함수, 시간(밀리초ms -> 1000 = 1초) ) -> 매 시간마다 반복
-      setInterval(counter, 100);
-      // clearInterval(변수명)
+        // const 변수명 = setInterval(콜백함수, 시간)
+        // 시간은 밀리초(ms): 1000 -> 1초
+        // 매 시간마다 반복
+        // setInterval(function(){counter();}, 50);
+        setInterval(counter, 50);
+        // clearInterval(변수명)
       });
+
+
+
+
+
     });
   </script>
 </head>
 
 <body>
   <!-- 
-  data-*
-  사용자 정의 속성
-  -->
+        data-* 
+        사용자 정의 속성
+     -->
   <p><span data-count="55">0</span>+</p>
   <p><span data-count="25">0</span>+</p>
   <p><span data-count="20">0</span>+</p>
