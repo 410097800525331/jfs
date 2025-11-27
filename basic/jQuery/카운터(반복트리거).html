@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>카운터 스크롤</title>
+  <title>스크롤 카운터</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -19,7 +19,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #eee;
+      background: red;
     }
 
     .counter {
@@ -36,6 +36,8 @@
   </style>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
 </head>
 
 <body>
@@ -45,9 +47,10 @@
 
   <section>
     <div id="counters">
+      <div class="counter" data-target="3">0</div>
+      <div class="counter" data-target="5">0</div>
       <div class="counter" data-target="20">0</div>
-      <div class="counter" data-target="50">0</div>
-      <div class="counter" data-target="30">0</div>
+      <div class="counter" data-target="7">0</div>
     </div>
   </section>
 
@@ -55,31 +58,33 @@
     $(function () {
 
       function runCounter($counter) {
-        const target = parseInt($counter.attr("data-target")),
+        var target = parseInt($counter.attr("data-target")),
           count = 0,
           speed = 50;
 
         $counter.text(0);
 
-        const counterInterval = setInterval(function () {
-          count += Math.ceil(target / 100);
+        var counterInterval = setInterval(function () {
+          // count += Math.ceil(target / 100);
+          count++;
           if (count >= target) {
-            count = target;
+            //count = target;
             clearInterval(counterInterval);
           }
           $counter.text(count);
         }, speed);
-      }
+      } // function runCounter($counter) end
 
       function checkScroll() {
         const scrollTop = $(window).scrollTop(),
-          windowHeight = $(window).height();
+          windowHeight = $(window).height(),
+          elementTop = $('#counters').offset().top;
 
         $(".counter").each(function () {
-          const $this = $(this),
-            elementTop = $this.offset().top;
+          const $this = $(this);
 
-          if (scrollTop + windowHeight > elementTop + 50 && scrollTop < elementTop + $this.outerHeight()) {
+          if (scrollTop + windowHeight > elementTop + 100) {
+            // if (scrollTop + windowHeight > elementTop + 50 && scrollTop < elementTop + $this.outerHeight()) {
             if (!$this.hasClass("active")) {
               $this.addClass("active");
               runCounter($this);
@@ -89,9 +94,13 @@
             $this.text(0);
           }
         });
-      }
+        console.log($(window).scrollTop());
+      } // function checkScroll() end
 
+      // $.throttle(시간, 함수)
+      // -> 시간은 ms, 예) 100 -> 0.1초
       $(window).on("scroll", $.throttle(100, checkScroll));
+      //$(window).on("scroll", checkScroll);
       checkScroll();
     });
   </script>

@@ -11,25 +11,29 @@
     $(() => {
 
       const counters = [];
-      // const ii = [];
+      // p태그 본문에 4개
+      // -> idx는 0, 1, 2, 3
       $('p').each(function (idx, ele) {
         const span = $(ele).find('span');
         let num = span.attr('data-count');
 
         // 배열에 값 추가
         counters.push(num);
-        // ii.push(0);
         console.log(counters);
 
         let i = 0;
-        // ['55', '25', '20', '35']
+        // counters = ['55', '25', '20', '35']
+        // counters[0] -> '55'
+        // counters[1] -> '25'
+        // counters[2] -> '20'
+        // counters[3] -> '35'
         function counter() {
           if (i <= counters[idx]) {
             span.text(i++);
           }
         }
 
-        setInterval(counter, 50);
+        setInterval(counter, 100);
       });
 
 
