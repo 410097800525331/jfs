@@ -11,6 +11,10 @@ $(function () {
       if (count >= target) {
         clearInterval(counterInterval);
       }
+      // 프로그래스 바 증가
+      $counter.parent().css("width", count + "%");
+
+      // 숫자(퍼센트) 증가
       $counter.text(count);
     }, speed);
   }
@@ -18,7 +22,7 @@ $(function () {
   function checkScroll() {
     const scrollTop = $(window).scrollTop(),
       windowHeight = $(window).height(),
-      elementTop = $('#counters').offset().top;
+      elementTop = $('.counters').offset().top;
 
     $(".counter").each(function () {
       const $this = $(this);
