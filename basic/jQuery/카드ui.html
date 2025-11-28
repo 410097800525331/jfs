@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주토피아 카드ul 연습</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .movie_card {
+      width: 280px;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .poster_container {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .poster_image {
+      width: 100%; height: 400px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .rank_badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      color: white;
+      width: 32px; height: 32px;
+      font-size: 24px;
+    }
+    .hover_overlay {
+      position: absolute;
+      top: 0; left: 0;
+      right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+    .poster_container:hover .hover_overlay {
+      opacity: 1;
+    }
+    .poster_container:hover .poster_image {
+      transform: scale(1.05);
+    }
+    .hover_title {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 16px;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hover_rating {
+      font-size: 20px;
+      color: #00d9ff;
+    }
+    .movie_info {
+      padding: 16px;
+    }
+    .age_badge {
+      display: inline-block;
+      background: #4CAF50;
+      color: white;
+      padding: 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      letter-spacing: -1px;
+    }
+    .movie_title {
+      font-size: 20px;
+      color: #333;
+    }
+    .movie_details {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      font-size: 17px;
+      color: #666;
+    }
+    .movie_actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .like_button {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: white;
+      border: 1px solid #ddd;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      color: #666;
+      transition: all 0.2s;
+    }
+    .like_button:hover {
+      background-color: #eee;
+    }
+    .like_button:hover span:nth-of-type(2) {
+      color: #6b46c1;
+    }
+    .heart_icon {
+      font-size: 16px;
+    }
+    .reserve_button,
+    .dolby_button {
+      flex: 1;
+      background: #6b46c1;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .reserve_button:hover,
+    .dolby_button  {
+      background: #553399;
+    }
+    .dolby_button {
+      font-size: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="movie_card">
+    <div class="poster_container">
+      <img src="https://img.megabox.co.kr/SharedImg/2025/11/27/YiSbqEf6OvFcDoLoQCipDojOHqMCwKG4_420.jpg" alt="주토피아 2" class="poster_image">
+      <div class="rank_badge">1</div>
+      <div class="hover_overlay">
+        <div class="hover_title">더 화려해진 세계, 더 넓어진 주토피아! 디즈니의 가~~장 사랑스러운 콤비 '주디'와 '닉'이 돌아온다! 미스터리한 뱀 '게리'가 나타난 순간, 주토피아가 다시 흔들리기 시작했다! 혼란에 빠진 도시를 구하기 위해 환상의</div>
+        <div class="hover_rating">관람평 9.5</div>
+      </div>
+    </div>
+    <div class="movie_info">
+      <span class="age_badge">ALL</span>
+      <span class="movie_title">주토피아 2</span>
+      <div class="movie_details">
+        <span>예매율 54.9%</span>
+        <span>| 개봉일 2025.11.26</span>
+      </div>
+      <div class="movie_actions">
+        <button class="like_button">
+          <span class="heart_icon">♡</span>
+          <span>1.7k</span>
+        </button>
+        <button class="reserve_button">예매</button>
+        <button class="dolby_button">Dolby<br>CINEMA</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
