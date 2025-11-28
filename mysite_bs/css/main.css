@@ -18,11 +18,11 @@
 }
 /* bg */
 #home .bgimg {
-  background: url(../assets/img/dark_main_bg.jpg) no-repeat 50% 50%/cover fixed;
+  background: url(../assets/img/light_main_bg.jpg) no-repeat 50% 50%/cover fixed;
 }
 #home.dark .bgimg {
   filter: brightness(60%);
-  background-image: url(../assets/img/light_main_bg.jpg);
+  background-image: url(../assets/img/dark_main_bg.jpg);
 }
 .parallax_bg {
   height: 400px;
@@ -80,16 +80,14 @@
   text-shadow: 1px 1px 2px #fff, 0 0 25px #fff, 0 0 5px palevioletred;
 }
 /* about */
-/* #counter {
-  transform: translateY(56px);
+#about {
+  overflow: hidden;
 }
-#about::before,
-#work::before,
-#contact::before {
-  display: block;
-  content: '';
-  height: 56px;
-} */
+.basic p {
+  /* 텍스트 양쪽 맞춤 */
+  text-align: justify;
+  word-break: break-all;
+}
 .myimg {
   width: 425px; height: 280px;
 }
@@ -99,7 +97,25 @@
 .progress:nth-of-type(1) .progress-bar {width: 90%;}
 .progress:nth-of-type(2) .progress-bar {width: 75%;}
 .progress:nth-of-type(3) .progress-bar {width: 85%;}
+.counter {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.counter::after {
+  content: '+';
+}
+.counter.active {
+  opacity: 1;
+}
+/* work */
+.portfolio li {
+  /* height: 300px; */
+  aspect-ratio: 8/5;
+}
 /* contact */
+.map {
+    height: 160px;
+}
 input {
   height: 38px;
 }

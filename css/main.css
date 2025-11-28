@@ -83,16 +83,11 @@
 #about {
   overflow: hidden;
 }
-/* #counterWrap {
-  transform: translateY(56px);
+.basic p {
+  /* 텍스트 양쪽 맞춤 */
+  text-align: justify;
+  word-break: break-all;
 }
-#about::before,
-#work::before,
-#contact::before {
-  display: block;
-  content: '';
-  height: 56px;
-} */
 .myimg {
   width: 425px; height: 280px;
 }
@@ -103,7 +98,7 @@
 .progress:nth-of-type(2) .progress-bar {width: 75%;}
 .progress:nth-of-type(3) .progress-bar {width: 85%;}
 .counter {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.5s;
 }
 .counter::after {
@@ -112,7 +107,15 @@
 .counter.active {
   opacity: 1;
 }
+/* work */
+.portfolio li {
+  /* height: 300px; */
+  aspect-ratio: 8/5;
+}
 /* contact */
+.map {
+    height: 160px;
+}
 input {
   height: 38px;
 }
