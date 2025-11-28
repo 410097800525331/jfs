@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>진행바 애니메이션</title>
+  <title>자동 진행바 애니메이션</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -35,18 +35,20 @@
       font-weight: bold;
     }
   </style>
-  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="progress-wrap">
-    <div class="progress-bar"></div>
-    <span class="percent">0%</span>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="script.js"></script>
 
+  <div class="progress rounded-0">
+    <div class="progress-bar bg-info"><span>85%</span></div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar"><span class="percent">0%</span></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script>
     $(function () {
       let current = 0;            // 시작값
