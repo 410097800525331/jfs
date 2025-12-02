@@ -110,18 +110,12 @@
   opacity: 1;
 }
 /* work */
-/* .portfolio li {
-  aspect-ratio: 9/6;
-} */
 .portfolio {
   display: flex;
   gap: 24px;
 }
 .box_office_card {
   position: relative;
-  width: 245px;
-  border-radius: 5px;
-  overflow: hidden;
 }
 /* front */
 .poster {
@@ -136,26 +130,15 @@
   font-style: italic;
   text-shadow: 2px 2px 2px #000;
 }
-.screen_type {
-  position: absolute;
-  left: 10px; bottom: 10px;
-  width: 60px;
-}
-.grade {
-  position: absolute;
-  right: 10px; bottom: 10px;
-  width: 28px;
-}
 /* back */
-.score {
+.worktime {
   position: absolute;
   bottom: 24px;
-  width: calc(100% - 48px);
   padding-top: 8px;
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, .2);
 }
-.score span {
+.worktime span {
   color: #59bec9;
   font-size: 1.5rem;
   margin-left: 16px;
@@ -163,23 +146,21 @@
 /* btn */
 .portfolio .btn {
   display: flex;
-  justify-content: space-between;
   gap: 8px;
-  margin-top: 8px;
+  padding: 0;
 }
-/* like */
-.like {
+/* 작업 인원 유형 */
+.worktype {
   background: transparent;
   border: 1px solid #000;
   border-radius: 5px;
-  width: 100px;
+  width: 60px;
 }
-.reservation_link {
+/* 사이트 바로가기 btn */
+.sitelink {
   width: 100%;
   border-radius: 5px;
-  text-align: center;
-  padding: 6px;
-  height: 34px;
+  line-height: 34px;
 }
 /* y축 회전 */
 .inner {
