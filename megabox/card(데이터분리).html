@@ -126,8 +126,20 @@
   <script src="js/data.js"></script>
 
   <script>
+    /*
+    ${data.screenTypes[0] === undefined ? "" : `<img src="${data.screenTypes[0]}" alt="mega_mx4d">`}
+    ${data.screenTypes[1] === undefined ? "" : `<img src="${data.screenTypes[1]}" alt="dolbycinema">`}
+    ${data.screenTypes[2] === undefined ? "" : `<img src="${data.screenTypes[2]}" alt="dolbyatmos">`}
+    */
+
+    // datas.each( [인덱스], [요소])=>{});
+    // datas.each((idx, data) => {
+
     // datas.forEach([요소], [인덱스], [배열])=>{});
     datas.forEach(data => {
+      // datas.map([요소], [인덱스], [배열])=>{});
+      const screenImgs = data.screenTypes.map(ele=>`<img src="${ele}" alt="Screen Types">`).join('');
+
       const card = `<div class="box_office_card">
       <div class="inner">
         <!-- front -->
@@ -137,9 +149,7 @@
             <img src="${data.poster}" alt="${data.title}">
           </div>
           <div class="screen_type">
-            ${data.screenTypes[0] === undefined ? "" : `<img src="${data.screenTypes[0]}" alt="mega_mx4d">`}
-            ${data.screenTypes[1] === undefined ? "" : `<img src="${data.screenTypes[1]}" alt="dolbycinema">`}
-            ${data.screenTypes[2] === undefined ? "" : `<img src="${data.screenTypes[2]}" alt="dolbyatmos">`}
+            ${screenImgs}
           </div>
           <div class="grade">
             <img src="${data.grade}" alt="${data.age}">
@@ -155,7 +165,7 @@
       </div>
       <!-- btn -->
       <div class="btn">
-        <button type="button" class="like"><i class="fa-regular fa-heart"></i>${data.like}k</button>
+        <button type="button" class="like"><i class="fa-regular fa-heart"></i>${data.like}</button>
         <a href="#" class="reservation_link">예매</a>
       </div>
     </div>`
