@@ -1,5 +1,5 @@
 @charset 'utf-8';
-@import url(reset.css);
+/* @import url(reset.css); */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @font-face {
@@ -110,10 +110,9 @@
   opacity: 1;
 }
 /* work */
-.portfolio li {
-  /* height: 300px; */
+/* .portfolio li {
   aspect-ratio: 9/6;
-}
+} */
 .portfolio {
   display: flex;
   gap: 24px;
@@ -170,22 +169,17 @@
 }
 /* like */
 .like {
-  color: #000;
   background: transparent;
   border: 1px solid #000;
   border-radius: 5px;
   width: 100px;
-  /* height: 34px; */
-}
-.like i {
-  margin-right: 4px;
 }
 .reservation_link {
   width: 100%;
   border-radius: 5px;
   text-align: center;
   padding: 6px;
-  /* line-height: 34px; */
+  height: 34px;
 }
 /* y축 회전 */
 .inner {
@@ -208,9 +202,9 @@
 }
 .back {
   transform: rotateY(180deg);
-  padding: 24px;
+  padding: 40px;
   color: #fff;
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, .9);
   /* 뒷면 숨기기 */
   backface-visibility: hidden;
 }

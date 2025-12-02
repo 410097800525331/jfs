@@ -1,5 +1,7 @@
 datas.forEach(data => {
-  const card = `<div class="box_office_card">
+  const desc = data.description.map(ele=>`<li>${ele}</li>`).join('');
+
+  const card = `<div class="box_office_card motion position-relative">
       <div class="inner">
         <!-- front -->
         <div class="front">
@@ -10,15 +12,13 @@ datas.forEach(data => {
         </div>
         <!-- back -->
         <div class="back">
-          <p>
-            ${data.description}
-          </p>
-          <div class="score">관람평<span>${data.score}</span></div>
+          <p>${desc}</p>
+          <div class="score">작업 시간<span>${data.worktime}</span></div>
         </div>
       </div>
       <!-- btn -->
       <div class="btn">
-        <button type="button" class="like"><i class="fa-regular fa-heart"></i>${data.like}</button>
+        <button type="button" class="like">${data.task}</button>
         <a href="${data.siteUrl}" target="_blank" class="btn btn-dark reservation_link">사이트 바로가기</a>
       </div>
     </div>`
