@@ -54,9 +54,10 @@
 #gnb .main {
   display: flex;
   justify-content: space-evenly;
-  align-content: flex-end;
+  /* align-content: flex-end; */
 }
 #gnb .main a {
+  position: relative;
   font-size: 1.125rem;
 }
 #gnb .main>li:nth-of-type(3) {

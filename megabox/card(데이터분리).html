@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메가박스</title>
+  <link rel="stylesheet" href="css/reset.css">
+
+  <style>
+    .box_office {
+      display: flex;
+      gap: 40px;
+    }
+    .box_office_card {
+      position: relative;
+      width: 245px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    /* front */
+    .poster {
+      height: 352px;
+    }
+    .rank {
+      position: absolute;
+      left: 10px; top: 10px;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 300;
+      font-style: italic;
+      text-shadow: 2px 2px 2px #000;
+    }
+    .screen_type {
+      position: absolute;
+      left: 10px; bottom: 10px;
+      width: 60px;
+    }
+    .grade {
+      position: absolute;
+      right: 10px; bottom: 10px;
+      width: 28px;
+    }
+    /* back */
+    .score {
+      position: absolute;
+      bottom: 24px;
+      width: calc(100% - 48px);
+      padding-top: 8px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, .2);
+    }
+    .score span {
+      color: #59bec9;
+      font-size: 1.5rem;
+      margin-left: 16px;
+    }
+    /* btn */
+    .btn {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    /* like */
+    .like {
+      color: #fff;
+      background: transparent;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      width: 100px;
+      /* height: 34px; */
+    }
+    .like i {
+      margin-right: 4px;
+    }
+    .reservation_link {
+      width: 100%;
+      background: #037b94;
+      border-radius: 5px;
+      text-align: center;
+      padding: 6px;
+      /* line-height: 34px; */
+    }
+    /* y축 회전 */
+    .inner {
+      position: relative;
+      height: 352px;
+      perspective: 1000px; /* 원근감 */
+    }
+    .inner:hover {
+      cursor: pointer;
+    }
+    .front,
+    .back {
+      position: absolute;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      transition: .5s;
+    }
+    .front {
+      transform: rotateY(0deg);
+    }
+    .back {
+      transform: rotateY(180deg);
+      padding: 24px;
+      color: #fff;
+      background: rgba(0, 0, 0, .7);
+      /* 뒷면 숨기기 */
+      backface-visibility: hidden;
+    }
+    /* 호버시 뒤집기 */
+    .inner:hover .front {
+      transform: rotateY(180deg);
+    }
+    .inner:hover .back {
+      transform: rotateY(360deg);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- card ui -->
+  <div class="box_office"></div>
+    
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/data.js"></script>
+
+  <script>
+    // datas.forEach([요소], [인덱스], [배열])=>{});
+    datas.forEach(data => {
+      const card = `<div class="box_office_card">
+      <div class="inner">
+        <!-- front -->
+        <div class="front">
+          <span class="rank">${data.rank}</span>
+          <div class="poster">
+            <img src="${data.poster}" alt="주토피아">
+          </div>
+          <div class="screen_type">
+            <img src="${data.}" alt="mega_mx4d">
+            <img src="${data.}" alt="dolbycinema">
+            <img src="${data.}" alt="dolbyatmos">
+          </div>
+          <div class="grade">
+            <img src="${data.}" alt="Grade All">
+          </div>
+        </div>
+        <!-- back -->
+        <div class="back">
+          <p>
+            ${"더 화려해진 세계, 더 넓어진 주토피아!<br> 디즈니의 가~~장 사랑스러운 콤비 '주디'와 '닉'이 돌아온다!<br><br> 미스터리한 뱀 '게리'가 나타난 순간, 주토피아가 다시 흔들리기 시작했다! 혼란에 빠진 도시를 구하기 위해 환상의 ..."}
+          </p>
+          <div class="score">관람평<span>${data.}</span></div>
+        </div>
+      </div>
+      <!-- btn -->
+      <div class="btn">
+        <button type="button" class="like"><i class="fa-regular fa-heart"></i>${data.}k</button>
+        <a href="#" class="reservation_link">예매</a>
+      </div>
+    </div>`
+    });
+
+  </script>
+</body>
+
+</html>
