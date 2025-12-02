@@ -134,31 +134,34 @@
         <div class="front">
           <span class="rank">${data.rank}</span>
           <div class="poster">
-            <img src="${data.poster}" alt="주토피아">
+            <img src="${data.poster}" alt="${data.title}">
           </div>
           <div class="screen_type">
-            <img src="${data.}" alt="mega_mx4d">
-            <img src="${data.}" alt="dolbycinema">
-            <img src="${data.}" alt="dolbyatmos">
+            ${data.screenTypes[0] === undefined ? "" : `<img src="${data.screenTypes[0]}" alt="mega_mx4d">`}
+            ${data.screenTypes[1] === undefined ? "" : `<img src="${data.screenTypes[1]}" alt="dolbycinema">`}
+            ${data.screenTypes[2] === undefined ? "" : `<img src="${data.screenTypes[2]}" alt="dolbyatmos">`}
           </div>
           <div class="grade">
-            <img src="${data.}" alt="Grade All">
+            <img src="${data.grade}" alt="${data.age}">
           </div>
         </div>
         <!-- back -->
         <div class="back">
           <p>
-            ${"더 화려해진 세계, 더 넓어진 주토피아!<br> 디즈니의 가~~장 사랑스러운 콤비 '주디'와 '닉'이 돌아온다!<br><br> 미스터리한 뱀 '게리'가 나타난 순간, 주토피아가 다시 흔들리기 시작했다! 혼란에 빠진 도시를 구하기 위해 환상의 ..."}
+            ${data.description}
           </p>
-          <div class="score">관람평<span>${data.}</span></div>
+          <div class="score">관람평<span>${data.score}</span></div>
         </div>
       </div>
       <!-- btn -->
       <div class="btn">
-        <button type="button" class="like"><i class="fa-regular fa-heart"></i>${data.}k</button>
+        <button type="button" class="like"><i class="fa-regular fa-heart"></i>${data.like}k</button>
         <a href="#" class="reservation_link">예매</a>
       </div>
     </div>`
+
+    $('.box_office').append(card);
+
     });
 
   </script>
