@@ -5,107 +5,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MEET PLAY SHARE, 메가박스</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+    #footer {background: #F8F8FA; font-size: 0.813rem; padding-bottom: 50px;}
+    #footer a {color: #555;}
+    .inbox {width: 1100px; margin: 0 auto;}
+    /* 상단 영역 */
+    .footer_top {display: flex; justify-content: space-between; align-items: center; padding: 30px 0;}
+    .fnb {display: flex; gap: 8px;}
+    .fnb a:hover {text-decoration: underline;}
+    .btn_looking_theater {border: 1px solid #ccc; border-radius: 30px; padding: 4px 16px;}
+    .btn_looking_theater img {width: 15px; height: 15px; margin-right: 4px;}
+    /* 하단 영역 */
+    .footer_bottom {display: flex; justify-content: space-between;}
+    .info {line-height: 0.5;}
+    .ci {width: 150px; height: 50px;}
+    .sns a {display: inline-block; width: 30px; height: 30px;}
+    .sns a:not(:last-of-type) {margin-right: 4px;}
+
+    /* 극장 찾기 */
+    .theater {color: #fff; height: calc(100vh - 200px); background: #333; padding: 20px 0; display: none;}
+    .theater.active {display: block;}
+    .tit {display: flex; justify-content: space-between; align-items: center;}
+    .theater h2 {font-weight: normal;}
+    .closed {display: inline-block; width: 36px; height: 36px; cursor: pointer;}
+    .cont {border: 1px solid rgba(255, 255, 255, .1); padding: 8px 0;}
+    .cont > ul > li {display: flex; align-items: center; padding: 8px 0;}
+    .cont > ul h2 {font-size: 0.935rem; width: 120px; margin-left: 20px;}
+    .cont_inner {display: flex; flex-wrap: wrap; width: 80%; margin-left: 30px; font-size: 0.92rem;}
+    .cont_inner li {margin: 2px 8px;}
+    .cont_inner a {color: #ccc;}
+    </style>
 </head>
 
 <body>
-  <!-- header -->
-  <header id="header">
-    <div class="inner">
-      <!-- logo -->
-      <h1 id="logo"><a href="index.html"><img src="./img/logo-white_new2.png" alt="메가박스" title="MEGABOX 메인으로 가기"></a>
-      </h1>
-      <!-- top link -->
-      <div class="top_link">
-        <div class="left_link">
-          <a href="https://www.megabox.co.kr/benefit/viplounge">VIP LOUNGE</a>
-          <a href="https://www.megabox.co.kr/benefit/membership">멤버십</a>
-          <a href="https://www.megabox.co.kr/support">고객센터</a>
-        </div>
-        <div class="right_link">
-          <a href="#">로그인</a>
-          <a href="https://www.megabox.co.kr/join">회원가입</a>
-          <a href="https://www.megabox.co.kr/booking">빠른예매</a>
-        </div>
-      </div>
-      <!-- GNB -->
-      <nav id="gnb">
-        <ul class="main">
-          <li>
-            <a href="#">영화</a>
-            <ul class="sub">
-              <li><a href="#">전체영화</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">예매</a>
-            <ul class="sub">
-              <li><a href="#">빠른예매</a></li>
-              <li><a href="#">상영시간표</a></li>
-              <li><a href="#">더 부티크 프라이빗 예매</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">극장</a>
-            <ul class="sub">
-              <li><a href="#">전체극장</a></li>
-              <li><a href="#">특별관</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">이벤트</a>
-            <ul class="sub">
-              <li><a href="#">진행중 이벤트</a></li>
-              <li><a href="#">지난 이벤트</a></li>
-              <li><a href="#">당첨자발표</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">스토어</a>
-            <ul class="sub">
-            </ul>
-          </li>
-          <li>
-            <a href="#">혜택</a>
-            <ul class="sub">
-              <li><a href="#">메가박스 멤버십</a></li>
-              <li><a href="#">제휴/할인</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <!-- link icon -->
-      <div class="link_icon">
-        <div class="left_link">
-          <a href="#"><img src="./img/ico-sitemap-white.png" alt="사이트맵" title="사이트맵"></a>
-          <a href="#"><img src="./img/ico-search-white.png" alt="검색" title="검색"></a>
-        </div>
-        <div class="right_link">
-          <a href="#"><img src="./img/ico-schedule-white.png" alt="상영시간표" title="상영시간표"></a>
-          <a href="#"><img src="./img/ico-mymega-white.png" alt="검색" title="나의 메가박스"></a>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- section -->
-  <section id="section">
-    <div class="ibox">
-      <h2>박스오피스</h2>
-      <div class="more"><a href="#">더 많은 영화보기<i class="fa-solid fa-plus"></i></a></div>
-      <!-- card ui -->
-      <div class="box_office"></div>
-      <ul class="link">
-        <li><span class="search"><input type="text" placeholder="영화명을 입력해 주세요"></span></li>
-        <li><a href="#"><img src="img/ico-schedule-main.png" alt="상영시간표"><span>상영시간표</span></a></li>
-        <li><a href="#"><img src="img/ico-boxoffice-main.png" alt="박스오피스">
-            <spa>박스오피스</spa>
-          </a></li>
-        <li><a href="#"><img src="img/ico-quick-reserve-main.png" alt="빠른예매"><span>빠른예매</span></a></li>
-      </ul>
-      <div class="mouse"><span><img src="img/ico-mouse.png" alt="아래로"></span></div>
-    </div>
-  </section>
-  <!-- footer -->
   <div class="theater">
     <div class="inbox">
       <div class="tit">
@@ -114,8 +47,7 @@
       </div>
       <div class="cont">
         <ul>
-          <li>
-            <h2>서울</h2>
+          <li><h2>서울</h2>
             <ul class="cont_inner">
               <li><a href="#">강남</a></li>
               <li><a href="#">강동</a></li>
@@ -139,8 +71,7 @@
               <li><a href="#">ARTNINE</a></li>
             </ul>
           </li>
-          <li>
-            <h2>경기</h2>
+          <li><h2>경기</h2>
             <ul class="cont_inner">
               <li><a href="#">고양스타필드</a></li>
               <li><a href="#">광명AK플라자</a></li>
@@ -176,8 +107,7 @@
               <li><a href="#">하남스타필드</a></li>
             </ul>
           </li>
-          <li>
-            <h2>인천</h2>
+          <li><h2>인천</h2>
             <ul class="cont_inner">
               <li><a href="#">검단</a></li>
               <li><a href="#">송도(트리플스트리트)</a></li>
@@ -188,8 +118,7 @@
               <li><a href="#">청라지젤(휴관)</a></li>
             </ul>
           </li>
-          <li>
-            <h2>대전/충청/세종</h2>
+          <li><h2>대전/충청/세종</h2>
             <ul class="cont_inner">
               <li><a href="#">공주</a></li>
               <li><a href="#">논산</a></li>
@@ -211,8 +140,7 @@
               <li><a href="#">홍성내포</a></li>
             </ul>
           </li>
-          <li>
-            <h2>부산/대구/경상</h2>
+          <li><h2>부산/대구/경상</h2>
             <ul class="cont_inner">
               <li><a href="#">경북도청</a></li>
               <li><a href="#">경산하양</a></li>
@@ -243,8 +171,7 @@
               <li><a href="#">화명</a></li>
             </ul>
           </li>
-          <li>
-            <h2>광주/전라</h2>
+          <li><h2>광주/전라</h2>
             <ul class="cont_inner">
               <li><a href="#">광주상무</a></li>
               <li><a href="#">광주하남</a></li>
@@ -257,8 +184,7 @@
               <li><a href="#">첨단</a></li>
             </ul>
           </li>
-          <li>
-            <h2>강원</h2>
+          <li><h2>강원</h2>
             <ul class="cont_inner">
               <li><a href="#">남춘천</a></li>
               <li><a href="#">속초</a></li>
@@ -266,8 +192,7 @@
               <li><a href="#">춘천석사</a></li>
             </ul>
           </li>
-          <li>
-            <h2>제주</h2>
+          <li><h2>제주</h2>
             <ul class="cont_inner">
               <li><a href="#">제주삼화</a></li>
               <li><a href="#">제주서귀포</a></li>
@@ -312,9 +237,14 @@
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <!-- 데이터 파일 -->
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
+  <script>
+    $('.btn_looking_theater').on('click', () => {
+      $('.theater').addClass('active');
+    });
+    $('.closed').on('click', () => {
+      $('.theater').removeClass('active');
+    });
+  </script>
 </body>
 
 </html>
