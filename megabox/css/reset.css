@@ -26,3 +26,5 @@ ul {list-style: none;}
 body {font: 0.9375rem/1.6 'NanumBarunGothic', sans-serif; background: #111;}
 a {text-decoration: none; color: #fff;}
 img {vertical-align: middle; width: 100%; height: 100%; object-fit: cover;}
+input {background: transparent; border: none;}
+::placeholder {color: #fff; font-size: 1rem;}
