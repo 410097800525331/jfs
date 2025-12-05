@@ -33,15 +33,59 @@
                 grid-template-areas
                     - 그리드의 열과 행을 정의합니다.
 
-                gap
+                gap: row col;
                 column-gap
                 row-gap
 
                 justify-content
-                place-content
+                    - 가로(수평) 축 정렬
+                    - 기본값: normal(상황에 따라 start 또는 stretch)
+                        - grid-template-columns: auto -> stretch
+                        - 아니면: start
+                        - 즉, 아이템의 크기가 auto이면 stretch, 아니면 start
+
+                        space-evenly
+                            - 아이템를 제외한 남은 공간을 모두 같게
+                        space-around
+                            - 아이템의 주위 공간을 같게
+                        space-between
+                            - 첫 번째 아이템은 start, 마지막 아이템은 end 배치 후 나머지 아이템의 주위 공간을 같게
+                        center
+                            - 모든 아이템을 가운데
+                        start
+                            - 모든 아이템을 시작
+                        end
+                            - 모든 아이템을 끝
+                        stretch
+                            - grid-template-columns: auto; 일때
+
                 align-content
-                align-items
+                    - 세로(수직) 축 정렬
+                    - 기본값: normal(stretch)
+                        space-evenly
+                        space-around
+                        space-between
+                        center
+                        start
+                        end
+                        stretch
+
+                place-content: align-content justify-content;
+                place-content: 수직 수평;
+                    - 값을 하나만 쓰면 수직/수평 둘 다 같은 값으로 지정된다.
+
                 
+                justify-items
+                    - 각 셀 내부의 가로(수평) 정렬
+                    - justify-content를 지정하지 않았을 때(normal) 지정된다.
+                    - 기본값: stretch
+                    - start, end, center
+                align-items
+                    - 각 셀 내부의 세로(수직) 정렬
+                    - align-content를 지정하지 않았을 때(normal) 지정된다.
+                    - 기본값: stretch
+                    - start, end, center, baseline
+                    
                 grid-auto-columns
                 grid-auto-rows
                 grid-auto-flow
@@ -49,25 +93,74 @@
         */
     .container {
       display: grid;
-      /* 3열(column), 폭은 자동(auto) */
+      grid-template-columns: repeat(3, 70px);
+      grid-template-columns: 70px 70px 70px;
       grid-template-columns: auto auto auto;
-      grid-template-columns: 80px 200px auto;
-      grid-template-columns: 1fr 1fr 1fr;
-      /* fraction(분수) */
-      grid-template-columns: minmax(200px, 1fr) 200px 200px;
-      grid-template-columns: repeat(4, 1fr);
-
-      grid-template-rows: 396px 83px;
-
-      column-gap: 40px;
-      row-gap: 50px;
-      /* gap: 행 열; */
-      gap: 50px 40px;
-
+      gap: 5px;
       background-color: dodgerblue;
-      /* padding: 10px; */
-      max-width: 1100px;
-      margin: 0 auto;
+      padding: 5px;
+
+      /* 수평 정렬 */
+      justify-content: start;
+      /* jcs */
+      justify-content: end;
+      /* jce */
+      justify-content: center;
+      /* jcc */
+      justify-content: space-between;
+      /* jcsb */
+      justify-content: space-around;
+      /* jcsao */
+      justify-content: space-evenly;
+      /* jcsel */
+      justify-content: stretch;
+      /* jcse */
+
+      /* 수직 정렬 */
+      height: 500px;
+      /* align-content 속성이 효과를 발휘하려면 그리드 콘텐츠의 총 높이가 컨테이너의 높이보다 작아야 합니다. -> 빈 공간이 있어야 함!*/
+      align-content: start;
+      /* acs */
+      align-content: center;
+      /* acc */
+      align-content: end;
+      /* ace */
+      align-content: space-between;
+      /* acsb */
+      align-content: space-evenly;
+      /* acsev */
+      align-content: space-around;
+      /* acsao */
+      align-content: stretch;
+      /* acse */
+
+      place-content: center;
+      /* pc */
+      /* 수직은 end, 수평은 space-between */
+      place-content: end space-between;
+      place-content: normal;
+
+      /* 각 셀 내부의 수직(세로) 정렬 */
+      align-items: stretch;
+      /* aise, 기본값 */
+      align-items: start;
+      /* ai */
+      align-items: baseline;
+      /* aib */
+      align-items: end;
+      /* aie */
+      align-items: center;
+      /* aic */
+
+      /* 각 셀 내부의 수평(가로) 정렬 */
+      justify-items: stretch;
+      /* jise */
+      justify-items: start;
+      /* ji */
+      justify-items: end;
+      /* jie */
+      justify-items: center;
+      /* jic */
     }
 
     /* 그리드 아이템(item) */

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        /* 
+            그리드 아이템
+                1. grid-column-start
+                    - 아이템의 시작 열 번호 지정
+                2. grid-column-end
+                    - 아이템의 끝 열 번호 지정
+                3. grid-column: start / span 숫자;
+
+                4. grid-row-start
+                    - 아이템의 시작 행 번호 지정
+                5. grid-row-end
+                    - 아이템의 끝 행 번호 지정
+                6. grid-row: start end;
+
+                    위 속성들의 속성 값은
+                        - auto(기본값), 숫자
+
+                1. justify-self
+                    - 셀 내의 수평 정렬 지정
+                2. align-self
+                    - 셀 내의 수직 정렬 지정
+                3. place-self: <align> <justify>;
+                    - 하나의 값만 사용하면 수직/수평이 같은 값으로 지정된다.
+                
+                    위 속성들의 속성 값은
+                        - stretch(기본값), start, center, end
+
+                grid-area: 이름;                        
+
+            그리드 컨테이너
+                grid-template-areas: '이름 이름 이름';
+        */
+        .container {
+            display: grid;
+            /* dg */
+            grid-template-columns: repeat(3, auto);
+            gap: 5px;
+            /* g5 */
+            background-color: dodgerblue;
+            padding: 5px;
+            height: 400px;
+        }
+
+        /* 그리드 아이템(item) */
+        .container div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        /* 아이템 별 수평 정렬 */
+        .item1 {
+            justify-self: auto;
+        }
+
+        /* jsa */
+        .item2 {
+            justify-self: stretch;
+        }
+
+        /* jsse */
+        .item3 {
+            justify-self: start;
+        }
+
+        /* js */
+        .item4 {
+            justify-self: end;
+        }
+
+        /* jse */
+        .item5 {
+            justify-self: center;
+        }
+
+        /* jsc */
+
+        /* 아이템 별 수직 정렬 */
+        .item1 {
+            align-self: auto;
+        }
+
+        /* asa */
+        .item2 {
+            align-self: stretch;
+        }
+
+        /* asse */
+        .item3 {
+            align-self: start;
+        }
+
+        /* as */
+        .item4 {
+            align-self: end;
+        }
+
+        /* ase */
+        .item5 {
+            align-self: center;
+        }
+
+        /* asc */
+
+        /* place-self: 수직 수평; */
+        .item7 {
+            place-self: end start;
+        }
+
+        /* ps */
+        .item9 {
+            place-self: center;
+        }
+
+        /* ps */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">9</div>
+    </div>
+</body>
+
+</html>

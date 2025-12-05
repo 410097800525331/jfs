@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        /* 
+            그리드 아이템
+                grid-column-start
+                    - 아이템의 시작 열 번호 지정
+                grid-column-end
+                    - 아이템의 끝 열 번호 지정
+                grid-column: start / span 숫자;
+
+                grid-row-start
+                    - 아이템의 시작 행 번호 지정
+                grid-row-end
+                    - 아이템의 끝 행 번호 지정
+                grid-row: start end;
+
+                위 속성들의 속성 값
+                    - auto(기본값), 숫자
+
+                grid-area: 이름;
+            
+            그리드 컨테이너
+                grid-template-areas: '이름 이름 이름';
+        */
+        .container {
+            display: grid;
+            /* dg */
+            grid-template-columns: repeat(5, auto);
+            gap: 5px;
+            /* g5 */
+            background-color: dodgerblue;
+            padding: 5px;
+        }
+
+        /* 그리드 아이템(item) */
+        .container div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        /* 헤더 */
+        .item1 {
+            grid-column: 1 / span 5;
+        }
+
+        /* 메뉴 */
+        .item2 {
+            grid-row: 2 / span 2;
+        }
+
+        /* 메인 */
+        .item3 {
+            grid-column: 2 / span 3;
+        }
+
+        /* 푸터 */
+        .item5 {
+            grid-column: 2 / span 4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1">헤더</div>
+        <div class="item2">메뉴</div>
+        <div class="item3">메인</div>
+        <div class="item4">오른쪽</div>
+        <div class="item5">푸터</div>
+    </div>
+</body>
+
+</html>

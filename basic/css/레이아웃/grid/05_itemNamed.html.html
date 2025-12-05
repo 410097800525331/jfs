@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        /* 
+            그리드 아이템
+                grid-column-start
+                    - 아이템의 시작 열 번호 지정
+                grid-column-end
+                    - 아이템의 끝 열 번호 지정
+                grid-column: start / span 숫자;
+
+                grid-row-start
+                    - 아이템의 시작 행 번호 지정
+                grid-row-end
+                    - 아이템의 끝 행 번호 지정
+                grid-row: start end;
+
+                위 속성들의 속성 값
+                    - auto(기본값), 숫자
+
+                grid-area: 이름;
+            
+            그리드 컨테이너
+                grid-template-areas: '이름 이름 이름';
+        */
+        .container {
+            display: grid;
+            /* dg */
+            grid-template-areas:
+                'header header header header header header'
+                'menu main main main main right'
+                'menu footer footer footer footer footer';
+            /* gta */
+            gap: 5px;
+            /* g5 */
+            background-color: dodgerblue;
+            padding: 5px;
+        }
+
+        /* 그리드 아이템(item) */
+        .container div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .item1 {
+            grid-area: header;
+        }
+
+        /* ga */
+        .item2 {
+            grid-area: menu;
+        }
+
+        .item3 {
+            grid-area: main;
+        }
+
+        .item4 {
+            grid-area: right;
+        }
+
+        .item5 {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1">헤더</div>
+        <div class="item2">메뉴</div>
+        <div class="item3">메인</div>
+        <div class="item4">오른쪽</div>
+        <div class="item5">푸터</div>
+    </div>
+</body>
+
+</html>
