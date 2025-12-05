@@ -33,13 +33,14 @@
                 grid-template-areas
                     - 그리드의 열과 행을 정의합니다.
 
+                gap
+                column-gap
+                row-gap
+
                 justify-content
                 place-content
                 align-content
                 align-items
-                gap
-                column-gap
-                row-gap
                 
                 grid-auto-columns
                 grid-auto-rows
@@ -58,8 +59,13 @@
 
       grid-template-rows: 396px 83px;
 
+      column-gap: 40px;
+      row-gap: 50px;
+      /* gap: 행 열; */
+      gap: 50px 40px;
+
       background-color: dodgerblue;
-      padding: 10px;
+      /* padding: 10px; */
       max-width: 1100px;
       margin: 0 auto;
     }
