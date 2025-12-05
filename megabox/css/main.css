@@ -21,7 +21,8 @@
 }
 /* top_link */
 #header .top_link {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: space-between;
   margin-bottom: 30px;
 }
