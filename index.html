@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- 1. 다트모드 위치를 인스타 오른쪽에 배치해줘.
+2. 우측 상단에 있는 동그란 원은 z-index를 낮게해서 다른것들 뒤에 있게 해줘
+3. 디자인 포트폴리오중에 2, 4, 8번은 .jpg 였다가 눌렀을땐 .png로 바뀌게 해줘 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김슬기 Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for Tech Stack Logos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Devicon for specialized tech icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+  <!-- Loading Spinner -->
+  <div class="loading-spinner" id="loadingSpinner">
+    <div class="spinner-circle"></div>
+  </div>
+
+  <!-- Rotating Text Badge (Top Right) -->
+  <div class="rotating-badge">
+    <svg viewBox="0 0 200 200" width="200" height="200">
+      <defs>
+        <path id="circlePath" d="M 100, 100 m -90, 0 a 90,90 0 1,1 180,0 a 90,90 0 1,1 -180,0" fill="none"/>
+      </defs>
+      <text font-size="16" font-weight="bold" letter-spacing="2" fill="currentColor">
+        <textPath href="#circlePath" startOffset="0%" text-anchor="start">
+          CREATIVE WEB DEVELOPER • PORTFOLIO 2026 •
+        </textPath>
+      </text>
+    </svg>
+  </div>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="sidebar-content">
+      <div class="logo">
+        <h1>S E U L - G I</h1>
+      </div>
+      
+      <nav class="nav-menu">
+        <a href="#about" class="nav-link active">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#web" class="nav-link">Web</a>
+        <a href="#design" class="nav-link">Design</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p class="tagline">Web Developer</p>
+        
+        <!-- Dark Mode Toggle Button -->
+        <div class="theme-toggle-container">
+          <button class="theme-toggle" id="themeToggle" title="다크 모드 전환">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+
+        <div class="social-links">
+          <a href="mailto:seulgirw410@gmail.com" title="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+          </a>
+          <a href="https://github.com/410097800525331" title="GitHub" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/sg.rowoon/" title="Instagram" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <circle cx="17.5" cy="6.5" r="1.5"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="greeting">안녕하세요,</p>
+        <h2 class="hero-title"><span style="color: red;">수정필요</span>웹 개발자<br>김슬기입니다.</h2>
+        <p class="hero-desc">디자인 감각을 갖춘 풀스택 개발자로,<br>사용자 경험을 중심으로 웹을 만들어갑니다.</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="section-container">
+        <h3 class="section-title">About</h3>
+        
+        <div class="about-grid">
+          <div class="about-card">
+            <h4 class="card-title">Profile</h4>
+            <div class="profile-info">
+              <div class="info-row">
+                <img src="images/IMG_8846.png" alt="My Photo">
+              </div>
+              <div class="info-row">
+                <span class="label">이름</span>
+                <span class="value">김 슬 기</span>
+              </div>
+              <div class="info-row">
+                <span class="label">생년월일</span>
+                <span class="value">2004.10.14</span>
+              </div>
+              <div class="info-row">
+                <span class="label">이메일</span>
+                <span class="value">seulgirw410@gmail.com</span>
+              </div>
+              <div class="info-row">
+                <span class="label">연락처</span>
+                <span class="value">010-2499-4191</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <h4 class="card-title">Experience</h4>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-date">2023.11 — 2025.07</span>
+                <div>
+                  <span class="timeline-title">티지이글로벌</span>
+                  <span class="timeline-role">디자이너</span>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date">2021.03 — 2023.02</span>
+                <div>
+                  <span class="timeline-title">성주약품</span>
+                  <span class="timeline-role">학습근로자</span>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date">2020.03 — 2023.02</span>
+                <div>
+                  <span class="timeline-title">삼일상업고등학교</span>
+                  <span class="timeline-role">졸업</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <h4 class="card-title">Education</h4>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-date">2026.04 — 2026.06</span>
+                <span class="timeline-title">생성형 AI와 AWS 클라우드를 활용한<br> 풀스택&자동화 실무 개발</span>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date">2025.09 — 2026.03</span>
+                <span class="timeline-title">프로젝트 기반 풀스택 개발자 양성과정</span>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date">2023.04 — 2023.08</span>
+                <span class="timeline-title">웹디자인&웹퍼블리싱 실무자 양성과정</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <h4 class="card-title">Certificate</h4>
+            <div class="certificates">
+              <div class="cert-item preparing">
+                <span class="cert-badge">준비중</span>
+                <span class="cert-name">전산회계 1급</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-date">2020.09</span>
+                <span class="cert-name">전산회계 2급</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-date">2020.12</span>
+                <span class="cert-name">워드프로세서</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-date">2021.04</span>
+                <span class="cert-name">한글엑셀 (A)</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-date">2021.06</span>
+                <span class="cert-name">한글엑세스 (A)</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-date">2023.04</span>
+                <span class="cert-name">운전면허 2종</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="section-container">
+        <h3 class="section-title">Skills</h3>
+        
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h4 class="category-title">Design</h4>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Photoshop</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Illustrator</span>
+                  <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="95%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="category-title">Development</h4>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Frontend</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Backend</span>
+                  <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="category-title">Tools</h4>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Excel</span>
+                  <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-stack">
+          <h4 class="stack-title">Tech Stack</h4>
+          <div class="tag-list">
+            <span class="tag"><i class="devicon-html5-plain colored"></i> HTML</span>
+            <span class="tag"><i class="devicon-css3-plain colored"></i> CSS</span>
+            <span class="tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+            <span class="tag"><i class="devicon-react-original colored"></i> React</span>
+            <span class="tag"><i class="devicon-bootstrap-plain colored"></i> BootStrap</span>
+            <span class="tag"><i class="devicon-java-plain colored"></i> Java</span>
+            <span class="tag"><i class="devicon-python-plain colored"></i> Python</span>
+            <span class="tag"><i class="fa-solid fa-server"></i> Servlet+JSP</span>
+            <span class="tag"><i class="devicon-spring-plain colored"></i> Spring Boot</span>
+            <span class="tag"><i class="fa-solid fa-leaf"></i> Thymeleaf</span>
+            <span class="tag"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+            <span class="tag"><i class="fa-solid fa-robot"></i> MLOps</span>
+            <span class="tag"><i class="devicon-amazonwebservices-original colored"></i> AWS</span>
+            <span class="tag"><i class="devicon-git-plain colored"></i> Git</span>
+            <span class="tag"><i class="devicon-figma-plain colored"></i> Figma</span>
+            <span class="tag"><i class="devicon-photoshop-plain colored"></i> Photoshop</span>
+            <span class="tag"><i class="devicon-illustrator-plain colored"></i> Illustrator</span>
+            <span class="tag"><i class="fa-solid fa-file-excel"></i> Excel</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Web Portfolio Section -->
+    <section id="web" class="section">
+      <div class="section-container">
+        <h3 class="section-title">Web Portfolio</h3>
+        <p class="section-desc">Responsive web & mobile design projects. All projects optimized for PC and Mobile.</p>
+
+        <div class="project-grid">
+          <article class="project-card" data-url="https://jejugroup.onrender.com">
+            <div class="project-img-wrap">
+              <img src="images/jeju_project.jpg" alt="제주그룹 프로젝트" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <h4 class="project-name">제주그룹 <span class="project-en">JejuAir</span></h4>
+              <p class="project-meta">
+                <span>2025.11 — 2026.03</span>
+                <span>팀 프로젝트</span>
+              </p>
+              <p class="project-tools">Frontend / Backend</p>
+              <div class="project-actions">
+                <a href="pdf/jeju_group_proposal.pdf" class="pdf-btn" target="_blank" onclick="event.stopPropagation();">
+                  <i class="fa-solid fa-file-pdf"></i> PDF 보기
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-url="https://ecoteav.netlify.app/">
+            <div class="project-img-wrap">
+              <img src="images/ecoteav_project.jpg" alt="에코티브 프로젝트" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <h4 class="project-name">에코티브 <span class="project-en">ecoteav</span></h4>
+              <p class="project-meta">
+                <span>2025.11 — 2026.01</span>
+                <span>1인 프로젝트</span>
+              </p>
+              <p class="project-tools">Frontend</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-url="https://leunland.netlify.app/">
+            <div class="project-img-wrap">
+              <img src="images/leunland_project.jpg" alt="레운랜드 프로젝트" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <h4 class="project-name">레운랜드 <span class="project-en">LeunLand</span></h4>
+              <p class="project-meta">
+                <span>2025.11 — 2026.01</span>
+                <span>1인 프로젝트</span>
+              </p>
+              <p class="project-tools">Frontend</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-url="https://knottedstore.netlify.app/">
+            <div class="project-img-wrap">
+              <img src="images/knotted_project.jpg" alt="노티드 프로젝트" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <h4 class="project-name">노티드<span class="project-en">Knotted</span></h4>
+              <p class="project-meta">
+                <span>2025.12 — 2026.01</span>
+                <span>1인 프로젝트</span>
+              </p>
+              <p class="project-tools">Frontend</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design Portfolio Section -->
+    <section id="design" class="section">
+      <div class="section-container">
+        <h3 class="section-title">Design Portfolio</h3>
+
+        <div class="design-grid" id="designGrid">
+          <!-- Design items will be sorted by date here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Design Modal -->
+    <div class="modal" id="designModal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-body">
+          <div class="modal-img-container">
+            <img class="modal-image" src="" alt="Design Image">
+          </div>
+          <div class="modal-info-container">
+            <div>
+              <h2 id="modal-title"></h2>
+              <div class="info-grid">
+                <div class="info-item">
+                  <span class="info-label">Type</span>
+                  <span class="info-value" id="modal-type"></span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Date</span>
+                  <span class="info-value" id="modal-month"></span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Program</span>
+                  <span class="info-value" id="modal-program"></span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Keywords</span>
+                  <span class="info-value" id="modal-keywords"></span>
+                </div>
+              </div>
+            </div>
+            <div class="info-section">
+              <span class="info-label">Description</span>
+              <p class="info-desc" id="modal-desc"></p>
+            </div>
+            <div class="info-section">
+              <span class="info-label">Color Palette</span>
+              <div class="color-palette" id="modal-colors"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="section-container">
+        <h3 class="section-title">Contact</h3>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <a href="mailto:seulgirw410@gmail.com" class="contact-value">seulgirw410@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">010-2499-4191</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">GitHub</span>
+            <a href="https://github.com/410097800525331" class="contact-value" target="_blank">github.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Instagram</span>
+            <a href="https://www.instagram.com/sg.rowoon/" class="contact-value" target="_blank">@sg.rowoon</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 Kim Seul-gi. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
