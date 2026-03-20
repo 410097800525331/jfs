@@ -129,7 +129,7 @@ const designData = [
     date: "202211"
   },
   {
-    image: "images/design4_niihwa.jpg",
+    image: "images/design4_niihwa.png",
     title: "NiiHWA - XYZ 앨범 아트",
     type: "Album Art",
     month: "2022.11",
