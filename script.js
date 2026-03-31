@@ -42,7 +42,7 @@ const sections = document.querySelectorAll('.section');
 // Update active nav link on scroll
 window.addEventListener('scroll', () => {
   let current = '';
-  
+
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
@@ -170,7 +170,7 @@ designData.sort((a, b) => b.date - a.date);
 function renderDesignCards() {
   const designGrid = document.getElementById('designGrid');
   designGrid.innerHTML = '';
-  
+
   designData.forEach(item => {
     const card = document.createElement('article');
     card.className = 'design-card';
@@ -182,7 +182,7 @@ function renderDesignCards() {
     card.setAttribute('data-keywords', item.keywords);
     card.setAttribute('data-desc', item.desc);
     card.setAttribute('data-colors', item.colors);
-    
+
     card.innerHTML = `
       <div class="design-img-wrap">
         <img src="${item.image}" alt="${item.title}" loading="lazy" />
@@ -192,10 +192,10 @@ function renderDesignCards() {
       </div>
       <p class="design-title">${item.type} — ${item.title}</p>
     `;
-    
+
     designGrid.appendChild(card);
   });
-  
+
   // Re-attach event listeners to new cards
   attachDesignCardListeners();
 }
@@ -214,7 +214,7 @@ const modalClose = designModal.querySelector('.modal-close');
 
 function attachDesignCardListeners() {
   const designCards = document.querySelectorAll('.design-card');
-  
+
   // Open modal on design card click
   designCards.forEach(card => {
     card.addEventListener('click', () => {
@@ -228,7 +228,7 @@ function attachDesignCardListeners() {
         desc: card.getAttribute('data-desc'),
         colors: card.getAttribute('data-colors').split(',')
       };
-      
+
       // Set text content
       modalImage.src = data.image;
       modalTitle.textContent = data.title;
@@ -237,7 +237,7 @@ function attachDesignCardListeners() {
       modalProgram.textContent = data.program;
       modalKeywords.textContent = data.keywords;
       modalDesc.textContent = data.desc;
-      
+
       // Set colors
       modalColors.innerHTML = '';
       data.colors.forEach(color => {
@@ -247,7 +247,7 @@ function attachDesignCardListeners() {
         circle.title = color;
         modalColors.appendChild(circle);
       });
-      
+
       designModal.classList.add('active');
       document.body.style.overflow = 'hidden';
     });
@@ -359,7 +359,7 @@ function createMobileMenuToggle() {
         color: var(--text-primary);
         transition: all 0.3s ease;
       `;
-      
+
       toggleBtn.addEventListener('click', () => {
         sidebar.classList.toggle('active');
         menuOpen = !menuOpen;
@@ -439,7 +439,7 @@ window.addEventListener('load', createScrollToTopButton);
 document.addEventListener('DOMContentLoaded', () => {
   // Render design cards sorted by date
   renderDesignCards();
-  
+
   // Set first nav link as active
   if (navLinks.length > 0) {
     navLinks[0].classList.add('active');

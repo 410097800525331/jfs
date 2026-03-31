@@ -73,8 +73,8 @@
     <section class="hero">
       <div class="hero-content">
         <p class="greeting">안녕하세요,</p>
-        <h2 class="hero-title"><span style="color: red;">수정필요</span>웹 개발자<br>김슬기입니다.</h2>
-        <p class="hero-desc"><span style="color: red;">수정필요</span>디자인 감각을 갖춘 풀스택 개발자로,<br>사용자 경험을 중심으로 웹을 만들어갑니다.</p>
+        <h2 class="hero-title">웹 개발자<br>김슬기입니다.</h2>
+        <p class="hero-desc">회계 지식을 갖춘 풀스택 개발자로,<br>사용자 경험을 중심으로 웹을 만들어갑니다.</p>
       </div>
     </section>
 
@@ -408,40 +408,63 @@
     </div>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="section-container">
-        <h3 class="section-title">Contact</h3>
+    <div class="container">
+      <section class="contact-section" id="contact">
+        <h2 class="section-title">Contact</h2>
 
-        <div class="contact-info">
-          <div class="contact-item">
-            <span class="contact-label">Email</span>
-            <a href="mailto:seulgirw410@gmail.com" class="contact-value">seulgirw410@gmail.com</a>
+        <div class="contact-grid">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <div class="contact-list">
+              <!-- Email -->
+              <div class="contact-item">
+                <svg class="contact-icon icon-mail" viewBox="0 0 24 24">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22 6 12 13 2 6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <a href="mailto:seulgirw410@gmail.com" class="contact-link">
+                  seulgirw410@gmail.com
+                </a>
+              </div>
+
+              <!-- Phone -->
+              <div class="contact-item">
+                <svg class="contact-icon icon-phone" viewBox="0 0 24 24">
+                  <path
+                    d="M22 16.92v3c0 1.105-.895 2-2 2h-2c-1.105 0-2-.895-2-2v-5.604c0-1.105.895-2 2-2h2c1.105 0 2 .895 2 2zm-15.5-1.6C5.387 13.963 9.037 10.313 13.4 9.5c.401-.066.8.074 1.074.348l2.126 2.126c.281.281.422.682.356 1.083-.915 5.424-5.348 9.857-10.772 10.772-.401.066-.802-.075-1.083-.356l-2.126-2.126c-.274-.274-.414-.673-.348-1.074z" />
+                </svg>
+                <a href="tel:+821024994191" class="contact-link">
+                  +82 10-2499-4191
+                </a>
+              </div>
+
+              <!-- GitHub -->
+              <div class="contact-item">
+                <svg class="contact-icon icon-github" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-link">
+                  github.com
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="contact-item">
-            <span class="contact-label">GitHub</span>
-            <a href="https://github.com/410097800525331" class="contact-value" target="_blank">github.com</a>
+
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <h3>Send Message</h3>
+            <form action="https://formspree.io/f/xpqyywly" method="POST">
+              <input type="text" name="name" placeholder="성함을 입력해주세요" required>
+              <input type="email" name="email" placeholder="이메일을 입력해주세요" required>
+              <textarea name="message" rows="5" placeholder="메시지를 작성해주세요" required></textarea>
+              <button type="submit">보내기</button>
+            </form>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="contact_section">
-      <div class="inner">
-        <h2>Contact</h2>
-        <ul class="addr">
-          <li><i class="fa-solid fa-phone"></i>Phone: <a href="tel:010-2499-4191">+82 10-2499-4191</a></li>
-          <li><i class="fa-solid fa-envelope"></i>Email: <a
-              href="mailto:seulgirw410@gmail.com">seulgirw410@gmail.com</a>
-          </li>
-        </ul>
-        <form class="contact_form" action="https://formspree.io/f/xpqyywly" method="POST">
-          <input type="hidden" name="_subject" value="Portfolio Contact">
-          <input type="text" name="name" placeholder="성함을 입력해주세요" required>
-          <input type="email" name="email" placeholder="이메일을 입력해주세요" required>
-          <textarea name="message" placeholder="메시지를 작성해주세요" rows="5" required></textarea>
-          <button type="submit">문의 보내기</button>
-        </form>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
